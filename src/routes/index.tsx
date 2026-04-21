@@ -1,26 +1,258 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Award, Cog, Factory, ShieldCheck, Wrench, Layers, Cpu, Hammer } from "lucide-react";
+import { SectionHeading } from "@/components/site/SectionHeading";
+import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Venus Dies & Moulds Pvt. Ltd. — Dies & Moulds Manufacturer in Pune, India" },
+      {
+        name: "description",
+        content:
+          "Precision engineering and trusted manufacturing since 1999. Plastic injection moulds, high pressure die casting and stamping tools manufacturer in Pune, India.",
+      },
+      { property: "og:title", content: "Venus Dies & Moulds — Precision Engineering, Pune" },
+      {
+        property: "og:description",
+        content:
+          "ISO 9001:2015 & IATF 16949:2016 certified dies and moulds manufacturer serving automotive, electrical and defense industries.",
+      },
+    ],
+  }),
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+const services = [
+  { icon: Layers, title: "Plastic Injection Moulds", desc: "Plastic injection moulds and PDC dies engineered for high precision and repeatability." },
+  { icon: Factory, title: "High Pressure Die Casting", desc: "Aluminum & Zinc PDC components produced at our 30,000 sq. ft. HPDC plant in Chakan." },
+  { icon: Hammer, title: "Progressive & Stamping Tools", desc: "High precision stamping dies, lamination and progressive tools for series production." },
+  { icon: Wrench, title: "Proto Tool Development", desc: "Proto tool components for plastic, aluminum and sheet metal parts to validate designs fast." },
+  { icon: Cog, title: "Sub Assembly", desc: "Stamping components development and sub assembly capability under one roof." },
+  { icon: Cpu, title: "Design & Engineering", desc: "Commercial design centre with CAD/CAM, DFM reports and complex mould design by 10+ engineers." },
+];
 
-function Index() {
-  return <PlaceholderIndex />;
+const strengths = [
+  "Diversified Business Profile",
+  "Experienced Professionals with robust technical capabilities",
+  "Innovative Approach",
+  "Continual Improvements",
+  "Premium Quality",
+  "Optimum cost",
+  "One-stop solution for all your queries",
+  "Market Presence since 26+ Years",
+];
+
+function HomePage() {
+  return (
+    <>
+      {/* HERO */}
+      <section className="relative hero-surface text-white">
+        <div className="absolute inset-0 industrial-grid opacity-[0.08]" />
+        <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-40">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 rounded-sm border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              ISO 9001:2015 · IATF 16949:2016 Certified
+            </div>
+            <h1 className="mt-6 font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+              Precision Engineering.
+              <br />
+              <span className="text-primary">Trusted Manufacturing.</span>
+            </h1>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
+              Venus Dies & Moulds Pvt. Ltd. is a Pune-based precision engineering company delivering injection moulds,
+              high pressure die casting and stamping tools to global manufacturers — with 26+ years of proven quality,
+              innovation and on-time delivery.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Get a Quote <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/capabilities"
+                className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/25 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-white/10"
+              >
+                Explore Capabilities
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 md:mt-24 md:grid-cols-4">
+            {[
+              { k: "26+", v: "Years of Excellence" },
+              { k: "5", v: "Manufacturing Plants" },
+              { k: "10+", v: "Design Engineers" },
+              { k: "30,000", v: "Sq. Ft. HPDC Plant" },
+            ].map((s) => (
+              <div key={s.v} className="bg-[var(--steel)] p-5 md:p-7">
+                <div className="font-display text-3xl font-bold text-primary md:text-4xl">{s.k}</div>
+                <div className="mt-1 text-xs uppercase tracking-[0.16em] text-white/60 md:text-sm">{s.v}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-6">
+            <SectionHeading
+              eyebrow="About Venus"
+              title="A trusted engineering partner since 1999"
+              subtitle="From a single-man job-work setup in Bhosari to a multi-plant precision manufacturing group in Pune — Venus has scaled responsibly, with quality and customer satisfaction at the core."
+            />
+            <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
+              <p>
+                We continuously strive for customer satisfaction by providing timely qualitative products and hassle-free
+                services. Our quality management system, innovation and committed people enable us to consistently
+                exceed customer needs and expectations.
+              </p>
+              <p>
+                Today, Venus operates four dedicated manufacturing units across Chinchwad and Chakan MIDC, with
+                in-house tool room, HPDC, press shop, laser cutting and a commercial design centre.
+              </p>
+            </div>
+            <Link
+              to="/about"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary hover:gap-3 transition-all"
+            >
+              More about us <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="lg:col-span-6">
+            <ImagePlaceholder label="Venus manufacturing facility" ratio="wide" />
+            <div className="mt-4 grid grid-cols-2 gap-4">
+              <ImagePlaceholder label="tool room" ratio="square" />
+              <ImagePlaceholder label="HPDC shop floor" ratio="square" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CAPABILITIES */}
+      <section className="bg-secondary/60 border-y">
+        <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
+          <SectionHeading
+            eyebrow="Capabilities"
+            title="End-to-end manufacturing under one roof"
+            subtitle="From design and prototyping to series production — engineered for automotive, electrical, defense and industrial sectors."
+          />
+          <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
+            {services.map((s) => (
+              <div key={s.title} className="group relative bg-background p-7 transition-colors hover:bg-card md:p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <s.icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              to="/capabilities"
+              className="inline-flex items-center gap-2 rounded-sm border border-foreground/20 bg-background px-6 py-3 text-sm font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              View all capabilities <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* STRENGTHS */}
+      <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
+          <SectionHeading
+            eyebrow="Why Venus"
+            title="Strengths that build long-term partnerships"
+            subtitle="Diversified capabilities, technical depth and a relentless focus on quality make us the preferred vendor to esteemed clients across industries."
+          />
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {strengths.map((s) => (
+              <li key={s} className="flex items-start gap-3 rounded-sm border border-border bg-card p-4">
+                <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span className="text-sm font-medium text-foreground">{s}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* MISSION / VISION */}
+      <section className="bg-[var(--steel)] text-white">
+        <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
+          <div className="grid gap-px bg-white/10 md:grid-cols-2">
+            <div className="bg-[var(--steel)] p-8 md:p-12">
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Mission</div>
+              <p className="mt-5 font-display text-2xl font-semibold uppercase leading-snug md:text-3xl">
+                To be the number one preferred vendor to our esteemed clients with our motto being{" "}
+                <span className="text-primary">leadership through quality.</span>
+              </p>
+            </div>
+            <div className="bg-[var(--steel)] p-8 md:p-12">
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Vision</div>
+              <p className="mt-5 font-display text-2xl font-semibold uppercase leading-snug md:text-3xl">
+                To be a complete solution to all customer needs in terms of innovation, development, quality, delivery,
+                cost <span className="text-primary">& its core values.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CERTIFICATIONS */}
+      <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
+        <SectionHeading
+          eyebrow="Quality & Certifications"
+          title="Built on systems that guarantee quality"
+          align="center"
+        />
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {[
+            { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus." },
+            { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains." },
+            { t: "In-house QC", d: "Video measuring machines, Shore D durometer and CMM-grade inspection capability." },
+          ].map((c) => (
+            <div key={c.t} className="rounded-sm border border-border bg-card p-8 text-center">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Award className="h-7 w-7" />
+              </div>
+              <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{c.t}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-primary text-primary-foreground">
+        <div className="container-px mx-auto max-w-7xl py-16 md:py-20">
+          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+            <div>
+              <h3 className="font-display text-3xl font-bold uppercase leading-tight md:text-4xl">
+                Have a project in mind?
+              </h3>
+              <p className="mt-2 max-w-xl text-sm text-primary-foreground/90 md:text-base">
+                Share your drawings or requirements — our engineering team will respond with a quote in 1–3 working days.
+              </p>
+            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-sm bg-[var(--steel)] px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white hover:bg-black/90"
+            >
+              Request a Quote <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
