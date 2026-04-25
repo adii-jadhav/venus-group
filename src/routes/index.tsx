@@ -104,7 +104,7 @@ function HomePage() {
             <SectionHeading
               eyebrow="About Venus"
               title="A trusted engineering partner since 1999"
-              subtitle="From a single-man job-work setup in Bhosari to a multi-plant precision manufacturing group in Pune — Venus has scaled responsibly, with quality and customer satisfaction at the core."
+              subtitle="From a single-man job-work setup in Bhosari to a multi-plant precision manufacturing group in Pune. Venus has scaled responsibly, with quality and customer satisfaction at the core."
             />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
               <p>
