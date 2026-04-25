@@ -29,7 +29,7 @@ const services = [
   { icon: Hammer, title: "Progressive & Stamping Tools", desc: "High precision stamping dies, lamination and progressive tools for series production." },
   { icon: Wrench, title: "Proto Tool Development", desc: "Proto tool components for plastic, aluminum and sheet metal parts to validate designs fast." },
   { icon: Cog, title: "Sub Assembly", desc: "Stamping components development and sub assembly capability under one roof." },
-  { icon: Cpu, title: "Design & Engineering", desc: "Commercial design centre with CAD/CAM, DFM reports and complex mould design by 100+ engineers." },
+  { icon: Cpu, title: "Design & Engineering", desc: "Commercial design centre with CAD/CAM, DFM reports and complex mould design by 1000+ engineers." },
 ];
 
 const strengths = [
