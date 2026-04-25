@@ -30,7 +30,7 @@ const services = [
   {
     icon: Factory,
     title: "High Pressure Die Casting",
-    desc: "Aluminum and zinc PDC components manufactured at our 100,000+ SQ. FT. AREA in Chakan, equipped with YIZUMI and LANSON machines.",
+    desc: "Aluminium and zinc PDC components manufactured at our Manufacturing facility in Chakan, equipped with YIZUMI and LANSON machines.",
     bullets: ["Aluminum & zinc components", "Tooling + production under one roof", "Export-quality castings"],
   },
   {
