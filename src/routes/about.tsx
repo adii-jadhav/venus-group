@@ -53,7 +53,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="Engineering trust, one precision part at a time"
-        subtitle="Venus Dies & Moulds Pvt. Ltd. is a Pune-headquartered precision engineering manufacturer with 26+ years of expertise across moulds, dies and stamping tools."
+        subtitle="Venus Group Pvt. Ltd. is a Pune-headquartered precision engineering manufacturer with 26+ years of expertise across moulds, dies and stamping tools."
       />
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
