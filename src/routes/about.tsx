@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { CheckCircle2, Target, Eye, Users } from "lucide-react";
+import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -92,11 +93,11 @@ function AboutPage() {
               "We continuously strive for customer satisfaction by providing timely qualitative products & hassle-free services.",
               "We are committed to continual improvement through innovation and our quality management system to meet customer needs with increased morale of our personnel.",
               "We create an environment that encourages all our employees and stakeholders to prevent defects and strive for excellence.",
-            ].map((q) => (
-              <li key={q} className="rounded-sm border border-border bg-background p-7">
+            ].map((q, i) => (
+              <Reveal as="li" key={q} delay={i * 80} className="rounded-sm border border-border bg-background p-7 card-lift">
                 <CheckCircle2 className="h-6 w-6 text-primary" />
                 <p className="mt-4 text-sm leading-relaxed text-foreground">{q}</p>
-              </li>
+              </Reveal>
             ))}
           </ul>
         </div>
@@ -125,13 +126,14 @@ function AboutPage() {
           <SectionHeading eyebrow="Core Values" title="The principles that guide every decision" align="center" titleClassName="text-white" />
           <div className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {coreValues.map((v, i) => (
-              <div
+              <Reveal
                 key={v}
-                className="flex flex-col items-center justify-center rounded-sm border border-white/10 bg-white/5 p-6 text-center"
+                delay={i * 70}
+                className="flex flex-col items-center justify-center rounded-sm border border-white/10 bg-white/5 p-6 text-center card-lift"
               >
                 <div className="font-display text-3xl font-bold text-primary">0{i + 1}</div>
                 <div className="mt-3 text-sm font-semibold uppercase tracking-wide text-white">{v}</div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -163,8 +165,9 @@ function AboutPage() {
             <div className="absolute left-4 top-0 bottom-0 w-px bg-border md:left-1/2" />
             <div className="space-y-8">
               {milestones.map((m, i) => (
-                <div
+                <Reveal
                   key={m.y}
+                  delay={Math.min(i * 50, 300)}
                   className={`relative flex flex-col gap-4 md:flex-row md:items-start ${
                     i % 2 === 0 ? "md:justify-start" : "md:justify-end"
                   }`}
@@ -174,7 +177,7 @@ function AboutPage() {
                     <div className="font-display text-2xl font-bold text-primary">{m.y}</div>
                     <p className="mt-1 text-sm text-muted-foreground">{m.t}</p>
                   </div>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -205,7 +208,7 @@ export function PageHero({
 
 function Card({ icon, title, children }: { icon: React.ReactNode; title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-sm border border-border bg-card p-8">
+    <div className="rounded-sm border border-border bg-card p-8 card-lift">
       <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary">{icon}</div>
       <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{title}</h3>
       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{children}</p>
