@@ -30,7 +30,7 @@ const machines = [
   { name: "Graphite Machining VMC", qty: "2 Nos.", spec: "Gold Sun GA-650 / GA-870 · 24,000 rpm" },
   { name: "Press Machines", qty: "12 Nos.", spec: "Capacity 5T – 200T" },
   { name: "Laser Cutting Machine", qty: "1 No.", spec: "Max. 3000 × 1500 mm · 3 KW" },
-  { name: "HPDC Machines", qty: "Multiple", spec: "YIZUMI DM500ARC · LANSON" },
+  { name: "HPDC Machines", qty: "5 NOS.", spec: "YIZUMI DM500ARC · LANSON" },
 ];
 
 const plants = [
@@ -54,8 +54,8 @@ const plants = [
 
 const stats = [
   { k: "55+", v: "Machines on shop floor" },
-  { k: "4", v: "Manufacturing plants" },
-  { k: "300", v: "KVA roof-top solar system" },
+  { k: "5", v: "Manufacturing plants" },
+  { k: "350", v: "KVA roof-top solar system" },
   { k: "10+", v: "Design engineers" },
 ];
 
