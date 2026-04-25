@@ -53,7 +53,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="Engineering trust, one precision part at a time"
-        subtitle="Venus Group Pvt. Ltd. is a Pune-headquartered precision engineering manufacturer with 26+ years of expertise across moulds, dies and stamping tools."
+        subtitle="Venus Group is a Pune-headquartered precision engineering manufacturer with 26+ years of expertise across plastic injection moulds, PDC dies and stamping tools."
       />
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
@@ -66,13 +66,13 @@ function AboutPage() {
                 operator. What we lacked in scale, we made up for in commitment to quality and on-time delivery.
               </p>
               <p>
-                Two and a half decades later, Venus operates four dedicated manufacturing plants across Chinchwad and
-                Chakan MIDC — covering the entire value chain from design and prototyping to high pressure die casting,
+                Two and a half decades later, Venus operates five dedicated manufacturing plants across Chinchwad and
+                Chakan MIDC - covering the entire value chain from design and prototyping to high pressure die casting,
                 stamping and sub-assembly.
               </p>
               <p>
                 Our quality policy commits us to continual improvement through innovation and a robust quality
-                management system — backed by skilled people, modern infrastructure and ISO 9001:2015 / IATF 16949:2016
+                management system - backed by skilled people, modern infrastructure and ISO 9001:2015 / IATF 16949:2016
                 certifications.
               </p>
             </div>
@@ -113,7 +113,7 @@ function AboutPage() {
             and its core values.
           </Card>
           <Card icon={<CheckCircle2 className="h-6 w-6" />} title="Goals">
-            To become a pioneer in stamping, plastic and die-casting technology — a specialty and innovative solutions
+            To become a pioneer in stamping, plastic and die-casting technology - a specialty and innovative solutions
             provider with strong JV partners and sustainable growth.
           </Card>
         </div>
