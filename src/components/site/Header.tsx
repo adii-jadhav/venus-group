@@ -37,7 +37,9 @@ export function Header() {
               VENUS GROUP PVT LTD.
             </div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground md:text-xs">
-              Pune, India
+              ALL UNDER ONE ROOF
+              <br />
+              PUNE, INDIA
             </div>
           </div>
         </Link>
