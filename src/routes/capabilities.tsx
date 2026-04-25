@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { PageHero } from "./about";
 import { Layers, Factory, Hammer, Wrench, Cog, Cpu, FileText } from "lucide-react";
+import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
@@ -80,8 +81,8 @@ function CapabilitiesPage() {
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <article key={s.title} className="bg-background p-7 md:p-8">
+          {services.map((s, i) => (
+            <Reveal as="article" key={s.title} delay={(i % 3) * 80} className="bg-background p-7 md:p-8 card-lift">
               <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary">
                 <s.icon className="h-6 w-6" />
               </div>
@@ -95,7 +96,7 @@ function CapabilitiesPage() {
                   </li>
                 ))}
               </ul>
-            </article>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -116,11 +117,11 @@ function CapabilitiesPage() {
               "Aluminum HPDC component",
               "Lamination component",
               "Sheet metal component",
-            ].map((label) => (
-              <div key={label}>
+            ].map((label, i) => (
+              <Reveal key={label} delay={(i % 3) * 80}>
                 <ImagePlaceholder label={label} ratio="square" />
                 <div className="mt-3 text-sm font-semibold uppercase tracking-wide text-foreground">{label}</div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -134,15 +135,15 @@ function CapabilitiesPage() {
           subtitle="A transparent, milestone-driven process keeps you informed at every stage."
         />
         <div className="mt-12 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
-          {projectFlow.map((p) => (
-            <div key={p.n} className="bg-background p-6">
+          {projectFlow.map((p, i) => (
+            <Reveal key={p.n} delay={(i % 4) * 70} className="bg-background p-6 card-lift">
               <div className="flex items-center gap-3">
                 <div className="font-display text-3xl font-bold text-primary">{p.n}</div>
                 <FileText className="h-5 w-5 text-muted-foreground" />
               </div>
               <h4 className="mt-4 font-display text-base font-bold uppercase tracking-wide text-foreground">{p.t}</h4>
               <p className="mt-1 text-sm text-muted-foreground">{p.d}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
