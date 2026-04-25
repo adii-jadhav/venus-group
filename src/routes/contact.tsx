@@ -7,13 +7,13 @@ import { MapPin, Phone, Mail, MessageCircle, CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Venus Dies & Moulds — Request a Quote | Pune, India" },
+      { title: "Contact Venus Group — Request a Quote | Pune, India" },
       {
         name: "description",
         content:
-          "Contact Venus Dies & Moulds Pvt. Ltd. for injection moulds, die casting and stamping tools. Corporate Office: D-2 Block, MIDC Chinchwad, Pune – 411019.",
+          "Contact Venus Group Pvt. Ltd. for injection moulds, die casting and stamping tools. Corporate Office: D-2 Block, MIDC Chinchwad, Pune – 411019.",
       },
-      { property: "og:title", content: "Contact Venus Dies & Moulds Pvt. Ltd." },
+      { property: "og:title", content: "Contact Venus Group Pvt. Ltd." },
       { property: "og:description", content: "Request a quote from a trusted dies and moulds manufacturer in Pune, India." },
     ],
   }),
@@ -153,7 +153,7 @@ function ContactPage() {
 
             <div className="mt-8 overflow-hidden rounded-sm border border-border">
               <iframe
-                title="Venus Dies & Moulds — Pune location"
+                title="Venus Group — Pune location"
                 src="https://www.google.com/maps?q=MIDC+Chinchwad+Pune&output=embed"
                 className="h-72 w-full"
                 loading="lazy"

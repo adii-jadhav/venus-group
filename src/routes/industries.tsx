@@ -10,9 +10,9 @@ export const Route = createFileRoute("/industries")({
       {
         name: "description",
         content:
-          "Venus Dies & Moulds serves automotive, electrical, textile, household, defense and other industrial segments with precision moulds, dies and components.",
+          "Venus Group serves automotive, electrical, textile, household, defense and other industrial segments with precision moulds, dies and components.",
       },
-      { property: "og:title", content: "Industries We Serve — Venus Dies & Moulds" },
+      { property: "og:title", content: "Industries We Serve — Venus Group" },
       { property: "og:description", content: "Trusted by leading OEMs across automotive, electrical and defense sectors." },
     ],
   }),

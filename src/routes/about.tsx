@@ -6,13 +6,13 @@ import { CheckCircle2, Target, Eye, Users } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Venus Dies & Moulds — 26+ Years of Precision Engineering in Pune" },
+      { title: "About Venus Group — 26+ Years of Precision Engineering in Pune" },
       {
         name: "description",
         content:
-          "Founded in 1999 in Pune, Venus Dies & Moulds is a precision engineering manufacturer of injection moulds, die casting and stamping tools. Quality, innovation and customer satisfaction.",
+          "Founded in 1999 in Pune, Venus Group is a precision engineering manufacturer of injection moulds, die casting and stamping tools. Quality, innovation and customer satisfaction.",
       },
-      { property: "og:title", content: "About Venus Dies & Moulds Pvt. Ltd." },
+      { property: "og:title", content: "About Venus Group Pvt. Ltd." },
       { property: "og:description", content: "Pune-based dies and moulds manufacturer with 26+ years of trusted manufacturing." },
     ],
   }),
@@ -53,7 +53,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="Engineering trust, one precision part at a time"
-        subtitle="Venus Dies & Moulds Pvt. Ltd. is a Pune-headquartered precision engineering manufacturer with 26+ years of expertise across moulds, dies and stamping tools."
+        subtitle="Venus Group Pvt. Ltd. is a Pune-headquartered precision engineering manufacturer with 26+ years of expertise across moulds, dies and stamping tools."
       />
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
@@ -62,7 +62,7 @@ function AboutPage() {
             <SectionHeading eyebrow="Our Story" title="From a single CNC machine to a multi-plant manufacturing group" />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                In 1999, Venus began as a small job-work unit in Bhosari with a single used CNC Wire EDM and one
+                In 1999, Venus Group began as a small job-work unit in Bhosari with a single used CNC Wire EDM and one
                 operator. What we lacked in scale, we made up for in commitment to quality and on-time delivery.
               </p>
               <p>
