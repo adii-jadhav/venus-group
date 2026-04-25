@@ -91,6 +91,12 @@
     border-color: var(--color-border);
   }
   html {
+    /* Instant scroll restoration on route change. Smooth scroll is opt-in via .smooth-scroll on specific anchors. */
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeSpeed;
+  }
+  html.smooth-scroll {
     scroll-behavior: smooth;
   }
   body {

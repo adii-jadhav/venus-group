@@ -22,8 +22,8 @@ export function Reveal({ children, delay = 0, as = "div", className = "" }: Prop
     <Tag
       ref={ref as React.RefObject<HTMLDivElement>}
       style={style}
-      className={`transition-all duration-[600ms] ease-out will-change-[opacity,transform] ${
-        shown ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      className={`transition-[opacity,transform] duration-300 ease-out ${
+        shown ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
       } ${className}`}
     >
       {children}
