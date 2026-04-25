@@ -153,7 +153,7 @@ function ContactPage() {
 
             <div className="mt-8 overflow-hidden rounded-sm border border-border">
               <iframe
-                title="Venus Dies & Moulds — Pune location"
+                title="Venus Group — Pune location"
                 src="https://www.google.com/maps?q=MIDC+Chinchwad+Pune&output=embed"
                 className="h-72 w-full"
                 loading="lazy"
