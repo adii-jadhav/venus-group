@@ -140,7 +140,7 @@ function HomePage() {
           <SectionHeading
             eyebrow="Capabilities"
             title="End-to-end manufacturing under one roof"
-            subtitle="From design and prototyping to series production — engineered for automotive, electrical, defense and industrial sectors."
+            subtitle="From design and prototyping to series production - engineered for automotive, electrical, defense and industrial sectors."
           />
           <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
