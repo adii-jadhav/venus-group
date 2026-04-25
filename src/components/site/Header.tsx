@@ -31,13 +31,13 @@ export function Header() {
     >
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Venus Dies & Moulds Pvt. Ltd. logo" className="h-10 w-auto md:h-12" />
+          <img src={logo} alt="Venus Group logo" className="h-10 w-auto md:h-12" />
           <div className="hidden sm:block leading-tight">
             <div className="font-display text-base font-bold tracking-wide text-foreground md:text-lg">
-              VENUS DIES & MOULDS
+              VENUS GROUP PVT LTD.
             </div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground md:text-xs">
-              Pvt. Ltd. · Pune, India
+              Pune, India
             </div>
           </div>
         </Link>
