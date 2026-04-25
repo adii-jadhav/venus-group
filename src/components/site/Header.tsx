@@ -83,14 +83,14 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t bg-background">
+        <div className="lg:hidden border-t bg-background animate-in fade-in slide-in-from-top-2 duration-200">
           <nav className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
             {NAV.map((n) => (
               <Link
                 key={n.to}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="rounded-sm px-3 py-3 text-sm font-medium text-foreground/90 hover:bg-accent"
+                className="rounded-sm px-3 py-3 text-sm font-medium text-foreground/90 transition-colors hover:bg-accent"
                 activeProps={{ className: "text-primary" }}
                 activeOptions={{ exact: n.to === "/" }}
               >
@@ -100,7 +100,7 @@ export function Header() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-sm bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground"
+              className="mt-2 inline-flex items-center justify-center rounded-sm bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Get a Quote
             </Link>
