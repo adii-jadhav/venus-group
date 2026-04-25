@@ -34,7 +34,7 @@ export function Header() {
           <img src={logo} alt="Venus Group logo" className="h-10 w-auto md:h-12" />
           <div className="hidden sm:block leading-tight">
             <div className="font-display text-base font-bold tracking-wide text-foreground md:text-lg">
-              VENUS GROUP PVT LTD.
+              VENUS GROUP
             </div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground md:text-xs">
               ALL UNDER ONE ROOF
