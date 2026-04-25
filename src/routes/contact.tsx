@@ -132,13 +132,10 @@ function ContactPage() {
               <Info icon={<MapPin className="h-5 w-5" />} title="Works">
                 Chinchwad and Chakan facilities, Pune – 410501
               </Info>
-              <Info icon={<Phone className="h-5 w-5" />} title="Call">
+              <Info icon={<Phone className="h-5 w-5" />} title="Call / WhatsApp">
                 <a href="tel:+919049001430" className="hover:text-primary">+91 90490 01430</a>{" "}
                 /{" "}
                 <a href="tel:+918484937681" className="hover:text-primary">+91 84849 37681</a>
-              </Info>
-              <Info icon={<MessageCircle className="h-5 w-5" />} title="WhatsApp">
-                +91 90490 01430 / +91 84849 37681
               </Info>
               <Info icon={<Mail className="h-5 w-5" />} title="Business Development">
                 <a href="mailto:bd.corp@venusgroup.co.in" className="hover:text-primary break-all">
