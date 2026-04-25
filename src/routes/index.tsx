@@ -61,8 +61,8 @@ function HomePage() {
               <span className="text-primary">Trusted Manufacturing.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-              Venus Group Pvt. Ltd. is a Pune-based precision engineering company delivering injection moulds,
-              high pressure die casting and stamping tools to global manufacturers — with 26+ years of proven quality,
+              Venus Group Pvt. Ltd. is a Pune-based precision engineering company delivering Injection Moulds,
+              High Pressure Casting Dies and Sheet Metal Tools to global manufacturers, with 26+ years of proven quality,
               innovation and on-time delivery.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
