@@ -62,7 +62,7 @@ function AboutPage() {
             <SectionHeading eyebrow="Our Story" title="From a single CNC machine to a multi-plant manufacturing group" />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                In 1999, Venus began as a small job-work unit in Bhosari with a single used CNC Wire EDM and one
+                In 1999, Venus Group began as a small job-work unit in Bhosari with a single used CNC Wire EDM and one
                 operator. What we lacked in scale, we made up for in commitment to quality and on-time delivery.
               </p>
               <p>
