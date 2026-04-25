@@ -85,12 +85,12 @@ function HomePage() {
             {[
               { k: "26+", v: "Years of Excellence" },
               { k: "5", v: "Manufacturing Plants" },
-              { k: "100+", v: "Design Engineers" },
+              { k: "100+", v: "CUSTOMER\nPRESENSE" },
               { k: "30,000", v: "Sq. Ft. HPDC Plant" },
             ].map((s) => (
               <div key={s.v} className="bg-[var(--steel)] p-5 md:p-7">
                 <div className="font-display text-3xl font-bold text-primary md:text-4xl">{s.k}</div>
-                <div className="mt-1 text-xs uppercase tracking-[0.16em] text-white/60 md:text-sm">{s.v}</div>
+                <div className="mt-1 text-xs uppercase tracking-[0.16em] text-white/60 md:text-sm whitespace-pre-line">{s.v}</div>
               </div>
             ))}
           </div>
