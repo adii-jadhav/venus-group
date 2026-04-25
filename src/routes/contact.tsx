@@ -154,7 +154,7 @@ function ContactPage() {
             <div className="mt-8 overflow-hidden rounded-sm border border-border">
               <iframe
                 title="Venus Group — Pune location"
-                src="https://www.google.com/maps?q=MIDC+Chinchwad+Pune&output=embed"
+                src="https://www.google.com/maps?q=Venus+Group+D-2+Block+66%2F12+MIDC+Chinchwad+Pune+411019&output=embed"
                 className="h-72 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
