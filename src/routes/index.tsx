@@ -85,7 +85,7 @@ function HomePage() {
             {[
               { k: "26+", v: "Years of Excellence" },
               { k: "5", v: "Manufacturing Plants" },
-              { k: "100+", v: "CUSTOMER\nPRESENSE" },
+              { k: "1000+", v: "CUSTOMER\nPRESENSE" },
               { k: "30,000", v: "Sq. Ft. HPDC Plant" },
             ].map((s) => (
               <div key={s.v} className="bg-[var(--steel)] p-5 md:p-7">
