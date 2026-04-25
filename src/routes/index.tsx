@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Award, Cog, Factory, ShieldCheck, Wrench, Layers, Cpu, Hammer } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
+import { Reveal } from "@/components/site/Reveal";
+import { CountUp } from "@/components/site/CountUp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -50,7 +52,7 @@ function HomePage() {
       <section className="relative hero-surface text-white">
         <div className="absolute inset-0 industrial-grid opacity-[0.08]" />
         <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-40">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl hero-rise">
             <div className="inline-flex items-center gap-2 rounded-sm border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               ISO 9001:2015 · IATF 16949:2016 Certified
@@ -68,13 +70,13 @@ function HomePage() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
+                className="group inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5"
               >
-                Get a Quote <ArrowRight className="h-4 w-4" />
+                Get a Quote <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
                 to="/capabilities"
-                className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/25 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/25 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
               >
                 Explore Capabilities
               </Link>
@@ -87,11 +89,13 @@ function HomePage() {
               { k: "5", v: "Manufacturing Plants" },
               { k: "100+", v: "TRUSTED CLIENTS" },
               { k: "100,000+", v: "SQ. FT. MANUFACTURING AREA" },
-            ].map((s) => (
-              <div key={s.v} className="bg-[var(--steel)] p-5 md:p-7">
-                <div className="font-display text-3xl font-bold text-primary md:text-4xl">{s.k}</div>
+            ].map((s, i) => (
+              <Reveal key={s.v} delay={i * 80} className="bg-[var(--steel)] p-5 md:p-7">
+                <div className="font-display text-3xl font-bold text-primary md:text-4xl">
+                  <CountUp value={s.k} />
+                </div>
                 <div className="mt-1 text-xs uppercase tracking-[0.16em] text-white/60 md:text-sm whitespace-pre-line">{s.v}</div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
