@@ -61,7 +61,7 @@ function HomePage() {
               <span className="text-primary">Trusted Manufacturing.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-              Venus Dies & Moulds Pvt. Ltd. is a Pune-based precision engineering company delivering injection moulds,
+              Venus Group Pvt. Ltd. is a Pune-based precision engineering company delivering injection moulds,
               high pressure die casting and stamping tools to global manufacturers — with 26+ years of proven quality,
               innovation and on-time delivery.
             </p>
