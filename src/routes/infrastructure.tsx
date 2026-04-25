@@ -47,7 +47,7 @@ const plants = [
     addr: "C-19, MIDC Chakan, Pune – 410501",
   },
   {
-    title: "HPDC Production Plant (30,000 sq. ft. · Est. 2018)",
+    title: "HPDC Production Plant (100,000+ SQ. FT. AREA · Est. 2018)",
     addr: "B-32, MIDC Phase – II, Bamboli, Chakan – 410501",
   },
 ];
