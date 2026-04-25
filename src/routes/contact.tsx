@@ -3,6 +3,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { PageHero } from "./about";
 import { MapPin, Phone, Mail, MessageCircle, CheckCircle2 } from "lucide-react";
+import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -67,8 +68,8 @@ function ContactPage() {
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Form */}
-          <div className="lg:col-span-7">
-            <div className="rounded-sm border border-border bg-card p-6 md:p-10">
+          <Reveal className="lg:col-span-7">
+            <div className="rounded-sm border border-border bg-card p-6 md:p-10 card-lift">
               <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground md:text-3xl">
                 Request a Quote
               </h2>
