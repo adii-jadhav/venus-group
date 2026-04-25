@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHero } from "./about";
 import { Car, Zap, Shirt, Home, Shield, Boxes } from "lucide-react";
+import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
@@ -43,8 +44,8 @@ function IndustriesPage() {
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-          {sectors.map((s) => (
-            <article key={s.title} className="group bg-background p-7 md:p-8 transition-colors hover:bg-card">
+          {sectors.map((s, i) => (
+            <Reveal as="article" key={s.title} delay={(i % 3) * 80} className="group bg-background p-7 md:p-8 transition-colors hover:bg-card card-lift">
               <div className="flex h-14 w-14 items-center justify-center rounded-sm bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <s.icon className="h-7 w-7" />
               </div>
@@ -52,7 +53,7 @@ function IndustriesPage() {
                 {s.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -66,15 +67,16 @@ function IndustriesPage() {
             align="center"
           />
           <div className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-px bg-border sm:grid-cols-3 lg:grid-cols-4">
-            {customers.map((c) => (
-              <div
+            {customers.map((c, i) => (
+              <Reveal
                 key={c}
+                delay={(i % 4) * 60}
                 className="flex aspect-[16/7] items-center justify-center bg-background p-4 text-center"
               >
                 <span className="font-display text-base font-bold uppercase tracking-[0.14em] text-foreground/80">
                   {c}
                 </span>
-              </div>
+              </Reveal>
             ))}
           </div>
           <p className="mt-6 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
@@ -90,11 +92,11 @@ function IndustriesPage() {
           align="center"
         />
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
-          <div className="rounded-sm border border-border bg-card p-8 text-center">
+          <Reveal delay={0} className="rounded-sm border border-border bg-card p-8 text-center card-lift">
             <div className="font-display text-base font-bold uppercase tracking-wide text-primary">Award</div>
             <h3 className="mt-3 font-display text-xl font-bold uppercase text-foreground">Best Upcoming Industry</h3>
-          </div>
-          <div className="rounded-sm border border-border bg-card p-8 text-center">
+          </Reveal>
+          <Reveal delay={100} className="rounded-sm border border-border bg-card p-8 text-center card-lift">
             <div className="font-display text-base font-bold uppercase tracking-wide text-primary">Award</div>
             <h3 className="mt-3 font-display text-xl font-bold uppercase text-foreground">
               All India Achievers Foundation
@@ -102,7 +104,7 @@ function IndustriesPage() {
             <p className="mt-2 text-sm text-muted-foreground">
               Indian Achievers Award for Industrial Development presented to Mr. M. Sadanand Nayak.
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>
