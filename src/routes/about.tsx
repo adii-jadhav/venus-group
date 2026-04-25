@@ -122,7 +122,7 @@ function AboutPage() {
       {/* Core Values */}
       <section className="bg-[var(--steel)] text-white">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
-          <SectionHeading eyebrow="Core Values" title="The principles that guide every decision" align="center" />
+          <SectionHeading eyebrow="Core Values" title="The principles that guide every decision" align="center" titleClassName="text-white" />
           <div className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {coreValues.map((v, i) => (
               <div

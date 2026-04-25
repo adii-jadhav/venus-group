@@ -3,9 +3,10 @@ interface Props {
   title: string;
   subtitle?: string;
   align?: "left" | "center";
+  titleClassName?: string;
 }
 
-export function SectionHeading({ eyebrow, title, subtitle, align = "left" }: Props) {
+export function SectionHeading({ eyebrow, title, subtitle, align = "left", titleClassName = "text-foreground" }: Props) {
   const alignment = align === "center" ? "text-center mx-auto" : "text-left";
   return (
     <div className={`max-w-3xl ${alignment}`}>
@@ -14,7 +15,7 @@ export function SectionHeading({ eyebrow, title, subtitle, align = "left" }: Pro
           {eyebrow}
         </div>
       )}
-      <h2 className="mt-3 font-display text-3xl font-bold uppercase tracking-tight text-foreground sm:text-4xl md:text-5xl">
+      <h2 className={`mt-3 font-display text-3xl font-bold uppercase tracking-tight sm:text-4xl md:text-5xl ${titleClassName}`}>
         {title}
       </h2>
       {subtitle && (
