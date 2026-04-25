@@ -147,17 +147,19 @@ function HomePage() {
             subtitle="From design and prototyping to series production - engineered for automotive, electrical, defense and industrial sectors."
           />
           <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <div key={s.title} className="group relative bg-background p-7 transition-colors hover:bg-card md:p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <s.icon className="h-6 w-6" />
+            {services.map((s, i) => (
+              <Reveal key={s.title} delay={i * 70}>
+                <div className="card-lift group relative h-full bg-background p-7 md:p-8">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                    <s.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
                 </div>
-                <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">
-                  {s.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
-              </div>
+              </Reveal>
             ))}
           </div>
           <div className="mt-10 text-center">
@@ -224,14 +226,16 @@ function HomePage() {
             { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus." },
             { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains." },
             { t: "In-house QC", d: "Video measuring machines, Shore D durometer and CMM-grade inspection capability." },
-          ].map((c) => (
-            <div key={c.t} className="rounded-sm border border-border bg-card p-8 text-center">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Award className="h-7 w-7" />
+          ].map((c, i) => (
+            <Reveal key={c.t} delay={i * 90}>
+              <div className="card-lift rounded-sm border border-border bg-card p-8 text-center h-full">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Award className="h-7 w-7" />
+                </div>
+                <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{c.t}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{c.t}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
