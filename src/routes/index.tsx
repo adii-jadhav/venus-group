@@ -6,13 +6,13 @@ import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Venus Dies & Moulds Pvt. Ltd. — Dies & Moulds Manufacturer in Pune, India" },
+      { title: "Venus Group Pvt. Ltd. — Precision Engineering, Pune" },
       {
         name: "description",
         content:
           "Precision engineering and trusted manufacturing since 1999. Plastic injection moulds, high pressure die casting and stamping tools manufacturer in Pune, India.",
       },
-      { property: "og:title", content: "Venus Dies & Moulds — Precision Engineering, Pune" },
+      { property: "og:title", content: "Venus Group — Precision Engineering, Pune" },
       {
         property: "og:description",
         content:
