@@ -11,8 +11,8 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img src={logo} alt="Venus logo" className="h-12 w-auto bg-white rounded-sm p-1" />
               <div className="leading-tight">
-                <div className="font-display text-lg font-bold">VENUS DIES & MOULDS</div>
-                <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">Pvt. Ltd.</div>
+                <div className="font-display text-lg font-bold">VENUS GROUP PVT LTD.</div>
+                <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">Pune, India</div>
               </div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/70">
