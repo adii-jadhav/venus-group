@@ -17,8 +17,21 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
+    let ticking = false;
+    let last = window.scrollY > 8;
+    setScrolled(last);
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const next = window.scrollY > 8;
+        if (next !== last) {
+          last = next;
+          setScrolled(next);
+        }
+        ticking = false;
+      });
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -33,8 +46,8 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-out ${
-        scrolled ? "bg-background/85 backdrop-blur-md shadow-sm" : "bg-background border-transparent"
+      className={`sticky top-0 z-50 w-full border-b transition-[box-shadow,border-color] duration-200 ease-out bg-background ${
+        scrolled ? "shadow-sm" : "border-transparent"
       }`}
     >
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
