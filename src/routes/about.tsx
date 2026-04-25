@@ -6,13 +6,13 @@ import { CheckCircle2, Target, Eye, Users } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Venus Dies & Moulds — 26+ Years of Precision Engineering in Pune" },
+      { title: "About Venus Group — 26+ Years of Precision Engineering in Pune" },
       {
         name: "description",
         content:
-          "Founded in 1999 in Pune, Venus Dies & Moulds is a precision engineering manufacturer of injection moulds, die casting and stamping tools. Quality, innovation and customer satisfaction.",
+          "Founded in 1999 in Pune, Venus Group is a precision engineering manufacturer of injection moulds, die casting and stamping tools. Quality, innovation and customer satisfaction.",
       },
-      { property: "og:title", content: "About Venus Dies & Moulds Pvt. Ltd." },
+      { property: "og:title", content: "About Venus Group Pvt. Ltd." },
       { property: "og:description", content: "Pune-based dies and moulds manufacturer with 26+ years of trusted manufacturing." },
     ],
   }),
