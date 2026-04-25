@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Award, Cog, Factory, ShieldCheck, Wrench, Layers, Cpu, Hammer } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
+import { Reveal } from "@/components/site/Reveal";
+import { CountUp } from "@/components/site/CountUp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -50,7 +52,7 @@ function HomePage() {
       <section className="relative hero-surface text-white">
         <div className="absolute inset-0 industrial-grid opacity-[0.08]" />
         <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-40">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl hero-rise">
             <div className="inline-flex items-center gap-2 rounded-sm border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               ISO 9001:2015 · IATF 16949:2016 Certified
@@ -68,13 +70,13 @@ function HomePage() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
+                className="group inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5"
               >
-                Get a Quote <ArrowRight className="h-4 w-4" />
+                Get a Quote <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
                 to="/capabilities"
-                className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/25 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/25 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
               >
                 Explore Capabilities
               </Link>
@@ -87,11 +89,13 @@ function HomePage() {
               { k: "5", v: "Manufacturing Plants" },
               { k: "100+", v: "TRUSTED CLIENTS" },
               { k: "100,000+", v: "SQ. FT. MANUFACTURING AREA" },
-            ].map((s) => (
-              <div key={s.v} className="bg-[var(--steel)] p-5 md:p-7">
-                <div className="font-display text-3xl font-bold text-primary md:text-4xl">{s.k}</div>
+            ].map((s, i) => (
+              <Reveal key={s.v} delay={i * 80} className="bg-[var(--steel)] p-5 md:p-7">
+                <div className="font-display text-3xl font-bold text-primary md:text-4xl">
+                  <CountUp value={s.k} />
+                </div>
                 <div className="mt-1 text-xs uppercase tracking-[0.16em] text-white/60 md:text-sm whitespace-pre-line">{s.v}</div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -143,17 +147,19 @@ function HomePage() {
             subtitle="From design and prototyping to series production - engineered for automotive, electrical, defense and industrial sectors."
           />
           <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <div key={s.title} className="group relative bg-background p-7 transition-colors hover:bg-card md:p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <s.icon className="h-6 w-6" />
+            {services.map((s, i) => (
+              <Reveal key={s.title} delay={i * 70}>
+                <div className="card-lift group relative h-full bg-background p-7 md:p-8">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                    <s.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
                 </div>
-                <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">
-                  {s.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
-              </div>
+              </Reveal>
             ))}
           </div>
           <div className="mt-10 text-center">
@@ -220,14 +226,16 @@ function HomePage() {
             { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus." },
             { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains." },
             { t: "In-house QC", d: "Video measuring machines, Shore D durometer and CMM-grade inspection capability." },
-          ].map((c) => (
-            <div key={c.t} className="rounded-sm border border-border bg-card p-8 text-center">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Award className="h-7 w-7" />
+          ].map((c, i) => (
+            <Reveal key={c.t} delay={i * 90}>
+              <div className="card-lift rounded-sm border border-border bg-card p-8 text-center h-full">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Award className="h-7 w-7" />
+                </div>
+                <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{c.t}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{c.t}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>

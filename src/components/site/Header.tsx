@@ -23,10 +23,18 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b transition-all ${
-        scrolled ? "bg-background/95 backdrop-blur shadow-sm" : "bg-background"
+      className={`sticky top-0 z-50 w-full border-b transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-out ${
+        scrolled ? "bg-background/85 backdrop-blur-md shadow-sm" : "bg-background border-transparent"
       }`}
     >
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
@@ -75,14 +83,14 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t bg-background">
+        <div className="lg:hidden border-t bg-background animate-in fade-in slide-in-from-top-2 duration-200">
           <nav className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
             {NAV.map((n) => (
               <Link
                 key={n.to}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="rounded-sm px-3 py-3 text-sm font-medium text-foreground/90 hover:bg-accent"
+                className="rounded-sm px-3 py-3 text-sm font-medium text-foreground/90 transition-colors hover:bg-accent"
                 activeProps={{ className: "text-primary" }}
                 activeOptions={{ exact: n.to === "/" }}
               >
@@ -92,7 +100,7 @@ export function Header() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-sm bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground"
+              className="mt-2 inline-flex items-center justify-center rounded-sm bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Get a Quote
             </Link>
