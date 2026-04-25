@@ -13,7 +13,7 @@ export const Route = createFileRoute("/infrastructure")({
         content:
           "Venus infrastructure: VMC, CNC EDM, Wire Cut (Makino, Mitsubishi, Sodick), graphite machining, press machines 5T–200T, laser cutting and HPDC plant in Chakan, Pune.",
       },
-      { property: "og:title", content: "Infrastructure & Manufacturing Units — Venus Dies & Moulds" },
+      { property: "og:title", content: "Infrastructure & Manufacturing Units — Venus Group" },
       { property: "og:description", content: "Multi-plant precision manufacturing infrastructure across MIDC Chinchwad and Chakan, Pune." },
     ],
   }),
