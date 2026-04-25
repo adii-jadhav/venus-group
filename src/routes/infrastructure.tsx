@@ -3,6 +3,8 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { PageHero } from "./about";
 import { MapPin } from "lucide-react";
+import { Reveal } from "@/components/site/Reveal";
+import { CountUp } from "@/components/site/CountUp";
 
 export const Route = createFileRoute("/infrastructure")({
   head: () => ({
@@ -71,11 +73,11 @@ function InfraPage() {
       {/* Stats */}
       <section className="container-px mx-auto max-w-7xl py-16">
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.v} className="bg-background p-6 md:p-8">
-              <div className="font-display text-3xl font-bold text-primary md:text-4xl">{s.k}</div>
+          {stats.map((s, i) => (
+            <Reveal key={s.v} delay={i * 80} className="bg-background p-6 md:p-8">
+              <CountUp value={s.k} className="font-display text-3xl font-bold text-primary md:text-4xl" />
               <div className="mt-1 text-xs uppercase tracking-[0.16em] text-muted-foreground md:text-sm">{s.v}</div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -84,12 +86,12 @@ function InfraPage() {
       <section className="container-px mx-auto max-w-7xl py-16 md:py-24">
         <SectionHeading eyebrow="Tool Room & Machinery" title="A complete in-house manufacturing capability" />
         <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-          {machines.map((m) => (
-            <div key={m.name} className="bg-background p-6">
+          {machines.map((m, i) => (
+            <Reveal key={m.name} delay={(i % 3) * 70} className="bg-background p-6 card-lift">
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">{m.qty}</div>
               <h3 className="mt-2 font-display text-lg font-bold uppercase tracking-wide text-foreground">{m.name}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{m.spec}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
@@ -108,8 +110,8 @@ function InfraPage() {
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading eyebrow="Manufacturing Units" title="Four dedicated plants across MIDC Pune" />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {plants.map((p) => (
-              <article key={p.title} className="overflow-hidden rounded-sm border border-border bg-background">
+            {plants.map((p, i) => (
+              <Reveal as="article" key={p.title} delay={(i % 2) * 90} className="overflow-hidden rounded-sm border border-border bg-background card-lift">
                 <ImagePlaceholder label={p.title} ratio="wide" />
                 <div className="p-6">
                   <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">{p.title}</h3>
@@ -118,7 +120,7 @@ function InfraPage() {
                     {p.addr}
                   </div>
                 </div>
-              </article>
+              </Reveal>
             ))}
           </div>
         </div>
