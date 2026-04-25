@@ -106,17 +106,17 @@ function AboutPage() {
       {/* Mission / Vision / Goals */}
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-6 md:grid-cols-3">
-          <Card icon={<Target className="h-6 w-6" />} title="Mission">
+          <Reveal delay={0}><Card icon={<Target className="h-6 w-6" />} title="Mission">
             To be the number one preferred vendor to our esteemed clients with our motto being leadership through quality.
-          </Card>
-          <Card icon={<Eye className="h-6 w-6" />} title="Vision">
+          </Card></Reveal>
+          <Reveal delay={80}><Card icon={<Eye className="h-6 w-6" />} title="Vision">
             To be a complete solution to all customer needs in terms of innovation, development, quality, delivery, cost
             and its core values.
-          </Card>
-          <Card icon={<CheckCircle2 className="h-6 w-6" />} title="Goals">
+          </Card></Reveal>
+          <Reveal delay={160}><Card icon={<CheckCircle2 className="h-6 w-6" />} title="Goals">
             To become a pioneer in stamping, plastic and die-casting technology - a specialty and innovative solutions
             provider with strong JV partners and sustainable growth.
-          </Card>
+          </Card></Reveal>
         </div>
       </section>
 
