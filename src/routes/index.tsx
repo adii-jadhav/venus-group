@@ -31,7 +31,7 @@ const services = [
   { icon: Hammer, title: "Progressive & Stamping Tools", desc: "High precision stamping dies, lamination and progressive tools for series production." },
   { icon: Wrench, title: "Proto Tool Development", desc: "Proto tool components for plastic, aluminum and sheet metal parts to validate designs fast." },
   { icon: Cog, title: "Sub Assembly", desc: "Stamping components development and sub assembly capability under one roof." },
-  { icon: Cpu, title: "Design & Engineering", desc: "Commercial design centre with CAD/CAM, DFM reports and complex mould design by 1000+ engineers." },
+  { icon: Cpu, title: "LASER CUT & CNC WIRE CUT SERVICES", desc: "Reliable CNC wire cut and Laser cut services for high-quality production" },
 ];
 
 const strengths = [
@@ -63,9 +63,7 @@ function HomePage() {
               <span className="text-primary">Trusted Manufacturing.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-              Venus Group Pvt. Ltd. is a Pune-based precision engineering company delivering Injection Moulds,
-              High Pressure Casting Dies and Sheet Metal Tools to global manufacturers, with 26+ years of proven quality,
-              innovation and on-time delivery.
+              Venus Group is a Pune-based precision engineering company delivering Injection Moulds, High Pressure Casting Dies, Sheet Metal Tools, Components and assemblies in all three verticals to global manufacturers, with 26+ years of proven quality, innovation and on-time delivery.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -117,8 +115,7 @@ function HomePage() {
                 exceed customer needs and expectations.
               </p>
               <p>
-                Today, Venus operates four dedicated manufacturing units across Chinchwad and Chakan MIDC, with
-                in-house tool room, HPDC, press shop, laser cutting and a commercial design centre.
+                Today, Venus operates five dedicated manufacturing units across Chinchwad and Chakan MIDC.
               </p>
             </div>
             <Link
@@ -225,7 +222,7 @@ function HomePage() {
           {[
             { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus." },
             { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains." },
-            { t: "In-house QC", d: "Video measuring machines, Shore D durometer and CMM-grade inspection capability." },
+            { t: "In-house QC", d: "CNC Video measuring machines, and other facilities." },
           ].map((c, i) => (
             <Reveal key={c.t} delay={i * 90}>
               <div className="card-lift rounded-sm border border-border bg-card p-8 text-center h-full">
