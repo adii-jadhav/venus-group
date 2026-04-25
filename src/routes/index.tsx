@@ -85,8 +85,8 @@ function HomePage() {
             {[
               { k: "26+", v: "Years of Excellence" },
               { k: "5", v: "Manufacturing Plants" },
-              { k: "1000+", v: "CUSTOMER\nPRESENSE" },
-              { k: "100,000+", v: "SQ. FT. AREA" },
+              { k: "100+", v: "TRUSTED CLIENTS" },
+              { k: "100,000+", v: "SQ. FT. MANUFACTURING AREA" },
             ].map((s) => (
               <div key={s.v} className="bg-[var(--steel)] p-5 md:p-7">
                 <div className="font-display text-3xl font-bold text-primary md:text-4xl">{s.k}</div>
@@ -104,7 +104,7 @@ function HomePage() {
             <SectionHeading
               eyebrow="About Venus"
               title="A trusted engineering partner since 1999"
-              subtitle="From a single-man job-work setup in Bhosari to a multi-plant precision manufacturing group in Pune — Venus has scaled responsibly, with quality and customer satisfaction at the core."
+              subtitle="From a single-man job-work setup in Bhosari to a multi-plant precision manufacturing group in Pune. Venus has scaled responsibly, with quality and customer satisfaction at the core."
             />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
               <p>
@@ -140,7 +140,7 @@ function HomePage() {
           <SectionHeading
             eyebrow="Capabilities"
             title="End-to-end manufacturing under one roof"
-            subtitle="From design and prototyping to series production — engineered for automotive, electrical, defense and industrial sectors."
+            subtitle="From design and prototyping to series production - engineered for automotive, electrical, defense and industrial sectors."
           />
           <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
