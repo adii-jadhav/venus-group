@@ -23,10 +23,18 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b transition-all ${
-        scrolled ? "bg-background/95 backdrop-blur shadow-sm" : "bg-background"
+      className={`sticky top-0 z-50 w-full border-b transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-out ${
+        scrolled ? "bg-background/85 backdrop-blur-md shadow-sm" : "bg-background border-transparent"
       }`}
     >
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
