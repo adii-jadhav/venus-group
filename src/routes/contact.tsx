@@ -119,10 +119,11 @@ function ContactPage() {
                 </form>
               )}
             </div>
-          </div>
+          </Reveal>
 
           {/* Details */}
-          <aside className="lg:col-span-5">
+          <Reveal as="div" delay={120} className="lg:col-span-5">
+            <aside>
             <h3 className="font-display text-xl font-bold uppercase tracking-wide text-foreground">
               Reach us directly
             </h3>
@@ -158,7 +159,8 @@ function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-          </aside>
+            </aside>
+          </Reveal>
         </div>
       </section>
     </>
