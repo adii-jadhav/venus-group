@@ -15,7 +15,7 @@ export const Route = createFileRoute("/capabilities")({
           "Plastic injection moulds, high pressure die casting, progressive & stamping tools, proto tool development and CAD/CAM design at Venus Group, Pune.",
       },
       { property: "og:title", content: "Manufacturing Capabilities — Venus Group" },
-      { property: "og:description", content: "End-to-end precision manufacturing capabilities under one roof in Pune, India." },
+      { property: "og:description", content: "End-to-end precision manufacturing capabilities under one roof in Pune." },
     ],
   }),
   component: CapabilitiesPage,

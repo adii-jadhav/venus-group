@@ -13,7 +13,7 @@ import certAchievers from "@/assets/cert-achievers.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Venus Group Pvt. Ltd. — Precision Engineering, Pune" },
+      { title: "Venus Group — Precision Engineering, Pune" },
       {
         name: "description",
         content:

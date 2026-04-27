@@ -33,14 +33,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Venus Group Pvt. Ltd. — Precision Dies, Moulds & Die Casting Manufacturer, Pune" },
+      { title: "Venus Group — Precision Dies, Moulds & Die Casting Manufacturer, Pune" },
       {
         name: "description",
         content:
-          "Venus Group Pvt. Ltd. — ISO 9001:2015 & IATF 16949:2016 certified manufacturer of plastic injection moulds, high pressure die casting, progressive & stamping tools in Pune, India.",
+          "Venus Group — ISO 9001:2015 & IATF 16949:2016 certified manufacturer of plastic injection moulds, high pressure die casting, progressive & stamping tools in Pune, India.",
       },
-      { name: "author", content: "Venus Group Pvt. Ltd." },
-      { property: "og:title", content: "Venus Group Pvt. Ltd. — Precision Engineering, Pune" },
+      { name: "author", content: "Venus Group" },
+      { property: "og:title", content: "Venus Group — Precision Engineering, Pune" },
       {
         property: "og:description",
         content:

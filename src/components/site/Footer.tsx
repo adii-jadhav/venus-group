@@ -11,8 +11,8 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img src={logo} alt="Venus logo" className="h-12 w-auto bg-white rounded-sm p-1" />
               <div className="leading-tight">
-                <div className="font-display text-lg font-bold">VENUS GROUP PVT LTD.</div>
-                <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">Pune, India</div>
+                <div className="font-display text-lg font-bold">VENUS GROUP</div>
+                <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">ALL UNDER ONE ROOF</div>
               </div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/70">
@@ -66,7 +66,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} Venus Group Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} Venus Group. All rights reserved.
           </p>
           <p className="text-xs text-white/50">
             ISO 9001:2015 · IATF 16949:2016 Certified

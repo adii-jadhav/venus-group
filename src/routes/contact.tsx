@@ -8,14 +8,14 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Venus Group — Request a Quote | Pune, India" },
+      { title: "Contact Venus Group — Request a Quote | ALL UNDER ONE ROOF" },
       {
         name: "description",
         content:
-          "Contact Venus Group Pvt. Ltd. for injection moulds, die casting and stamping tools. Corporate Office: D-2 Block, MIDC Chinchwad, Pune – 411019.",
+          "Contact Venus Group for injection moulds, die casting and stamping tools. Corporate Office: D-2 Block, MIDC Chinchwad, Pune – 411019.",
       },
-      { property: "og:title", content: "Contact Venus Group Pvt. Ltd." },
-      { property: "og:description", content: "Request a quote from a trusted dies and moulds manufacturer in Pune, India." },
+      { property: "og:title", content: "Contact Venus Group" },
+      { property: "og:description", content: "Request a quote from a trusted dies and moulds manufacturer in Pune." },
     ],
   }),
   component: ContactPage,
