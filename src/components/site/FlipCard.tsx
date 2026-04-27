@@ -30,7 +30,7 @@ export function FlipCard({ front, back, className = "", active, onActivate }: Pr
 
   return (
     <div
-      className={`flip-card h-full ${className}`}
+      className={`relative h-full min-h-[280px] cursor-pointer ${className}`}
       style={{ perspective: "1200px" }}
       onClick={toggle}
       onKeyDown={onKey}
