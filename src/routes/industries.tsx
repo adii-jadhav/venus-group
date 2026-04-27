@@ -32,10 +32,6 @@ const sectors = [
   { icon: Boxes, title: "Other Segments", desc: "General engineering, industrial and export components produced to customer specifications." },
 ];
 
-const customers = [
-  "TATA", "Mercedes-Benz", "Mahindra", "Bajaj", "Brakes India", "Marquardt", "Modine", "Europa",
-];
-
 function IndustriesPage() {
   return (
     <>
