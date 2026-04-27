@@ -4,6 +4,11 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
+import { FlipCard } from "@/components/site/FlipCard";
+import { useState } from "react";
+import certIso from "@/assets/cert-iso-9001.png";
+import certIatf from "@/assets/cert-iatf-16949.png";
+import certAchievers from "@/assets/cert-achievers.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,6 +51,7 @@ const strengths = [
 ];
 
 function HomePage() {
+  const [activeCert, setActiveCert] = useState<number | null>(null);
   return (
     <>
       {/* HERO */}
@@ -220,18 +226,35 @@ function HomePage() {
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus." },
-            { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains." },
-            { t: "In-house QC", d: "CNC Video measuring machines, and other facilities." },
+            { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus.", img: certIso, alt: "ISO 9001:2015 Certificate" },
+            { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains.", img: certIatf, alt: "IATF 16949:2016 Certificate" },
+            { t: "All India Achievers Foundation", d: "Indian Achievers Award for Industrial Development", img: certAchievers, alt: "Indian Achievers Award Certificate" },
           ].map((c, i) => (
-            <Reveal key={c.t} delay={i * 90}>
-              <div className="card-lift rounded-sm border border-border bg-card p-8 text-center h-full">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Award className="h-7 w-7" />
-                </div>
-                <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{c.t}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
-              </div>
+            <Reveal key={c.t} delay={i * 90} className="min-h-[280px]">
+              <FlipCard
+                active={activeCert === i}
+                onActivate={() => setActiveCert(activeCert === i ? null : i)}
+                front={
+                  <div className="card-lift cursor-pointer rounded-sm border border-border bg-card p-8 text-center h-full flex flex-col items-center justify-center">
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <Award className="h-7 w-7" />
+                    </div>
+                    <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{c.t}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
+                    <span className="mt-4 text-[11px] uppercase tracking-wider text-primary/80">Tap to view certificate</span>
+                  </div>
+                }
+                back={
+                  <div className="cursor-pointer rounded-sm border border-border bg-card p-3 h-full flex items-center justify-center overflow-hidden">
+                    <img
+                      src={c.img}
+                      alt={c.alt}
+                      loading="lazy"
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
+                }
+              />
             </Reveal>
           ))}
         </div>
