@@ -51,6 +51,7 @@ const strengths = [
 ];
 
 function HomePage() {
+  const [activeCert, setActiveCert] = useState<number | null>(null);
   return (
     <>
       {/* HERO */}
