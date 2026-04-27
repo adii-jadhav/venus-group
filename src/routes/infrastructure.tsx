@@ -49,10 +49,52 @@ const plants = [
     addr: "C-19, MIDC Chakan, Pune – 410501",
   },
   {
-    title: "HPDC Production Plant (100,000+ SQ. FT. AREA · Est. 2018)",
+    title: "HPDC Production Plant",
     addr: "B-32, MIDC Phase – II, Bamboli, Chakan – 410501",
   },
 ];
+
+const venusAuto = {
+  title: "Venus Auto – Chinchwad",
+  subtitle: "Automotive Service & Maintenance Facility",
+  addr: "Chinchwad MIDC, Pune",
+  phone: "80622 45037",
+  services: [
+    {
+      cat: "Engine & Mechanical",
+      items: [
+        "Engine diagnostics & tuning",
+        "Suspension & steering repairs",
+        "Transmission service",
+        "Cooling system maintenance",
+      ],
+    },
+    {
+      cat: "Maintenance",
+      items: ["Oil changes", "Filter replacements", "Fluid checks"],
+    },
+    {
+      cat: "Repairs",
+      items: [
+        "Brake system repair",
+        "Electrical system repair",
+        "Exhaust system repairs",
+      ],
+    },
+    {
+      cat: "Vehicle Care",
+      items: [
+        "Tire services & alignment",
+        "Cleaning & detailing",
+        "Pre-purchase inspections",
+      ],
+    },
+    {
+      cat: "Body Work",
+      items: ["Denting & painting", "Minor body repairs", "Interior fixes"],
+    },
+  ],
+};
 
 const stats = [
   { k: "55+", v: "Machines on shop floor" },
