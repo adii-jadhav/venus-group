@@ -150,7 +150,7 @@ function InfraPage() {
       {/* Manufacturing units */}
       <section className="bg-secondary/60 border-y">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
-          <SectionHeading eyebrow="Manufacturing Units" title="Four dedicated plants across MIDC Pune" />
+          <SectionHeading eyebrow="Manufacturing Units" title="Five dedicated units across MIDC Pune" />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {plants.map((p, i) => (
               <Reveal as="article" key={p.title} delay={(i % 2) * 90} className="overflow-hidden rounded-sm border border-border bg-background card-lift">
@@ -164,6 +164,43 @@ function InfraPage() {
                 </div>
               </Reveal>
             ))}
+
+            <Reveal as="article" delay={(plants.length % 2) * 90} className="overflow-hidden rounded-sm border border-border bg-background card-lift md:col-span-2">
+              <ImagePlaceholder label={venusAuto.title} ratio="wide" />
+              <div className="p-6">
+                <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">{venusAuto.title}</h3>
+                <div className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">{venusAuto.subtitle}</div>
+
+                <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {venusAuto.services.map((s) => (
+                    <div key={s.cat}>
+                      <div className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground">{s.cat}</div>
+                      <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                        {s.items.map((it) => (
+                          <li key={it} className="flex items-start gap-2">
+                            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />
+                            <span>{it}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 flex flex-col gap-2 border-t border-border pt-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:gap-6">
+                  <div className="flex items-start gap-2">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    {venusAuto.addr}
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    <a href={`tel:+91${venusAuto.phone.replace(/\s/g, "")}`} className="hover:text-primary">
+                      {venusAuto.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
