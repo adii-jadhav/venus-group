@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { PageHero } from "./about";
-import { MapPin } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
 
