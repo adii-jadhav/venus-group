@@ -4,6 +4,11 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
+import { FlipCard } from "@/components/site/FlipCard";
+import { useState } from "react";
+import certIso from "@/assets/cert-iso-9001.png";
+import certIatf from "@/assets/cert-iatf-16949.png";
+import certAchievers from "@/assets/cert-achievers.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
