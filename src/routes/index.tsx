@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
+import venusLogo from "@/assets/venus-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,6 +54,13 @@ function HomePage() {
         <div className="absolute inset-0 industrial-grid opacity-[0.08]" />
         <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-40">
           <div className="max-w-3xl hero-rise">
+            <img
+              src={venusLogo}
+              alt="Venus Group logo"
+              className="mb-6 h-16 w-auto md:h-20"
+              loading="eager"
+              decoding="async"
+            />
             <div className="inline-flex items-center gap-2 rounded-sm border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               ISO 9001:2015 · IATF 16949:2016 Certified
