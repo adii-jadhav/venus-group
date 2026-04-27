@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { PageHero } from "./about";
-import { MapPin } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
 
@@ -49,10 +49,52 @@ const plants = [
     addr: "C-19, MIDC Chakan, Pune – 410501",
   },
   {
-    title: "HPDC Production Plant (100,000+ SQ. FT. AREA · Est. 2018)",
+    title: "HPDC Production Plant",
     addr: "B-32, MIDC Phase – II, Bamboli, Chakan – 410501",
   },
 ];
+
+const venusAuto = {
+  title: "Venus Auto – Chinchwad",
+  subtitle: "Automotive Service & Maintenance Facility",
+  addr: "Chinchwad MIDC, Pune",
+  phone: "80622 45037",
+  services: [
+    {
+      cat: "Engine & Mechanical",
+      items: [
+        "Engine diagnostics & tuning",
+        "Suspension & steering repairs",
+        "Transmission service",
+        "Cooling system maintenance",
+      ],
+    },
+    {
+      cat: "Maintenance",
+      items: ["Oil changes", "Filter replacements", "Fluid checks"],
+    },
+    {
+      cat: "Repairs",
+      items: [
+        "Brake system repair",
+        "Electrical system repair",
+        "Exhaust system repairs",
+      ],
+    },
+    {
+      cat: "Vehicle Care",
+      items: [
+        "Tire services & alignment",
+        "Cleaning & detailing",
+        "Pre-purchase inspections",
+      ],
+    },
+    {
+      cat: "Body Work",
+      items: ["Denting & painting", "Minor body repairs", "Interior fixes"],
+    },
+  ],
+};
 
 const stats = [
   { k: "55+", v: "Machines on shop floor" },
@@ -108,7 +150,7 @@ function InfraPage() {
       {/* Manufacturing units */}
       <section className="bg-secondary/60 border-y">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
-          <SectionHeading eyebrow="Manufacturing Units" title="Four dedicated plants across MIDC Pune" />
+          <SectionHeading eyebrow="Manufacturing Units" title="Five dedicated units across MIDC Pune" />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {plants.map((p, i) => (
               <Reveal as="article" key={p.title} delay={(i % 2) * 90} className="overflow-hidden rounded-sm border border-border bg-background card-lift">
@@ -122,6 +164,43 @@ function InfraPage() {
                 </div>
               </Reveal>
             ))}
+
+            <Reveal as="article" delay={(plants.length % 2) * 90} className="overflow-hidden rounded-sm border border-border bg-background card-lift md:col-span-2">
+              <ImagePlaceholder label={venusAuto.title} ratio="wide" />
+              <div className="p-6">
+                <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">{venusAuto.title}</h3>
+                <div className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">{venusAuto.subtitle}</div>
+
+                <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {venusAuto.services.map((s) => (
+                    <div key={s.cat}>
+                      <div className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground">{s.cat}</div>
+                      <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                        {s.items.map((it) => (
+                          <li key={it} className="flex items-start gap-2">
+                            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />
+                            <span>{it}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 flex flex-col gap-2 border-t border-border pt-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:gap-6">
+                  <div className="flex items-start gap-2">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    {venusAuto.addr}
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    <a href={`tel:+91${venusAuto.phone.replace(/\s/g, "")}`} className="hover:text-primary">
+                      {venusAuto.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>

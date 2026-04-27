@@ -132,7 +132,7 @@ function ContactPage() {
                 D-2 Block 66/12, MIDC Chinchwad, Pune – 411019
               </Info>
               <Info icon={<MapPin className="h-5 w-5" />} title="Works">
-                Chinchwad and Chakan facilities, Pune – 410501
+                Chinchwad and Chakan facilities, Pune
               </Info>
               <Info icon={<Phone className="h-5 w-5" />} title="Call / WhatsApp">
                 <a href="tel:+919049001430" className="hover:text-primary">+91 90490 01430</a>{" "}
