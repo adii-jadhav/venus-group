@@ -3,6 +3,9 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHero } from "./about";
 import { Car, Zap, Shirt, Home, Shield, Boxes } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import awardBia from "@/assets/award-bia.jpg";
+import awardAia from "@/assets/award-aia.png";
+import customersLogos from "@/assets/customers-logos.png";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
@@ -27,10 +30,6 @@ const sectors = [
   { icon: Home, title: "Household", desc: "Plastic and metal components for household appliances and consumer durable products." },
   { icon: Shield, title: "Defense", desc: "Precision-engineered components meeting stringent defense quality standards." },
   { icon: Boxes, title: "Other Segments", desc: "General engineering, industrial and export components produced to customer specifications." },
-];
-
-const customers = [
-  "TATA", "Mercedes-Benz", "Mahindra", "Bajaj", "Brakes India", "Marquardt", "Modine", "Europa",
 ];
 
 function IndustriesPage() {
@@ -66,19 +65,15 @@ function IndustriesPage() {
             subtitle="A select list of esteemed brands we have served as a precision engineering partner."
             align="center"
           />
-          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-px bg-border sm:grid-cols-3 lg:grid-cols-4">
-            {customers.map((c, i) => (
-              <Reveal
-                key={c}
-                delay={(i % 4) * 60}
-                className="flex aspect-[16/7] items-center justify-center bg-background p-4 text-center"
-              >
-                <span className="font-display text-base font-bold uppercase tracking-[0.14em] text-foreground/80">
-                  {c}
-                </span>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal className="mx-auto mt-12 max-w-5xl">
+            <img
+              src={customersLogos}
+              alt="Logos of leading manufacturers served by Venus Group"
+              loading="lazy"
+              decoding="async"
+              className="mx-auto h-auto w-full object-contain"
+            />
+          </Reveal>
           <p className="mt-6 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
             Brand names belong to their respective owners.
           </p>
@@ -92,11 +87,20 @@ function IndustriesPage() {
           align="center"
         />
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
-          <Reveal delay={0} className="rounded-sm border border-border bg-card p-8 text-center card-lift">
+          <Reveal delay={0} className="group rounded-sm border border-border bg-card p-8 text-center card-lift">
             <div className="font-display text-base font-bold uppercase tracking-wide text-primary">Award</div>
             <h3 className="mt-3 font-display text-xl font-bold uppercase text-foreground">Best Upcoming Industry</h3>
+            <div className="mt-6 overflow-hidden rounded-sm">
+              <img
+                src={awardBia}
+                alt="Best Upcoming Industry award presented to Venus Group"
+                loading="lazy"
+                decoding="async"
+                className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
+              />
+            </div>
           </Reveal>
-          <Reveal delay={100} className="rounded-sm border border-border bg-card p-8 text-center card-lift">
+          <Reveal delay={100} className="group rounded-sm border border-border bg-card p-8 text-center card-lift">
             <div className="font-display text-base font-bold uppercase tracking-wide text-primary">Award</div>
             <h3 className="mt-3 font-display text-xl font-bold uppercase text-foreground">
               All India Achievers Foundation
@@ -104,6 +108,15 @@ function IndustriesPage() {
             <p className="mt-2 text-sm text-muted-foreground">
               Indian Achievers Award for Industrial Development presented to Mr. M. Sadanand Nayak.
             </p>
+            <div className="mt-6 overflow-hidden rounded-sm">
+              <img
+                src={awardAia}
+                alt="Mr. M. Sadanand Nayak receiving the Indian Achievers Award"
+                loading="lazy"
+                decoding="async"
+                className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
