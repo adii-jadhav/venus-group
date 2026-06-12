@@ -1,14 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Award, Cog, Factory, ShieldCheck, Wrench, Layers, Cpu, Hammer } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
 import { FlipCard } from "@/components/site/FlipCard";
 import { useState } from "react";
 import certIso from "@/assets/cert-iso-9001.png";
 import certIatf from "@/assets/cert-iatf-16949.png";
-import certAchievers from "@/assets/cert-achievers.png";
+import certAiaf from "@/assets/AIAF.png.asset.json";
+import facilityExterior from "@/assets/h2.png.asset.json";
+import facilitySign from "@/assets/h3.png.asset.json";
+import manufacturingFloor from "@/assets/h5.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,6 +50,12 @@ const strengths = [
   "Optimum cost",
   "One-stop solution for all your queries",
   "Market Presence since 26+ Years",
+];
+
+const certifications = [
+  { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus.", img: certIso, alt: "ISO 9001:2015 Certificate" },
+  { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains.", img: certIatf, alt: "IATF 16949:2016 Certificate" },
+  { t: "All India Achievers Foundation", d: "Indian Achievers Award for Industrial Development", img: certAiaf.url, alt: "All India Achievers Foundation Indian Achievers Award for Industrial Development certificate awarded to Venus Dies & Moulds" },
 ];
 
 function HomePage() {
@@ -132,10 +140,42 @@ function HomePage() {
             </Link>
           </div>
           <div className="lg:col-span-6">
-            <ImagePlaceholder label="Venus manufacturing facility" ratio="wide" />
-            <div className="mt-4 grid grid-cols-2 gap-4">
-              <ImagePlaceholder label="tool room" ratio="square" />
-              <ImagePlaceholder label="HPDC shop floor" ratio="square" />
+            <div className="grid gap-4">
+              <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={facilityExterior.url}
+                    alt="Venus Group facility exterior in Pune"
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+                  />
+                </div>
+              </figure>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={facilitySign.url}
+                      alt="Venus signage at the manufacturing facility"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+                    />
+                  </div>
+                </figure>
+                <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={manufacturingFloor.url}
+                      alt="Venus Group manufacturing environment and shop floor"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+                    />
+                  </div>
+                </figure>
+              </div>
             </div>
           </div>
         </div>
@@ -225,11 +265,7 @@ function HomePage() {
           align="center"
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {[
-            { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus.", img: certIso, alt: "ISO 9001:2015 Certificate" },
-            { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains.", img: certIatf, alt: "IATF 16949:2016 Certificate" },
-            { t: "All India Achievers Foundation", d: "Indian Achievers Award for Industrial Development", img: certAchievers, alt: "Indian Achievers Award Certificate" },
-          ].map((c, i) => (
+          {certifications.map((c, i) => (
             <Reveal key={c.t} delay={i * 90} className="min-h-[280px]">
               <FlipCard
                 active={activeCert === i}
@@ -250,6 +286,7 @@ function HomePage() {
                       src={c.img}
                       alt={c.alt}
                       loading="lazy"
+                      decoding="async"
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>
