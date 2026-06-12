@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
-import { CheckCircle2, Target, Eye, Users } from "lucide-react";
+import { CheckCircle2, Target, Eye } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import storyExterior from "@/assets/h4.png.asset.json";
+import storyEngineering from "@/assets/h1.png.asset.json";
+import leaderNayak from "@/assets/SN.png.asset.json";
+import leaderMishra from "@/assets/SB.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -44,8 +47,20 @@ const coreValues = [
 ];
 
 const founders = [
-  { name: "Mr. M S Nayak", role: "Chairman & Managing Director" },
-  { name: "Mr. S B Mishra", role: "Managing Director" },
+  {
+    name: "Mr. M S Nayak",
+    role: "Chairman & Managing Director",
+    description: "Provides strategic direction built on decades of manufacturing experience, customer trust and long-term industrial growth.",
+    image: leaderNayak.url,
+    alt: "Portrait of Mr. M S Nayak",
+  },
+  {
+    name: "Mr. S B Mishra",
+    role: "Managing Director",
+    description: "Leads execution excellence across operations, quality systems and business development with a focus on dependable delivery.",
+    image: leaderMishra.url,
+    alt: "Portrait of Mr. S B Mishra",
+  },
 ];
 
 function AboutPage() {
@@ -58,7 +73,7 @@ function AboutPage() {
       />
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-start">
           <div className="lg:col-span-7">
             <SectionHeading eyebrow="Our Story" title="From a single CNC machine to a multi-plant manufacturing group" />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
@@ -79,7 +94,30 @@ function AboutPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <ImagePlaceholder label="Venus corporate office" ratio="portrait" />
+            <div className="grid gap-4">
+              <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={storyExterior.url}
+                    alt="Venus brand signage at the facility"
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+                  />
+                </div>
+              </figure>
+              <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img
+                    src={storyEngineering.url}
+                    alt="Engineering review session at Venus Group"
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+                  />
+                </div>
+              </figure>
+            </div>
           </div>
         </div>
       </section>
@@ -142,17 +180,22 @@ function AboutPage() {
       {/* Founders */}
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <SectionHeading eyebrow="Leadership" title="Founders & visionaries behind Venus" align="center" />
-        <div className="mx-auto mt-12 grid max-w-3xl gap-8 sm:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2">
           {founders.map((f) => (
-            <div key={f.name} className="text-center">
-              <div className="mx-auto h-48 w-48 overflow-hidden rounded-full border border-border bg-muted industrial-grid relative">
-                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                  <Users className="h-10 w-10" />
-                </div>
+            <Reveal key={f.name} className="group rounded-sm border border-border bg-card p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8">
+              <div className="mx-auto aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-sm border border-border bg-muted">
+                <img
+                  src={f.image}
+                  alt={f.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
+                />
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{f.name}</h3>
-              <div className="text-xs uppercase tracking-[0.18em] text-primary">{f.role}</div>
-            </div>
+              <h3 className="mt-6 font-display text-xl font-bold uppercase tracking-wide text-foreground">{f.name}</h3>
+              <div className="mt-2 text-xs uppercase tracking-[0.18em] text-primary">{f.role}</div>
+              <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">{f.description}</p>
+            </Reveal>
           ))}
         </div>
       </section>
