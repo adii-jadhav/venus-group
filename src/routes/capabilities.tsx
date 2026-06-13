@@ -1,9 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { PageHero } from "./about";
 import { Layers, Factory, Hammer, Wrench, Cog, Cpu, FileText } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { MediaAsset } from "@/components/site/MediaAsset";
+import plasticInjectionMouldsAsset from "@/assets/Plastic_injection_moulds.png.asset.json";
+import hpdcDiesAsset from "@/assets/HPDC_dies.png.asset.json";
+import progressiveStampingToolsAsset from "@/assets/progressive_stamping_tools.png.asset.json";
+import hpdcAndExportComponentAsset from "@/assets/HPDC_and_Export_Component.png.asset.json";
+import laminationComponentAsset from "@/assets/lamination_component.png.asset.json";
 
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
@@ -15,7 +20,10 @@ export const Route = createFileRoute("/capabilities")({
           "Plastic injection moulds, high pressure die casting, progressive & stamping tools, proto tool development and CAD/CAM design at Venus Group, Pune.",
       },
       { property: "og:title", content: "Manufacturing Capabilities — Venus Group" },
-      { property: "og:description", content: "End-to-end precision manufacturing capabilities under one roof in Pune." },
+      {
+        property: "og:description",
+        content: "End-to-end precision manufacturing capabilities under one roof in Pune.",
+      },
     ],
   }),
   component: CapabilitiesPage,
@@ -26,13 +34,21 @@ const services = [
     icon: Layers,
     title: "Plastic Injection Moulds",
     desc: "Precision plastic injection moulds and PDC dies for automotive, electrical and industrial components — designed and built in-house with rigorous DFM and validation.",
-    bullets: ["Single & multi-cavity tools", "Hot runner & cold runner systems", "Mould flow analysis"],
+    bullets: [
+      "Single & multi-cavity tools",
+      "Hot runner & cold runner systems",
+      "Mould flow analysis",
+    ],
   },
   {
     icon: Factory,
     title: "High Pressure Die Casting",
     desc: "Aluminium and zinc PDC components manufactured at our Manufacturing facility in Chakan, equipped with YIZUMI and LANSON machines.",
-    bullets: ["Aluminum & zinc components", "Tooling + production under one roof", "Export-quality castings"],
+    bullets: [
+      "Aluminum & zinc components",
+      "Tooling + production under one roof",
+      "Export-quality castings",
+    ],
   },
   {
     icon: Hammer,
@@ -60,6 +76,63 @@ const services = [
   },
 ];
 
+const showcaseItems = [
+  {
+    label: "Plastic Injection Mould",
+    src: plasticInjectionMouldsAsset.url,
+    alt: "Plastic injection moulds manufactured by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "HPDC Die",
+    src: hpdcDiesAsset.url,
+    alt: "High pressure die casting dies manufactured by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "Progressive Stamping Tool",
+    src: progressiveStampingToolsAsset.url,
+    alt: "Progressive stamping tools manufactured by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "HPDC & Export Component",
+    src: hpdcAndExportComponentAsset.url,
+    alt: "HPDC and export components produced by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "Lamination Component",
+    src: laminationComponentAsset.url,
+    alt: "Lamination components manufactured by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "Sheet Metal Component",
+    alt: "Reserved slot for sheet metal components image",
+    reservedLabel: "Reserved for the upcoming sheet metal component image.",
+    fit: "contain" as const,
+  },
+  {
+    label: "Plastic Component",
+    alt: "Reserved slot for plastic components image",
+    reservedLabel: "Reserved for the upcoming plastic component image.",
+    fit: "contain" as const,
+  },
+  {
+    label: "Small Terminal Component",
+    alt: "Reserved slot for small terminal components image",
+    reservedLabel: "Reserved for the upcoming small terminal component image.",
+    fit: "contain" as const,
+  },
+  {
+    label: "High Precision Machine Work",
+    alt: "Reserved slot for high precision machine work image",
+    reservedLabel: "Reserved for the upcoming high precision machine work image.",
+    fit: "contain" as const,
+  },
+];
+
 const projectFlow = [
   { n: "01", t: "Quotation", d: "Reply within 1–3 working days." },
   { n: "02", t: "Project Kick-off", d: "Project starts upon receipt of PO." },
@@ -82,11 +155,18 @@ function CapabilitiesPage() {
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
-            <Reveal as="article" key={s.title} delay={(i % 3) * 80} className="bg-background p-7 md:p-8 card-lift">
+            <Reveal
+              as="article"
+              key={s.title}
+              delay={(i % 3) * 80}
+              className="bg-background p-7 md:p-8 card-lift"
+            >
               <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary">
                 <s.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">{s.title}</h3>
+              <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                {s.title}
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
               <ul className="mt-4 space-y-1.5">
                 {s.bullets.map((b) => (
@@ -101,8 +181,7 @@ function CapabilitiesPage() {
         </div>
       </section>
 
-      {/* Product showcase placeholders */}
-      <section className="bg-secondary/60 border-y">
+      <section className="border-y bg-secondary/60">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
             eyebrow="Product Showcase"
@@ -110,24 +189,31 @@ function CapabilitiesPage() {
             subtitle="Plastic injection moulds, HPDC dies, progressive & stamping tools and finished components."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              "Plastic injection mould",
-              "HPDC die",
-              "Progressive stamping tool",
-              "Aluminum HPDC component",
-              "Lamination component",
-              "Sheet metal component",
-            ].map((label, i) => (
-              <Reveal key={label} delay={(i % 3) * 80}>
-                <ImagePlaceholder label={label} ratio="square" />
-                <div className="mt-3 text-sm font-semibold uppercase tracking-wide text-foreground">{label}</div>
+            {showcaseItems.map((item, i) => (
+              <Reveal
+                key={item.label}
+                as="article"
+                delay={(i % 3) * 80}
+                className="group overflow-hidden rounded-sm border border-border bg-card card-lift"
+              >
+                <MediaAsset
+                  src={item.src}
+                  alt={item.alt}
+                  ratio="square"
+                  fit={item.fit}
+                  reservedLabel={item.reservedLabel}
+                  className="rounded-none border-0 bg-background"
+                  imageClassName="p-4"
+                />
+                <div className="border-t border-border px-4 py-3 text-sm font-semibold uppercase tracking-wide text-foreground">
+                  {item.label}
+                </div>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Project management flow */}
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <SectionHeading
           eyebrow="Project Management"
@@ -141,7 +227,9 @@ function CapabilitiesPage() {
                 <div className="font-display text-3xl font-bold text-primary">{p.n}</div>
                 <FileText className="h-5 w-5 text-muted-foreground" />
               </div>
-              <h4 className="mt-4 font-display text-base font-bold uppercase tracking-wide text-foreground">{p.t}</h4>
+              <h4 className="mt-4 font-display text-base font-bold uppercase tracking-wide text-foreground">
+                {p.t}
+              </h4>
               <p className="mt-1 text-sm text-muted-foreground">{p.d}</p>
             </Reveal>
           ))}
