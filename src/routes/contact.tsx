@@ -73,10 +73,11 @@ function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, e.currentTarget, {
+      const form = e.currentTarget;
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, {
         publicKey: EMAILJS_PUBLIC_KEY,
       });
-      e.currentTarget.reset();
+      form.reset();
       setStatus("success");
     } catch {
       setStatus("error");
