@@ -20,7 +20,10 @@ export const Route = createFileRoute("/capabilities")({
           "Plastic injection moulds, high pressure die casting, progressive & stamping tools, proto tool development and CAD/CAM design at Venus Group, Pune.",
       },
       { property: "og:title", content: "Manufacturing Capabilities — Venus Group" },
-      { property: "og:description", content: "End-to-end precision manufacturing capabilities under one roof in Pune." },
+      {
+        property: "og:description",
+        content: "End-to-end precision manufacturing capabilities under one roof in Pune.",
+      },
     ],
   }),
   component: CapabilitiesPage,
@@ -31,13 +34,21 @@ const services = [
     icon: Layers,
     title: "Plastic Injection Moulds",
     desc: "Precision plastic injection moulds and PDC dies for automotive, electrical and industrial components — designed and built in-house with rigorous DFM and validation.",
-    bullets: ["Single & multi-cavity tools", "Hot runner & cold runner systems", "Mould flow analysis"],
+    bullets: [
+      "Single & multi-cavity tools",
+      "Hot runner & cold runner systems",
+      "Mould flow analysis",
+    ],
   },
   {
     icon: Factory,
     title: "High Pressure Die Casting",
     desc: "Aluminium and zinc PDC components manufactured at our Manufacturing facility in Chakan, equipped with YIZUMI and LANSON machines.",
-    bullets: ["Aluminum & zinc components", "Tooling + production under one roof", "Export-quality castings"],
+    bullets: [
+      "Aluminum & zinc components",
+      "Tooling + production under one roof",
+      "Export-quality castings",
+    ],
   },
   {
     icon: Hammer,
@@ -144,11 +155,18 @@ function CapabilitiesPage() {
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
-            <Reveal as="article" key={s.title} delay={(i % 3) * 80} className="bg-background p-7 md:p-8 card-lift">
+            <Reveal
+              as="article"
+              key={s.title}
+              delay={(i % 3) * 80}
+              className="bg-background p-7 md:p-8 card-lift"
+            >
               <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary">
                 <s.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">{s.title}</h3>
+              <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                {s.title}
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
               <ul className="mt-4 space-y-1.5">
                 {s.bullets.map((b) => (
@@ -172,7 +190,12 @@ function CapabilitiesPage() {
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {showcaseItems.map((item, i) => (
-              <Reveal key={item.label} as="article" delay={(i % 3) * 80} className="group overflow-hidden rounded-sm border border-border bg-card card-lift">
+              <Reveal
+                key={item.label}
+                as="article"
+                delay={(i % 3) * 80}
+                className="group overflow-hidden rounded-sm border border-border bg-card card-lift"
+              >
                 <MediaAsset
                   src={item.src}
                   alt={item.alt}
@@ -204,7 +227,9 @@ function CapabilitiesPage() {
                 <div className="font-display text-3xl font-bold text-primary">{p.n}</div>
                 <FileText className="h-5 w-5 text-muted-foreground" />
               </div>
-              <h4 className="mt-4 font-display text-base font-bold uppercase tracking-wide text-foreground">{p.t}</h4>
+              <h4 className="mt-4 font-display text-base font-bold uppercase tracking-wide text-foreground">
+                {p.t}
+              </h4>
               <p className="mt-1 text-sm text-muted-foreground">{p.d}</p>
             </Reveal>
           ))}

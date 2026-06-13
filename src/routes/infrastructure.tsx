@@ -29,7 +29,11 @@ export const Route = createFileRoute("/infrastructure")({
           "Venus infrastructure: VMC, CNC EDM, Wire Cut (Makino, Mitsubishi, Sodick), graphite machining, press machines 5T–200T, laser cutting and HPDC plant in Chakan, Pune.",
       },
       { property: "og:title", content: "Infrastructure & Manufacturing Units — Venus Group" },
-      { property: "og:description", content: "Multi-plant precision manufacturing infrastructure across MIDC Chinchwad and Chakan, Pune." },
+      {
+        property: "og:description",
+        content:
+          "Multi-plant precision manufacturing infrastructure across MIDC Chinchwad and Chakan, Pune.",
+      },
     ],
   }),
   component: InfraPage,
@@ -40,7 +44,11 @@ const machines = [
   { name: "Milling Machines", qty: "9 Nos.", spec: "Conventional milling capability" },
   { name: "Lathe Machines", qty: "7 Nos.", spec: "Turning operations" },
   { name: "Radial Drill", qty: "5 Nos.", spec: "Heavy-duty drilling" },
-  { name: "CNC EDM (incl. double-head)", qty: "6 Nos. + 1 Drill", spec: "Max 1000 × 2200 mm (HSPK)" },
+  {
+    name: "CNC EDM (incl. double-head)",
+    qty: "6 Nos. + 1 Drill",
+    spec: "Max 1000 × 2200 mm (HSPK)",
+  },
   { name: "Wire Cut", qty: "8 Nos.", spec: "Makino (4) · Mitsubishi (3) · Sodick (1)" },
   { name: "Graphite Machining VMC", qty: "2 Nos.", spec: "Gold Sun GA-650 / GA-870 · 24,000 rpm" },
   { name: "Press Machines", qty: "12 Nos.", spec: "Capacity 5T – 200T" },
@@ -190,20 +198,32 @@ function InfraPage() {
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.v} delay={i * 80} className="bg-background p-6 md:p-8">
-              <CountUp value={s.k} className="font-display text-3xl font-bold text-primary md:text-4xl" />
-              <div className="mt-1 text-xs uppercase tracking-[0.16em] text-muted-foreground md:text-sm">{s.v}</div>
+              <CountUp
+                value={s.k}
+                className="font-display text-3xl font-bold text-primary md:text-4xl"
+              />
+              <div className="mt-1 text-xs uppercase tracking-[0.16em] text-muted-foreground md:text-sm">
+                {s.v}
+              </div>
             </Reveal>
           ))}
         </div>
       </section>
 
       <section className="container-px mx-auto max-w-7xl py-16 md:py-24">
-        <SectionHeading eyebrow="Tool Room & Machinery" title="A complete in-house manufacturing capability" />
+        <SectionHeading
+          eyebrow="Tool Room & Machinery"
+          title="A complete in-house manufacturing capability"
+        />
         <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {machines.map((m, i) => (
             <Reveal key={m.name} delay={(i % 3) * 70} className="bg-background p-6 card-lift">
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">{m.qty}</div>
-              <h3 className="mt-2 font-display text-lg font-bold uppercase tracking-wide text-foreground">{m.name}</h3>
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                {m.qty}
+              </div>
+              <h3 className="mt-2 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                {m.name}
+              </h3>
               <p className="mt-2 text-sm text-muted-foreground">{m.spec}</p>
             </Reveal>
           ))}
@@ -226,7 +246,9 @@ function InfraPage() {
                 imageClassName="p-4"
               />
               <div className="border-t border-border p-4">
-                <h3 className="font-display text-sm font-bold uppercase tracking-wide text-foreground">{machine.title}</h3>
+                <h3 className="font-display text-sm font-bold uppercase tracking-wide text-foreground">
+                  {machine.title}
+                </h3>
                 <p className="mt-1 text-sm text-muted-foreground">{machine.meta}</p>
               </div>
             </Reveal>
@@ -236,7 +258,10 @@ function InfraPage() {
 
       <section className="border-y bg-secondary/60">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
-          <SectionHeading eyebrow="Manufacturing Units" title="Five dedicated units across MIDC Pune" />
+          <SectionHeading
+            eyebrow="Manufacturing Units"
+            title="Five dedicated units across MIDC Pune"
+          />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {plants.map((p, i) => (
               <Reveal
@@ -253,7 +278,9 @@ function InfraPage() {
                   className="rounded-none border-0"
                 />
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">{p.title}</h3>
+                  <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                    {p.title}
+                  </h3>
                   <div className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
                     <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                     {p.addr}
@@ -262,7 +289,11 @@ function InfraPage() {
               </Reveal>
             ))}
 
-            <Reveal as="article" delay={(plants.length % 2) * 90} className="overflow-hidden rounded-sm border border-border bg-background card-lift md:col-span-2">
+            <Reveal
+              as="article"
+              delay={(plants.length % 2) * 90}
+              className="overflow-hidden rounded-sm border border-border bg-background card-lift md:col-span-2"
+            >
               <MediaAsset
                 src={venusAuto.src}
                 alt={venusAuto.alt}
@@ -271,13 +302,19 @@ function InfraPage() {
                 className="rounded-none border-0"
               />
               <div className="p-6">
-                <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">{venusAuto.title}</h3>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">{venusAuto.subtitle}</div>
+                <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                  {venusAuto.title}
+                </h3>
+                <div className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                  {venusAuto.subtitle}
+                </div>
 
                 <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {venusAuto.services.map((s) => (
                     <div key={s.cat}>
-                      <div className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground">{s.cat}</div>
+                      <div className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
+                        {s.cat}
+                      </div>
                       <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
                         {s.items.map((it) => (
                           <li key={it} className="flex items-start gap-2">
@@ -297,7 +334,10 @@ function InfraPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <a href={`tel:+91${venusAuto.phone.replace(/\s/g, "")}`} className="hover:text-primary">
+                    <a
+                      href={`tel:+91${venusAuto.phone.replace(/\s/g, "")}`}
+                      className="hover:text-primary"
+                    >
                       {venusAuto.phone}
                     </a>
                   </div>

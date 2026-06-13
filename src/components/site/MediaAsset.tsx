@@ -27,7 +27,9 @@ export function MediaAsset({
   eager = false,
 }: Props) {
   return (
-    <div className={`group relative w-full overflow-hidden rounded-sm border border-border bg-muted ${ratioMap[ratio]} ${className}`}>
+    <div
+      className={`group relative w-full overflow-hidden rounded-sm border border-border bg-muted ${ratioMap[ratio]} ${className}`}
+    >
       {src ? (
         <img
           src={src}
@@ -40,7 +42,9 @@ export function MediaAsset({
         />
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-5 text-center">
-          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Reserved</div>
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            Reserved
+          </div>
           <div className="max-w-xs text-xs leading-relaxed text-muted-foreground">
             {reservedLabel ?? "Space reserved for an upcoming image upload."}
           </div>

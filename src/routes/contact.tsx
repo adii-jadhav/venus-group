@@ -16,7 +16,10 @@ export const Route = createFileRoute("/contact")({
           "Contact Venus Group for injection moulds, die casting and stamping tools. Corporate Office: D-2 Block, MIDC Chinchwad, Pune – 411019.",
       },
       { property: "og:title", content: "Contact Venus Group" },
-      { property: "og:description", content: "Request a quote from a trusted dies and moulds manufacturer in Pune." },
+      {
+        property: "og:description",
+        content: "Request a quote from a trusted dies and moulds manufacturer in Pune.",
+      },
     ],
   }),
   component: ContactPage,
@@ -105,9 +108,12 @@ function ContactPage() {
                 <div className="mt-8 flex items-start gap-4 rounded-sm border border-primary/30 bg-primary/5 p-6">
                   <CheckCircle2 className="h-6 w-6 shrink-0 text-primary" />
                   <div>
-                    <h3 className="font-display text-lg font-bold uppercase text-foreground">Thank you!</h3>
+                    <h3 className="font-display text-lg font-bold uppercase text-foreground">
+                      Thank you!
+                    </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Thank you. Your enquiry has been submitted successfully. Our team will get back to you shortly.
+                      Thank you. Your enquiry has been submitted successfully. Our team will get
+                      back to you shortly.
                     </p>
                   </div>
                 </div>
@@ -117,7 +123,9 @@ function ContactPage() {
                 <div className="mt-8 flex items-start gap-4 rounded-sm border border-destructive/30 bg-destructive/5 p-6">
                   <AlertCircle className="h-6 w-6 shrink-0 text-destructive" />
                   <div>
-                    <h3 className="font-display text-lg font-bold uppercase text-foreground">Submission failed</h3>
+                    <h3 className="font-display text-lg font-bold uppercase text-foreground">
+                      Submission failed
+                    </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
                       Unable to send your enquiry right now. Please try again later.
                     </p>
@@ -126,7 +134,12 @@ function ContactPage() {
               )}
 
               <form onSubmit={onSubmit} noValidate className="mt-8 grid gap-5 sm:grid-cols-2">
-                <Field label="Name *" name="from_name" error={errors.from_name} autoComplete="name" />
+                <Field
+                  label="Name *"
+                  name="from_name"
+                  error={errors.from_name}
+                  autoComplete="name"
+                />
                 <Field
                   label="Email *"
                   name="from_email"
@@ -141,7 +154,12 @@ function ContactPage() {
                   error={errors.from_phone}
                   autoComplete="tel"
                 />
-                <Field label="Company" name="company" error={errors.company} autoComplete="organization" />
+                <Field
+                  label="Company"
+                  name="company"
+                  error={errors.company}
+                  autoComplete="organization"
+                />
                 <div className="sm:col-span-2">
                   <Field
                     label="Subject *"
@@ -161,7 +179,9 @@ function ContactPage() {
                     placeholder="Tell us about your project, component requirements, expected volumes, or timelines"
                     className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
                   />
-                  {errors.message && <p className="mt-1 text-xs text-destructive">{errors.message}</p>}
+                  {errors.message && (
+                    <p className="mt-1 text-xs text-destructive">{errors.message}</p>
+                  )}
                 </div>
                 <div className="sm:col-span-2">
                   <button
@@ -179,7 +199,9 @@ function ContactPage() {
 
           <Reveal as="div" delay={120} className="lg:col-span-5">
             <aside>
-              <h3 className="font-display text-xl font-bold uppercase tracking-wide text-foreground">Reach us directly</h3>
+              <h3 className="font-display text-xl font-bold uppercase tracking-wide text-foreground">
+                Reach us directly
+              </h3>
               <ul className="mt-6 space-y-5">
                 <Info icon={<MapPin className="h-5 w-5" />} title="Corporate Office">
                   D-2 Block 66/12, MIDC Chinchwad, Pune – 411019
@@ -197,7 +219,10 @@ function ContactPage() {
                   </a>
                 </Info>
                 <Info icon={<Mail className="h-5 w-5" />} title="Business Development">
-                  <a href="mailto:bd.corp@venusgroup.co.in" className="break-all hover:text-primary">
+                  <a
+                    href="mailto:bd.corp@venusgroup.co.in"
+                    className="break-all hover:text-primary"
+                  >
                     bd.corp@venusgroup.co.in
                   </a>
                   <br />
@@ -241,7 +266,9 @@ function Field({
 }) {
   return (
     <div>
-      <label className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground">{label}</label>
+      <label className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
+        {label}
+      </label>
       <input
         type={type}
         name={name}
@@ -254,14 +281,24 @@ function Field({
   );
 }
 
-function Info({ icon, title, children }: { icon: React.ReactNode; title: string; children: React.ReactNode }) {
+function Info({
+  icon,
+  title,
+  children,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <li className="flex items-start gap-4">
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-primary/10 text-primary">
         {icon}
       </div>
       <div>
-        <div className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">{title}</div>
+        <div className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+          {title}
+        </div>
         <div className="mt-1 text-sm text-foreground">{children}</div>
       </div>
     </li>
