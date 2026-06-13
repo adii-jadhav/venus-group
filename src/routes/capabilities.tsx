@@ -1,9 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { PageHero } from "./about";
 import { Layers, Factory, Hammer, Wrench, Cog, Cpu, FileText } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { MediaAsset } from "@/components/site/MediaAsset";
+import plasticInjectionMouldsAsset from "@/assets/Plastic_injection_moulds.png.asset.json";
+import hpdcDiesAsset from "@/assets/HPDC_dies.png.asset.json";
+import progressiveStampingToolsAsset from "@/assets/progressive_stamping_tools.png.asset.json";
+import hpdcAndExportComponentAsset from "@/assets/HPDC_and_Export_Component.png.asset.json";
+import laminationComponentAsset from "@/assets/lamination_component.png.asset.json";
 
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
@@ -60,6 +65,63 @@ const services = [
   },
 ];
 
+const showcaseItems = [
+  {
+    label: "Plastic Injection Mould",
+    src: plasticInjectionMouldsAsset.url,
+    alt: "Plastic injection moulds manufactured by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "HPDC Die",
+    src: hpdcDiesAsset.url,
+    alt: "High pressure die casting dies manufactured by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "Progressive Stamping Tool",
+    src: progressiveStampingToolsAsset.url,
+    alt: "Progressive stamping tools manufactured by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "HPDC & Export Component",
+    src: hpdcAndExportComponentAsset.url,
+    alt: "HPDC and export components produced by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "Lamination Component",
+    src: laminationComponentAsset.url,
+    alt: "Lamination components manufactured by Venus Group",
+    fit: "contain" as const,
+  },
+  {
+    label: "Sheet Metal Component",
+    alt: "Reserved slot for sheet metal components image",
+    reservedLabel: "Reserved for the upcoming sheet metal component image.",
+    fit: "contain" as const,
+  },
+  {
+    label: "Plastic Component",
+    alt: "Reserved slot for plastic components image",
+    reservedLabel: "Reserved for the upcoming plastic component image.",
+    fit: "contain" as const,
+  },
+  {
+    label: "Small Terminal Component",
+    alt: "Reserved slot for small terminal components image",
+    reservedLabel: "Reserved for the upcoming small terminal component image.",
+    fit: "contain" as const,
+  },
+  {
+    label: "High Precision Machine Work",
+    alt: "Reserved slot for high precision machine work image",
+    reservedLabel: "Reserved for the upcoming high precision machine work image.",
+    fit: "contain" as const,
+  },
+];
+
 const projectFlow = [
   { n: "01", t: "Quotation", d: "Reply within 1–3 working days." },
   { n: "02", t: "Project Kick-off", d: "Project starts upon receipt of PO." },
@@ -101,8 +163,7 @@ function CapabilitiesPage() {
         </div>
       </section>
 
-      {/* Product showcase placeholders */}
-      <section className="bg-secondary/60 border-y">
+      <section className="border-y bg-secondary/60">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
             eyebrow="Product Showcase"
@@ -110,24 +171,26 @@ function CapabilitiesPage() {
             subtitle="Plastic injection moulds, HPDC dies, progressive & stamping tools and finished components."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              "Plastic injection mould",
-              "HPDC die",
-              "Progressive stamping tool",
-              "Aluminum HPDC component",
-              "Lamination component",
-              "Sheet metal component",
-            ].map((label, i) => (
-              <Reveal key={label} delay={(i % 3) * 80}>
-                <ImagePlaceholder label={label} ratio="square" />
-                <div className="mt-3 text-sm font-semibold uppercase tracking-wide text-foreground">{label}</div>
+            {showcaseItems.map((item, i) => (
+              <Reveal key={item.label} as="article" delay={(i % 3) * 80} className="group overflow-hidden rounded-sm border border-border bg-card card-lift">
+                <MediaAsset
+                  src={item.src}
+                  alt={item.alt}
+                  ratio="square"
+                  fit={item.fit}
+                  reservedLabel={item.reservedLabel}
+                  className="rounded-none border-0 bg-background"
+                  imageClassName="p-4"
+                />
+                <div className="border-t border-border px-4 py-3 text-sm font-semibold uppercase tracking-wide text-foreground">
+                  {item.label}
+                </div>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Project management flow */}
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <SectionHeading
           eyebrow="Project Management"
