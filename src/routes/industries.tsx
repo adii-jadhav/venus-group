@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHero } from "./about";
 import { Car, Zap, Shirt, Home, Shield, Boxes } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { SmartImg } from "@/components/site/SmartImg";
 import awardBia from "@/assets/award-bia.jpg";
 import awardAia from "@/assets/award-aia.png";
 import customersLogos from "@/assets/customers-logos.png";
