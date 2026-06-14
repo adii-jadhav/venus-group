@@ -9,6 +9,10 @@ import hpdcDiesAsset from "@/assets/HPDC_dies.png.asset.json";
 import progressiveStampingToolsAsset from "@/assets/progressive_stamping_tools.png.asset.json";
 import hpdcAndExportComponentAsset from "@/assets/HPDC_and_Export_Component.png.asset.json";
 import laminationComponentAsset from "@/assets/lamination_component.png.asset.json";
+import sheetMetalComponentAsset from "@/assets/sheet_metal_component.png.asset.json";
+import plasticComponentAsset from "@/assets/plastic_component.png.asset.json";
+import smallTerminalComponentAsset from "@/assets/small_terminal_component.png.asset.json";
+import highPrecisionMachineWorkAsset from "@/assets/High_precision_machine_work.png.asset.json";
 
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
