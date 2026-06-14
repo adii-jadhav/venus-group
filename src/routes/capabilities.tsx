@@ -9,6 +9,10 @@ import hpdcDiesAsset from "@/assets/HPDC_dies.png.asset.json";
 import progressiveStampingToolsAsset from "@/assets/progressive_stamping_tools.png.asset.json";
 import hpdcAndExportComponentAsset from "@/assets/HPDC_and_Export_Component.png.asset.json";
 import laminationComponentAsset from "@/assets/lamination_component.png.asset.json";
+import sheetMetalComponentAsset from "@/assets/sheet_metal_component.png.asset.json";
+import plasticComponentAsset from "@/assets/plastic_component.png.asset.json";
+import smallTerminalComponentAsset from "@/assets/small_terminal_component.png.asset.json";
+import highPrecisionMachineWorkAsset from "@/assets/High_precision_machine_work.png.asset.json";
 
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
@@ -109,26 +113,26 @@ const showcaseItems = [
   },
   {
     label: "Sheet Metal Component",
-    alt: "Reserved slot for sheet metal components image",
-    reservedLabel: "Reserved for the upcoming sheet metal component image.",
+    src: sheetMetalComponentAsset.url,
+    alt: "Sheet metal components manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
     label: "Plastic Component",
-    alt: "Reserved slot for plastic components image",
-    reservedLabel: "Reserved for the upcoming plastic component image.",
+    src: plasticComponentAsset.url,
+    alt: "Plastic components manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
     label: "Small Terminal Component",
-    alt: "Reserved slot for small terminal components image",
-    reservedLabel: "Reserved for the upcoming small terminal component image.",
+    src: smallTerminalComponentAsset.url,
+    alt: "Small terminal components manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
     label: "High Precision Machine Work",
-    alt: "Reserved slot for high precision machine work image",
-    reservedLabel: "Reserved for the upcoming high precision machine work image.",
+    src: highPrecisionMachineWorkAsset.url,
+    alt: "High precision machine work CAD models by Venus Group",
     fit: "contain" as const,
   },
 ];
@@ -201,7 +205,7 @@ function CapabilitiesPage() {
                   alt={item.alt}
                   ratio="square"
                   fit={item.fit}
-                  reservedLabel={item.reservedLabel}
+                  
                   className="rounded-none border-0 bg-background"
                   imageClassName="p-4"
                 />
