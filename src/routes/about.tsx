@@ -181,11 +181,9 @@ function AboutPage() {
           {founders.map((f) => (
             <Reveal key={f.name} className="group rounded-sm border border-border bg-card p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8">
               <div className="mx-auto aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-sm border border-border bg-muted">
-                <img
+                <SmartImg
                   src={f.image}
                   alt={f.alt}
-                  loading="lazy"
-                  decoding="async"
                   className="h-full w-full object-cover"
                 />
               </div>
