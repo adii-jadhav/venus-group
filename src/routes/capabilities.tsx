@@ -205,7 +205,7 @@ function CapabilitiesPage() {
                   alt={item.alt}
                   ratio="square"
                   fit={item.fit}
-                  reservedLabel={item.reservedLabel}
+                  
                   className="rounded-none border-0 bg-background"
                   imageClassName="p-4"
                 />
