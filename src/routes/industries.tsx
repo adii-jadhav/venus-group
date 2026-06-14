@@ -90,11 +90,9 @@ function IndustriesPage() {
             <div className="font-display text-base font-bold uppercase tracking-wide text-primary">Award</div>
             <h3 className="mt-3 font-display text-xl font-bold uppercase text-foreground">Best Upcoming Industry</h3>
             <div className="mt-6 overflow-hidden rounded-sm">
-              <img
+              <SmartImg
                 src={awardBia}
                 alt="Best Upcoming Industry award presented to Venus Group"
-                loading="lazy"
-                decoding="async"
                 className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
               />
             </div>
@@ -108,11 +106,9 @@ function IndustriesPage() {
               Indian Achievers Award for Industrial Development presented to Mr. M. Sadanand Nayak.
             </p>
             <div className="mt-6 overflow-hidden rounded-sm">
-              <img
+              <SmartImg
                 src={awardAia}
                 alt="Mr. M. Sadanand Nayak receiving the Indian Achievers Award"
-                loading="lazy"
-                decoding="async"
                 className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
               />
             </div>
