@@ -144,11 +144,9 @@ function HomePage() {
             <div className="grid gap-4">
               <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
                 <div className="aspect-[16/10] overflow-hidden">
-                  <img
+                  <SmartImg
                     src={facilityExterior.url}
                     alt="Venus Group facility exterior in Pune"
-                    loading="lazy"
-                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
                   />
                 </div>
@@ -156,22 +154,18 @@ function HomePage() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
+                    <SmartImg
                       src={facilitySign.url}
                       alt="Venus signage at the manufacturing facility"
-                      loading="lazy"
-                      decoding="async"
                       className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
                     />
                   </div>
                 </figure>
                 <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
+                    <SmartImg
                       src={manufacturingFloor.url}
                       alt="Venus Group manufacturing environment and shop floor"
-                      loading="lazy"
-                      decoding="async"
                       className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
                     />
                   </div>
