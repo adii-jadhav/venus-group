@@ -98,22 +98,18 @@ function AboutPage() {
             <div className="grid gap-4">
               <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img
+                  <SmartImg
                     src={storyExterior.url}
                     alt="Venus brand signage at the facility"
-                    loading="lazy"
-                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
                   />
                 </div>
               </figure>
               <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
                 <div className="aspect-[4/5] overflow-hidden">
-                  <img
+                  <SmartImg
                     src={storyEngineering.url}
                     alt="Engineering review session at Venus Group"
-                    loading="lazy"
-                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
                   />
                 </div>
