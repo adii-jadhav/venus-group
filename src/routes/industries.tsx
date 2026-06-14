@@ -67,11 +67,9 @@ function IndustriesPage() {
             align="center"
           />
           <Reveal className="mx-auto mt-12 max-w-5xl">
-            <img
+            <SmartImg
               src={customersLogos}
               alt="Logos of leading manufacturers served by Venus Group"
-              loading="lazy"
-              decoding="async"
               className="mx-auto h-auto w-full object-contain"
             />
           </Reveal>
