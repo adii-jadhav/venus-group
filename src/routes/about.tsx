@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { CheckCircle2, Target, Eye } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { SmartImg } from "@/components/site/SmartImg";
 import storyExterior from "@/assets/h4.png.asset.json";
 import storyEngineering from "@/assets/h1.png.asset.json";
 import leaderNayak from "@/assets/SN.png.asset.json";
