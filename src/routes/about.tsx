@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { CheckCircle2, Target, Eye } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { SmartImg } from "@/components/site/SmartImg";
 import storyExterior from "@/assets/h4.png.asset.json";
 import storyEngineering from "@/assets/h1.png.asset.json";
 import leaderNayak from "@/assets/SN.png.asset.json";
@@ -97,22 +98,18 @@ function AboutPage() {
             <div className="grid gap-4">
               <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img
+                  <SmartImg
                     src={storyExterior.url}
                     alt="Venus brand signage at the facility"
-                    loading="lazy"
-                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
                   />
                 </div>
               </figure>
               <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
                 <div className="aspect-[4/5] overflow-hidden">
-                  <img
+                  <SmartImg
                     src={storyEngineering.url}
                     alt="Engineering review session at Venus Group"
-                    loading="lazy"
-                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
                   />
                 </div>
@@ -184,11 +181,9 @@ function AboutPage() {
           {founders.map((f) => (
             <Reveal key={f.name} className="group rounded-sm border border-border bg-card p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8">
               <div className="mx-auto aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-sm border border-border bg-muted">
-                <img
+                <SmartImg
                   src={f.image}
                   alt={f.alt}
-                  loading="lazy"
-                  decoding="async"
                   className="h-full w-full object-cover"
                 />
               </div>

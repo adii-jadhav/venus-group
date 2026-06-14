@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface Props {
   src?: string;
   alt: string;
@@ -26,20 +28,31 @@ export function MediaAsset({
   reservedLabel,
   eager = false,
 }: Props) {
+  const [loaded, setLoaded] = useState(false);
   return (
     <div
       className={`group relative w-full overflow-hidden rounded-sm border border-border bg-muted ${ratioMap[ratio]} ${className}`}
     >
       {src ? (
-        <img
-          src={src}
-          alt={alt}
-          loading={eager ? "eager" : "lazy"}
-          decoding="async"
-          className={`h-full w-full transition-transform duration-300 ease-out motion-reduce:transition-none ${
-            fit === "contain" ? "object-contain" : "object-cover"
-          } ${imageClassName} group-hover:scale-[1.02]`}
-        />
+        <>
+          {!loaded && (
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 shimmer-skeleton"
+            />
+          )}
+          <img
+            src={src}
+            alt={alt}
+            loading={eager ? "eager" : "lazy"}
+            decoding="async"
+            onLoad={() => setLoaded(true)}
+            onError={() => setLoaded(true)}
+            className={`h-full w-full transition-[transform,opacity] duration-300 ease-out motion-reduce:transition-none ${
+              fit === "contain" ? "object-contain" : "object-cover"
+            } ${imageClassName} ${loaded ? "opacity-100" : "opacity-0"} group-hover:scale-[1.02]`}
+          />
+        </>
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-5 text-center">
           <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
