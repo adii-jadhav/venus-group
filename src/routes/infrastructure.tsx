@@ -189,8 +189,8 @@ function InfraPage() {
   return (
     <>
       <PageHero
-        eyebrow="Infrastructure"
-        title="Engineered for precision at scale"
+        eyebrow="INFRASTRUCTURE"
+        title="ENGINEERED FOR PRECISION AT SCALE"
         subtitle="A modern shop floor with VMC, CNC EDM, wire cut, press, laser cutting and HPDC machinery — built to deliver consistent quality on every job."
       />
 
@@ -212,8 +212,8 @@ function InfraPage() {
 
       <section className="container-px mx-auto max-w-7xl py-16 md:py-24">
         <SectionHeading
-          eyebrow="Tool Room & Machinery"
-          title="A complete in-house manufacturing capability"
+          eyebrow="TOOL ROOM & MACHINERY"
+          title="A COMPLETE IN-HOUSE MANUFACTURING CAPABILITY"
         />
         <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {machines.map((m, i) => (
@@ -259,8 +259,8 @@ function InfraPage() {
       <section className="border-y bg-secondary/60">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
-            eyebrow="Manufacturing Units"
-            title="Six dedicated units across MIDC Pune"
+            eyebrow="MANUFACTURING UNITS"
+            title="SIX DEDICATED UNITS ACROSS MIDC PUNE"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {plants.map((p, i) => (
