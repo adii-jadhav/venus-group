@@ -33,10 +33,10 @@ const milestones = [
   { y: "2018", t: "Takeover of PDC plant at B-32, Phase-2 MIDC Chakan." },
   { y: "2019", t: "Installed 300 KVA roof-top solar system — contributing to power saving." },
   { y: "2021", t: "Added 2M × 1.5M vertical machining centre." },
-  { y: "2022", t: "Plant expansion at D-89 Phase-2 MIDC Chakan and Makino U6 Wire Cut machine." },
+  { y: "2022", t: "Plant expansion at D-89 Phase-2 MIDC Chakan." },
   { y: "2024", t: "Added new laser cutting machine." },
   { y: "2025", t: "Added 2 brand-new Mitsubishi MV2400S-D Cube & MV1200S-D Cube wire cut machines." },
-  { y: "2026", t: "Added a double-head CNC EDM machine at the tool room." },
+  { y: "2026", t: "Added double-head CNC EDM machine." },
 ];
 
 const coreValues = [
