@@ -37,8 +37,8 @@ function IndustriesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Industries"
-        title="Trusted across sectors that demand precision"
+        eyebrow="INDUSTRIES"
+        title="TRUSTED ACROSS SECTORS THAT DEMAND PRECISION"
         subtitle="From automotive to defense — Venus delivers engineered tools and components to industries where quality is non-negotiable."
       />
 
@@ -61,8 +61,8 @@ function IndustriesPage() {
       <section className="bg-secondary/60 border-y">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
-            eyebrow="Customers"
-            title="Trusted by leading manufacturers"
+            eyebrow="CUSTOMERS"
+            title="TRUSTED BY LEADING MANUFACTURERS"
             subtitle="A select list of esteemed brands we have served as a precision engineering partner."
             align="center"
           />
@@ -81,8 +81,8 @@ function IndustriesPage() {
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <SectionHeading
-          eyebrow="Awards & Recognition"
-          title="Recognized for our contribution to Indian manufacturing"
+          eyebrow="AWARDS & RECOGNITION"
+          title="RECOGNIZED FOR OUR CONTRIBUTION TO INDIAN MANUFACTURING"
           align="center"
         />
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
