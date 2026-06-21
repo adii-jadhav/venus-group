@@ -119,8 +119,8 @@ function HomePage() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6">
             <SectionHeading
-              eyebrow="About Venus"
-              title="A trusted engineering partner since 1999"
+              eyebrow="ABOUT VENUS"
+              title="A TRUSTED ENGINEERING PARTNER SINCE 1999"
               subtitle="From a single-man job-work setup in Bhosari to a multi-plant precision manufacturing group in Pune. Venus has scaled responsibly, with quality and customer satisfaction at the core."
             />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
@@ -137,7 +137,7 @@ function HomePage() {
               to="/about"
               className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary hover:gap-3 transition-all"
             >
-              More about us <ArrowRight className="h-4 w-4" />
+              MORE ABOUT US <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="lg:col-span-6">
