@@ -22,29 +22,29 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">Explore</h4>
+            <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">EXPLORE</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
-              <li><Link to="/about" className="hover:text-primary">About Us</Link></li>
-              <li><Link to="/capabilities" className="hover:text-primary">Capabilities</Link></li>
-              <li><Link to="/infrastructure" className="hover:text-primary">Infrastructure</Link></li>
-              <li><Link to="/industries" className="hover:text-primary">Industries</Link></li>
-              <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
+              <li><Link to="/about" className="hover:text-primary">ABOUT US</Link></li>
+              <li><Link to="/capabilities" className="hover:text-primary">CAPABILITIES</Link></li>
+              <li><Link to="/infrastructure" className="hover:text-primary">INFRASTRUCTURE</Link></li>
+              <li><Link to="/industries" className="hover:text-primary">INDUSTRIES</Link></li>
+              <li><Link to="/contact" className="hover:text-primary">CONTACT</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">Capabilities</h4>
+            <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">CAPABILITIES</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               <li>PLASTIC INJECTION MOULDS AND COMPONENTS</li>
               <li>HPDC DIES AND COMPONENTS</li>
               <li>PROGRESSIVE & STAMPING TOOLS AND COMPONENTS</li>
-              <li>Aluminum & Zinc PDC Components</li>
-              <li>CAD/CAM Design & DFM</li>
+              <li>ALUMINUM & ZINC PDC COMPONENTS</li>
+              <li>SHEET METAL COMPONENTS</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">Get in Touch</h4>
+            <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">GET IN TOUCH</h4>
             <ul className="mt-5 space-y-4 text-sm text-white/80">
               <li className="flex gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />

@@ -151,8 +151,8 @@ function CapabilitiesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Capabilities"
-        title="End-to-end precision manufacturing"
+        eyebrow="CAPABILITIES"
+        title="END-TO-END PRECISION MANUFACTURING"
         subtitle="From design and prototyping to series production — engineered for the most demanding applications."
       />
 
@@ -188,8 +188,8 @@ function CapabilitiesPage() {
       <section className="border-y bg-secondary/60">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
-            eyebrow="Product Showcase"
-            title="Tools and components we manufacture"
+            eyebrow="PRODUCT SHOWCASE"
+            title="TOOLS AND COMPONENTS WE MANUFACTURE"
             subtitle="Plastic injection moulds, HPDC dies, progressive & stamping tools and finished components."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -220,8 +220,8 @@ function CapabilitiesPage() {
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <SectionHeading
-          eyebrow="Project Management"
-          title="A clear path from RFQ to delivery"
+          eyebrow="PROJECT MANAGEMENT"
+          title="A CLEAR PATH FROM RFQ TO DELIVERY"
           subtitle="A transparent, milestone-driven process keeps you informed at every stage."
         />
         <div className="mt-12 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">

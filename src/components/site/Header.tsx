@@ -68,7 +68,7 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="text-sm font-medium uppercase tracking-wide text-foreground/80 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
               activeOptions={{ exact: n.to === "/" }}
             >
@@ -82,7 +82,7 @@ export function Header() {
             to="/contact"
             className="hidden md:inline-flex items-center justify-center rounded-sm bg-primary px-5 py-2.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
-            Get a Quote
+            GET A QUOTE
           </Link>
           <button
             type="button"
@@ -103,7 +103,7 @@ export function Header() {
                 key={n.to}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="rounded-sm px-3 py-3 text-sm font-medium text-foreground/90 transition-colors hover:bg-accent"
+                className="rounded-sm px-3 py-3 text-sm font-medium uppercase tracking-wide text-foreground/90 transition-colors hover:bg-accent"
                 activeProps={{ className: "text-primary" }}
                 activeOptions={{ exact: n.to === "/" }}
               >
@@ -115,7 +115,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-sm bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Get a Quote
+              GET A QUOTE
             </Link>
           </nav>
         </div>

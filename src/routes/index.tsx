@@ -85,13 +85,13 @@ function HomePage() {
                 to="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5"
               >
-                Get a Quote <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                GET A QUOTE <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
                 to="/capabilities"
                 className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/25 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
               >
-                Explore Capabilities
+                EXPLORE CAPABILITIES
               </Link>
             </div>
           </div>
@@ -119,8 +119,8 @@ function HomePage() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6">
             <SectionHeading
-              eyebrow="About Venus"
-              title="A trusted engineering partner since 1999"
+              eyebrow="ABOUT VENUS"
+              title="A TRUSTED ENGINEERING PARTNER SINCE 1999"
               subtitle="From a single-man job-work setup in Bhosari to a multi-plant precision manufacturing group in Pune. Venus has scaled responsibly, with quality and customer satisfaction at the core."
             />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
@@ -137,7 +137,7 @@ function HomePage() {
               to="/about"
               className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary hover:gap-3 transition-all"
             >
-              More about us <ArrowRight className="h-4 w-4" />
+              MORE ABOUT US <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="lg:col-span-6">
@@ -180,8 +180,8 @@ function HomePage() {
       <section className="bg-secondary/60 border-y">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
-            eyebrow="Capabilities"
-            title="End-to-end manufacturing under one roof"
+            eyebrow="CAPABILITIES"
+            title="END-TO-END MANUFACTURING UNDER ONE ROOF"
             subtitle="From design and prototyping to series production - engineered for automotive, electrical, defense and industrial sectors."
           />
           <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
@@ -205,7 +205,7 @@ function HomePage() {
               to="/capabilities"
               className="inline-flex items-center gap-2 rounded-sm border border-foreground/20 bg-background px-6 py-3 text-sm font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
             >
-              View all capabilities <ArrowRight className="h-4 w-4" />
+              VIEW ALL CAPABILITIES <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -215,8 +215,8 @@ function HomePage() {
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           <SectionHeading
-            eyebrow="Why Venus"
-            title="Strengths that build long-term partnerships"
+            eyebrow="WHY VENUS"
+            title="STRENGTHS THAT BUILD LONG-TERM PARTNERSHIPS"
             subtitle="Diversified capabilities, technical depth and a relentless focus on quality make us the preferred vendor to esteemed clients across industries."
           />
           <ul className="grid gap-3 sm:grid-cols-2">
@@ -235,14 +235,14 @@ function HomePage() {
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <div className="grid gap-px bg-white/10 md:grid-cols-2">
             <div className="bg-[var(--steel)] p-8 md:p-12">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Mission</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">MISSION</div>
               <p className="mt-5 font-display text-2xl font-semibold uppercase leading-snug md:text-3xl">
                 To be the number one preferred vendor to our esteemed clients with our motto being{" "}
                 <span className="text-primary">leadership through quality.</span>
               </p>
             </div>
             <div className="bg-[var(--steel)] p-8 md:p-12">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Vision</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">VISION</div>
               <p className="mt-5 font-display text-2xl font-semibold uppercase leading-snug md:text-3xl">
                 To be a complete solution to all customer needs in terms of innovation, development, quality, delivery,
                 cost <span className="text-primary">& its core values.</span>
@@ -255,8 +255,8 @@ function HomePage() {
       {/* CERTIFICATIONS */}
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <SectionHeading
-          eyebrow="Quality & Certifications"
-          title="Built on systems that guarantee quality"
+          eyebrow="QUALITY & CERTIFICATIONS"
+          title="BUILT ON SYSTEMS THAT GUARANTEE QUALITY"
           align="center"
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -298,7 +298,7 @@ function HomePage() {
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div>
               <h3 className="font-display text-3xl font-bold uppercase leading-tight md:text-4xl">
-                Have a project in mind?
+                HAVE A PROJECT IN MIND?
               </h3>
               <p className="mt-2 max-w-xl text-sm text-primary-foreground/90 md:text-base">
                 Share your drawings or requirements — our engineering team will respond with a quote in 1–3 working days.
@@ -308,7 +308,7 @@ function HomePage() {
               to="/contact"
               className="inline-flex items-center gap-2 rounded-sm bg-[var(--steel)] px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white hover:bg-black/90"
             >
-              Request a Quote <ArrowRight className="h-4 w-4" />
+              REQUEST A QUOTE <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
