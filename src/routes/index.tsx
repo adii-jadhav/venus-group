@@ -99,7 +99,7 @@ function HomePage() {
           <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 md:mt-24 md:grid-cols-4">
             {[
               { k: "26+", v: "Years of Excellence" },
-              { k: "5", v: "Manufacturing Plants" },
+              { k: "6", v: "Manufacturing Plants" },
               { k: "100+", v: "TRUSTED CLIENTS" },
               { k: "100,000+", v: "SQ. FT. MANUFACTURING AREA" },
             ].map((s, i) => (
