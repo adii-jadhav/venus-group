@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: Layers, title: "Plastic Injection Moulds", desc: "Plastic injection moulds and PDC dies engineered for high precision and repeatability." },
+  { icon: Layers, title: "PLASTIC INJECTION MOULDS AND COMPONENTS", desc: "Plastic injection moulds engineered for high precision and repeatability." },
   { icon: Factory, title: "High Pressure Die Casting", desc: "Aluminum & Zinc PDC components produced at our 100,000+ sq. ft. area in Chakan." },
   { icon: Hammer, title: "Progressive & Stamping Tools", desc: "High precision stamping dies, lamination and progressive tools for series production." },
   { icon: Wrench, title: "Proto Tool Development", desc: "Proto tool components for plastic, aluminum and sheet metal parts to validate designs fast." },

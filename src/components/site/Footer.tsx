@@ -35,7 +35,7 @@ export function Footer() {
           <div>
             <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">Capabilities</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
-              <li>Plastic Injection Moulds</li>
+              <li>PLASTIC INJECTION MOULDS AND COMPONENTS</li>
               <li>High Pressure Die Casting</li>
               <li>Progressive & Stamping Tools</li>
               <li>Aluminum & Zinc PDC Components</li>

@@ -123,7 +123,7 @@ const plants = [
     alt: "Progressive tools manufacturing plant at Venus Group",
   },
   {
-    title: "Plastic Injection Moulds & PDC Dies Plant",
+    title: "PLASTIC INJECTION MOULDS AND COMPONENTS & PDC Dies Plant",
     addr: "K-2, MIDC Chakan – 410501",
     src: plasticInjectionPlantAsset.url,
     alt: "Plastic injection moulds and PDC dies plant at Venus Group",

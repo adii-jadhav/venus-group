@@ -36,8 +36,8 @@ export const Route = createFileRoute("/capabilities")({
 const services = [
   {
     icon: Layers,
-    title: "Plastic Injection Moulds",
-    desc: "Precision plastic injection moulds and PDC dies for automotive, electrical and industrial components — designed and built in-house with rigorous DFM and validation.",
+    title: "PLASTIC INJECTION MOULDS AND COMPONENTS",
+    desc: "Precision plastic injection moulds engineered for high precision and repeatability — designed and built in-house with rigorous DFM and validation.",
     bullets: [
       "Single & multi-cavity tools",
       "Hot runner & cold runner systems",
