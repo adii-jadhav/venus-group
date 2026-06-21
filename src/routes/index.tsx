@@ -180,8 +180,8 @@ function HomePage() {
       <section className="bg-secondary/60 border-y">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
-            eyebrow="Capabilities"
-            title="End-to-end manufacturing under one roof"
+            eyebrow="CAPABILITIES"
+            title="END-TO-END MANUFACTURING UNDER ONE ROOF"
             subtitle="From design and prototyping to series production - engineered for automotive, electrical, defense and industrial sectors."
           />
           <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
@@ -205,7 +205,7 @@ function HomePage() {
               to="/capabilities"
               className="inline-flex items-center gap-2 rounded-sm border border-foreground/20 bg-background px-6 py-3 text-sm font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
             >
-              View all capabilities <ArrowRight className="h-4 w-4" />
+              VIEW ALL CAPABILITIES <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
