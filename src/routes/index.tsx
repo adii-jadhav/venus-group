@@ -91,7 +91,7 @@ function HomePage() {
                 to="/capabilities"
                 className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/25 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
               >
-                Explore Capabilities
+                EXPLORE CAPABILITIES
               </Link>
             </div>
           </div>
