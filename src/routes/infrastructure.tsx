@@ -180,7 +180,7 @@ const venusAuto = {
 
 const stats = [
   { k: "55+", v: "Machines on shop floor" },
-  { k: "5", v: "Manufacturing plants" },
+  { k: "6", v: "Manufacturing plants" },
   { k: "350", v: "KVA roof-top solar system" },
   { k: "10+", v: "Design engineers" },
 ];
