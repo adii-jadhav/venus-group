@@ -36,8 +36,8 @@ export function Footer() {
             <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">Capabilities</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               <li>PLASTIC INJECTION MOULDS AND COMPONENTS</li>
-              <li>High Pressure Die Casting</li>
-              <li>Progressive & Stamping Tools</li>
+              <li>HPDC DIES AND COMPONENTS</li>
+              <li>PROGRESSIVE & STAMPING TOOLS AND COMPONENTS</li>
               <li>Aluminum & Zinc PDC Components</li>
               <li>CAD/CAM Design & DFM</li>
             </ul>
