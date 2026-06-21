@@ -46,8 +46,8 @@ const services = [
   },
   {
     icon: Factory,
-    title: "High Pressure Die Casting",
-    desc: "Aluminium and zinc PDC components manufactured at our Manufacturing facility in Chakan, equipped with YIZUMI and LANSON machines.",
+    title: "HPDC DIES AND COMPONENTS",
+    desc: "Aluminum & Zinc PDC components,\ncold chamber and hot chamber components.",
     bullets: [
       "Aluminum & zinc components",
       "Tooling + production under one roof",
@@ -56,20 +56,20 @@ const services = [
   },
   {
     icon: Hammer,
-    title: "Progressive & Stamping Tools",
+    title: "PROGRESSIVE & STAMPING TOOLS AND COMPONENTS",
     desc: "High precision stamping dies, lamination tools and progressive tools — engineered for high-volume series production.",
     bullets: ["Progressive die design", "Lamination & E-cores", "Press tonnage 5T–200T"],
   },
   {
     icon: Wrench,
     title: "Proto Tool Development",
-    desc: "Rapid proto tool components for plastic, aluminum and sheet metal parts — to validate designs before committing to production tooling.",
+    desc: "Proto tool components for plastic, aluminum and sheet metal parts.",
     bullets: ["Plastic prototypes", "Aluminum & sheet metal protos", "Faster design validation"],
   },
   {
     icon: Cog,
     title: "Sub Assembly",
-    desc: "Stamping components development paired with sub-assembly capability for delivering ready-to-fit modules to your line.",
+    desc: "plastic, sheet metal and aluminum sub assembly capability under one roof.",
     bullets: ["Stamped component development", "Sub-assembly", "Single-source supply"],
   },
   {

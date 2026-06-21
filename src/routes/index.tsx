@@ -35,10 +35,10 @@ export const Route = createFileRoute("/")({
 
 const services = [
   { icon: Layers, title: "PLASTIC INJECTION MOULDS AND COMPONENTS", desc: "Plastic injection moulds engineered for high precision and repeatability." },
-  { icon: Factory, title: "High Pressure Die Casting", desc: "Aluminum & Zinc PDC components produced at our 100,000+ sq. ft. area in Chakan." },
-  { icon: Hammer, title: "Progressive & Stamping Tools", desc: "High precision stamping dies, lamination and progressive tools for series production." },
-  { icon: Wrench, title: "Proto Tool Development", desc: "Proto tool components for plastic, aluminum and sheet metal parts to validate designs fast." },
-  { icon: Cog, title: "Sub Assembly", desc: "Stamping components development and sub assembly capability under one roof." },
+  { icon: Factory, title: "HPDC DIES AND COMPONENTS", desc: "Aluminum & Zinc PDC components,\ncold chamber and hot chamber components." },
+  { icon: Hammer, title: "PROGRESSIVE & STAMPING TOOLS AND COMPONENTS", desc: "High precision stamping dies, lamination and progressive tools for series production." },
+  { icon: Wrench, title: "Proto Tool Development", desc: "Proto tool components for plastic, aluminum and sheet metal parts." },
+  { icon: Cog, title: "Sub Assembly", desc: "plastic, sheet metal and aluminum sub assembly capability under one roof." },
   { icon: Cpu, title: "LASER CUT & CNC WIRE CUT SERVICES", desc: "Reliable CNC wire cut and Laser cut services for high-quality production" },
 ];
 
