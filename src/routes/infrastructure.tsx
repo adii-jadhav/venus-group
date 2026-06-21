@@ -180,7 +180,7 @@ const venusAuto = {
 
 const stats = [
   { k: "55+", v: "Machines on shop floor" },
-  { k: "5", v: "Manufacturing plants" },
+  { k: "6", v: "Manufacturing plants" },
   { k: "350", v: "KVA roof-top solar system" },
   { k: "10+", v: "Design engineers" },
 ];
@@ -260,7 +260,7 @@ function InfraPage() {
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
             eyebrow="Manufacturing Units"
-            title="Five dedicated units across MIDC Pune"
+            title="Six dedicated units across MIDC Pune"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {plants.map((p, i) => (
