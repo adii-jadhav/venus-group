@@ -40,11 +40,11 @@ const milestones = [
 ];
 
 const coreValues = [
-  "Customer Is Supreme",
-  "Live Quality",
-  "Encourage Creativity & Innovation",
-  "Respect For Individual",
-  "Respect For Work-Place Ethics",
+  "CUSTOMER IS SUPREME",
+  "LIVE QUALITY",
+  "ENCOURAGE CREATIVITY & INNOVATION",
+  "RESPECT FOR INDIVIDUAL",
+  "RESPECT FOR WORK-PLACE ETHICS",
 ];
 
 const founders = [
@@ -68,15 +68,15 @@ function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Us"
-        title="Engineering trust, one precision part at a time"
+        eyebrow="ABOUT US"
+        title="ENGINEERING TRUST, ONE PRECISION PART AT A TIME"
         subtitle="Venus Group is a Pune-headquartered precision engineering manufacturer with 26+ years of expertise across plastic injection moulds, PDC dies and stamping tools."
       />
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-start">
           <div className="lg:col-span-7">
-            <SectionHeading eyebrow="Our Story" title="From a single CNC machine to a multi-plant manufacturing group" />
+            <SectionHeading eyebrow="OUR STORY" title="FROM A SINGLE CNC MACHINE TO A MULTI-PLANT MANUFACTURING GROUP" />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
               <p>
                 In 1999, Venus Group began as a small job-work unit in Bhosari with a single used CNC Wire EDM and one
@@ -122,7 +122,7 @@ function AboutPage() {
       {/* Quality Policy */}
       <section className="bg-secondary/60 border-y">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
-          <SectionHeading eyebrow="Quality Policy" title="What we commit to, every single day" />
+          <SectionHeading eyebrow="QUALITY POLICY" title="WHAT WE COMMIT TO, EVERY SINGLE DAY" />
           <ul className="mt-10 grid gap-6 md:grid-cols-3">
             {[
               "We continuously strive for customer satisfaction by providing timely qualitative products & hassle-free services.",
@@ -141,14 +141,14 @@ function AboutPage() {
       {/* Mission / Vision / Goals */}
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-6 md:grid-cols-3">
-          <Reveal delay={0}><Card icon={<Target className="h-6 w-6" />} title="Mission">
+          <Reveal delay={0}><Card icon={<Target className="h-6 w-6" />} title="MISSION">
             To be the number one preferred vendor to our esteemed clients with our motto being leadership through quality.
           </Card></Reveal>
-          <Reveal delay={80}><Card icon={<Eye className="h-6 w-6" />} title="Vision">
+          <Reveal delay={80}><Card icon={<Eye className="h-6 w-6" />} title="VISION">
             To be a complete solution to all customer needs in terms of innovation, development, quality, delivery, cost
             and its core values.
           </Card></Reveal>
-          <Reveal delay={160}><Card icon={<CheckCircle2 className="h-6 w-6" />} title="Goals">
+          <Reveal delay={160}><Card icon={<CheckCircle2 className="h-6 w-6" />} title="GOALS">
             To become a pioneer in stamping, plastic and die-casting technology - a specialty and innovative solutions
             provider with strong JV partners and sustainable growth.
           </Card></Reveal>
@@ -158,7 +158,7 @@ function AboutPage() {
       {/* Core Values */}
       <section className="bg-[var(--steel)] text-white">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
-          <SectionHeading eyebrow="Core Values" title="The principles that guide every decision" align="center" titleClassName="text-white" />
+          <SectionHeading eyebrow="CORE VALUES" title="THE PRINCIPLES THAT GUIDE EVERY DECISION" align="center" titleClassName="text-white" />
           <div className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {coreValues.map((v, i) => (
               <Reveal
@@ -176,7 +176,7 @@ function AboutPage() {
 
       {/* Founders */}
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
-        <SectionHeading eyebrow="Leadership" title="Founders & visionaries behind Venus" align="center" />
+        <SectionHeading eyebrow="LEADERSHIP" title="FOUNDERS & VISIONARIES BEHIND VENUS" align="center" />
         <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2">
           {founders.map((f) => (
             <Reveal key={f.name} className="group rounded-sm border border-border bg-card p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8">
@@ -198,7 +198,7 @@ function AboutPage() {
       {/* Milestones */}
       <section className="bg-secondary/60 border-y">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
-          <SectionHeading eyebrow="Milestones" title="A timeline of growth and innovation" />
+          <SectionHeading eyebrow="MILESTONES" title="A timeline of growth and innovation" />
           <div className="mt-12 relative">
             <div className="absolute left-4 top-0 bottom-0 w-px bg-border md:left-1/2" />
             <div className="space-y-8">

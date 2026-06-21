@@ -24,7 +24,7 @@ export function Footer() {
           <div>
             <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">Explore</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
-              <li><Link to="/about" className="hover:text-primary">About Us</Link></li>
+              <li><Link to="/about" className="hover:text-primary">ABOUT US</Link></li>
               <li><Link to="/capabilities" className="hover:text-primary">Capabilities</Link></li>
               <li><Link to="/infrastructure" className="hover:text-primary">Infrastructure</Link></li>
               <li><Link to="/industries" className="hover:text-primary">Industries</Link></li>
@@ -39,7 +39,7 @@ export function Footer() {
               <li>HPDC DIES AND COMPONENTS</li>
               <li>PROGRESSIVE & STAMPING TOOLS AND COMPONENTS</li>
               <li>Aluminum & Zinc PDC Components</li>
-              <li>CAD/CAM Design & DFM</li>
+              <li>SHEET METAL COMPONENTS</li>
             </ul>
           </div>
 
