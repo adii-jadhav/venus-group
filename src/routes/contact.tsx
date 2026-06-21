@@ -89,8 +89,8 @@ function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Contact"
-        title="Let's engineer your next project together"
+        eyebrow="CONTACT"
+        title="LET'S ENGINEER YOUR NEXT PROJECT TOGETHER"
         subtitle="Share your drawings or requirements — our engineering team will respond with a quote in 1–3 working days."
       />
 
@@ -99,7 +99,7 @@ function ContactPage() {
           <Reveal className="lg:col-span-7">
             <div className="rounded-sm border border-border bg-card p-6 md:p-10 card-lift">
               <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground md:text-3xl">
-                Request a Quote
+                REQUEST A QUOTE
               </h2>
               <p className="mt-2 text-sm text-muted-foreground">
                 Fill in the details below — all fields marked * are required.
@@ -201,7 +201,7 @@ function ContactPage() {
           <Reveal as="div" delay={120} className="lg:col-span-5">
             <aside>
               <h3 className="font-display text-xl font-bold uppercase tracking-wide text-foreground">
-                Reach us directly
+                REACH US DIRECTLY
               </h3>
               <ul className="mt-6 space-y-5">
                 <Info icon={<MapPin className="h-5 w-5" />} title="Corporate Office">
