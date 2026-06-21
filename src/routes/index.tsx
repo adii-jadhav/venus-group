@@ -215,8 +215,8 @@ function HomePage() {
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           <SectionHeading
-            eyebrow="Why Venus"
-            title="Strengths that build long-term partnerships"
+            eyebrow="WHY VENUS"
+            title="STRENGTHS THAT BUILD LONG-TERM PARTNERSHIPS"
             subtitle="Diversified capabilities, technical depth and a relentless focus on quality make us the preferred vendor to esteemed clients across industries."
           />
           <ul className="grid gap-3 sm:grid-cols-2">
@@ -235,14 +235,14 @@ function HomePage() {
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <div className="grid gap-px bg-white/10 md:grid-cols-2">
             <div className="bg-[var(--steel)] p-8 md:p-12">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Mission</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">MISSION</div>
               <p className="mt-5 font-display text-2xl font-semibold uppercase leading-snug md:text-3xl">
                 To be the number one preferred vendor to our esteemed clients with our motto being{" "}
                 <span className="text-primary">leadership through quality.</span>
               </p>
             </div>
             <div className="bg-[var(--steel)] p-8 md:p-12">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Vision</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">VISION</div>
               <p className="mt-5 font-display text-2xl font-semibold uppercase leading-snug md:text-3xl">
                 To be a complete solution to all customer needs in terms of innovation, development, quality, delivery,
                 cost <span className="text-primary">& its core values.</span>
@@ -255,8 +255,8 @@ function HomePage() {
       {/* CERTIFICATIONS */}
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <SectionHeading
-          eyebrow="Quality & Certifications"
-          title="Built on systems that guarantee quality"
+          eyebrow="QUALITY & CERTIFICATIONS"
+          title="BUILT ON SYSTEMS THAT GUARANTEE QUALITY"
           align="center"
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
