@@ -298,7 +298,7 @@ function HomePage() {
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div>
               <h3 className="font-display text-3xl font-bold uppercase leading-tight md:text-4xl">
-                Have a project in mind?
+                HAVE A PROJECT IN MIND?
               </h3>
               <p className="mt-2 max-w-xl text-sm text-primary-foreground/90 md:text-base">
                 Share your drawings or requirements — our engineering team will respond with a quote in 1–3 working days.
@@ -308,7 +308,7 @@ function HomePage() {
               to="/contact"
               className="inline-flex items-center gap-2 rounded-sm bg-[var(--steel)] px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white hover:bg-black/90"
             >
-              Request a Quote <ArrowRight className="h-4 w-4" />
+              REQUEST A QUOTE <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
