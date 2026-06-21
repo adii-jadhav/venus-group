@@ -83,7 +83,7 @@ function AboutPage() {
                 operator. What we lacked in scale, we made up for in commitment to quality and on-time delivery.
               </p>
               <p>
-                Two and a half decades later, Venus operates five dedicated manufacturing plants across Chinchwad and
+                Two and a half decades later, Venus operates six dedicated manufacturing plants across Chinchwad and
                 Chakan MIDC - covering the entire value chain from design and prototyping to high pressure die casting,
                 stamping and sub-assembly.
               </p>
