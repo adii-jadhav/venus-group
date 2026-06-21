@@ -68,7 +68,7 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="text-sm font-medium uppercase tracking-wide text-foreground/80 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
               activeOptions={{ exact: n.to === "/" }}
             >
@@ -103,7 +103,7 @@ export function Header() {
                 key={n.to}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="rounded-sm px-3 py-3 text-sm font-medium text-foreground/90 transition-colors hover:bg-accent"
+                className="rounded-sm px-3 py-3 text-sm font-medium uppercase tracking-wide text-foreground/90 transition-colors hover:bg-accent"
                 activeProps={{ className: "text-primary" }}
                 activeOptions={{ exact: n.to === "/" }}
               >
