@@ -260,7 +260,7 @@ function InfraPage() {
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
             eyebrow="Manufacturing Units"
-            title="Five dedicated units across MIDC Pune"
+            title="Six dedicated units across MIDC Pune"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {plants.map((p, i) => (
