@@ -35,9 +35,9 @@ export function Footer() {
           <div>
             <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">CAPABILITIES</h4>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
-              <li>PLASTIC INJECTION MOULDS AND COMPONENTS</li>
-              <li>HPDC DIES AND COMPONENTS</li>
-              <li>PROGRESSIVE & STAMPING TOOLS AND COMPONENTS</li>
+              <li>PLASTIC INJECTION MOULDS</li>
+              <li>HPDC DIES</li>
+              <li>PROGRESSIVE & STAMPING TOOLS</li>
               <li>ALUMINUM & ZINC PDC COMPONENTS</li>
               <li>SHEET METAL COMPONENTS</li>
             </ul>
@@ -52,13 +52,21 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                <a href="tel:+919049001430" className="hover:text-primary">+91 90490 01430</a>
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+919049001430" className="hover:text-primary">+91 90490 01430</a>
+                  <a href="tel:+918830603858" className="hover:text-primary">+91 88306 03858</a>
+                </div>
               </li>
               <li className="flex gap-3">
                 <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                <a href="mailto:bd.corp@venusgroup.co.in" className="hover:text-primary break-all">
-                  bd.corp@venusgroup.co.in
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:msnayak@venusgroup.co.in" className="hover:text-primary break-all">
+                    msnayak@venusgroup.co.in
+                  </a>
+                  <a href="mailto:sathvik@venusgroup.co.in" className="hover:text-primary break-all">
+                    sathvik@venusgroup.co.in
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

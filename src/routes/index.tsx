@@ -8,7 +8,6 @@ import { SmartImg } from "@/components/site/SmartImg";
 import { useState } from "react";
 import certIso from "@/assets/cert-iso-9001.png";
 import certIatf from "@/assets/cert-iatf-16949.png";
-import certAiaf from "@/assets/AIAF.png.asset.json";
 import facilityExterior from "@/assets/h2.png.asset.json";
 import facilitySign from "@/assets/h3.png.asset.json";
 import manufacturingFloor from "@/assets/h5.png.asset.json";
@@ -56,7 +55,6 @@ const strengths = [
 const certifications = [
   { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus.", img: certIso, alt: "ISO 9001:2015 Certificate" },
   { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains.", img: certIatf, alt: "IATF 16949:2016 Certificate" },
-  { t: "All India Achievers Foundation", d: "Indian Achievers Award for Industrial Development", img: certAiaf.url, alt: "All India Achievers Foundation Indian Achievers Award for Industrial Development certificate awarded to Venus Dies & Moulds" },
 ];
 
 function HomePage() {
@@ -259,7 +257,7 @@ function HomePage() {
           title="BUILT ON SYSTEMS THAT GUARANTEE QUALITY"
           align="center"
         />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
           {certifications.map((c, i) => (
             <Reveal key={c.t} delay={i * 90} className="min-h-[280px]">
               <FlipCard

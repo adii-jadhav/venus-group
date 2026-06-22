@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHero } from "./about";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, Building2 } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
 import { MediaAsset } from "@/components/site/MediaAsset";
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/infrastructure")({
       {
         name: "description",
         content:
-          "Venus infrastructure: VMC, CNC EDM, Wire Cut (Makino, Mitsubishi, Sodick), graphite machining, press machines 5T–200T, laser cutting and HPDC plant in Chakan, Pune.",
+          "Venus infrastructure: VMC, CNC EDM, Wire Cut, graphite machining, press machines 5T–200T, laser cutting and HPDC plant in Chakan, Pune.",
       },
       { property: "og:title", content: "Infrastructure & Manufacturing Units — Venus Group" },
       {
@@ -40,46 +40,42 @@ export const Route = createFileRoute("/infrastructure")({
 });
 
 const machines = [
-  { name: "VMC Machines", qty: "5 Nos.", spec: "Max. size 2000 × 1500 mm" },
-  { name: "Milling Machines", qty: "9 Nos.", spec: "Conventional milling capability" },
-  { name: "Lathe Machines", qty: "7 Nos.", spec: "Turning operations" },
-  { name: "Radial Drill", qty: "5 Nos.", spec: "Heavy-duty drilling" },
-  {
-    name: "CNC EDM (incl. double-head)",
-    qty: "6 Nos. + 1 Drill",
-    spec: "Max 1000 × 2200 mm (HSPK)",
-  },
-  { name: "Wire Cut", qty: "8 Nos.", spec: "Makino (4) · Mitsubishi (3) · Sodick (1)" },
-  { name: "Graphite Machining VMC", qty: "2 Nos.", spec: "Gold Sun GA-650 / GA-870 · 24,000 rpm" },
-  { name: "Press Machines", qty: "12 Nos.", spec: "Capacity 5T – 200T" },
-  { name: "Laser Cutting Machine", qty: "1 No.", spec: "Max. 3000 × 1500 mm · 3 KW" },
-  { name: "HPDC Machines", qty: "5 NOS.", spec: "YIZUMI DM500ARC · LANSON" },
+  { name: "VMC Machines", spec: "Max. size 2000 × 1500 mm" },
+  { name: "Milling Machines", spec: "Conventional milling capability" },
+  { name: "Lathe Machines", spec: "Turning operations" },
+  { name: "Radial Drills", spec: "Heavy-duty drilling" },
+  { name: "CNC EDM Machines (incl. double-head)", spec: "Max 1000 × 2200 mm (HSPK)" },
+  { name: "Wire Cut Machines", spec: "Precision wire cut EDM capability" },
+  { name: "Graphite Machining Centers", spec: "High-speed graphite machining · 24,000 rpm" },
+  { name: "Press Machines", spec: "Capacity 5T – 200T" },
+  { name: "Laser Cutting Machines", spec: "Max. 3000 × 1500 mm · 3 KW" },
+  { name: "HPDC Die Casting Lines", spec: "High pressure aluminum and zinc die casting" },
 ];
 
 const machineShowcase = [
   {
-    title: "CNC EDM Machine",
+    title: "CNC EDM Machines",
     meta: "Double-head EDM capability",
     src: ezrAsset.url,
     alt: "CNC EDM machine used in Venus Group tool room",
     fit: "contain" as const,
   },
   {
-    title: "VMC Machine",
-    meta: "Precision vertical machining center",
+    title: "VMC Machines",
+    meta: "Precision vertical machining centers",
     src: rtxAsset.url,
     alt: "VMC machine used in Venus Group tool room",
     fit: "contain" as const,
   },
   {
-    title: "Graphite Machining",
-    meta: "High-speed graphite machining center",
+    title: "Graphite Machining Machines",
+    meta: "High-speed graphite machining centers",
     src: ezAsset.url,
     alt: "Graphite machining center used in Venus Group tool room",
     fit: "contain" as const,
   },
   {
-    title: "Wire Cut Machine",
+    title: "Wire Cut Machines",
     meta: "Fine precision wire cut EDM",
     src: shAsset.url,
     alt: "Wire cut machine used in Venus Group tool room",
@@ -93,7 +89,7 @@ const machineShowcase = [
     fit: "contain" as const,
   },
   {
-    title: "Laser Cutting Machine",
+    title: "Laser Cutting Machines",
     meta: "Sheet laser cutting capability",
     src: eu5Asset.url,
     alt: "Laser cutting machine used in Venus Group manufacturing facility",
@@ -107,10 +103,10 @@ const machineShowcase = [
     fit: "contain" as const,
   },
   {
-    title: "HPDC Machines",
-    meta: "YIZUMI and LANSON die casting lines",
+    title: "HPDC Die Casting Lines",
+    meta: "High pressure aluminum and zinc die casting lines",
     src: tyAsset.url,
-    alt: "HPDC production machines installed at Venus Group",
+    alt: "HPDC production lines installed at Venus Group",
     fit: "contain" as const,
   },
 ];
@@ -179,10 +175,9 @@ const venusAuto = {
 };
 
 const stats = [
-  { k: "55+", v: "Machines on shop floor" },
   { k: "6", v: "Manufacturing plants" },
   { k: "350", v: "KVA roof-top solar system" },
-  { k: "10+", v: "Design engineers" },
+  { k: "25+", v: "Design engineers" },
 ];
 
 function InfraPage() {
@@ -195,7 +190,7 @@ function InfraPage() {
       />
 
       <section className="container-px mx-auto max-w-7xl py-16">
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-3">
           {stats.map((s, i) => (
             <Reveal key={s.v} delay={i * 80} className="bg-background p-6 md:p-8">
               <CountUp
@@ -218,10 +213,7 @@ function InfraPage() {
         <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {machines.map((m, i) => (
             <Reveal key={m.name} delay={(i % 3) * 70} className="bg-background p-6 card-lift">
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                {m.qty}
-              </div>
-              <h3 className="mt-2 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+              <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">
                 {m.name}
               </h3>
               <p className="mt-2 text-sm text-muted-foreground">{m.spec}</p>
@@ -273,7 +265,7 @@ function InfraPage() {
                 <MediaAsset
                   src={p.src}
                   alt={p.alt}
-                  ratio="wide"
+                  ratio="video"
                   fit="cover"
                   className="rounded-none border-0"
                 />
@@ -289,15 +281,42 @@ function InfraPage() {
               </Reveal>
             ))}
 
+            {/* Upcoming Plant Placeholder */}
             <Reveal
               as="article"
-              delay={(plants.length % 2) * 90}
+              delay={0}
+              className="flex h-full flex-col overflow-hidden rounded-sm border border-dashed border-border bg-background card-lift"
+            >
+              <div className="relative aspect-video w-full overflow-hidden bg-secondary/60 industrial-grid">
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Building2 className="h-7 w-7" />
+                  </div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                    Coming Soon
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                  Upcoming Manufacturing Facility
+                </h3>
+                <div className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                  6th manufacturing plant — details to be announced.
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal
+              as="article"
+              delay={90}
               className="overflow-hidden rounded-sm border border-border bg-background card-lift md:col-span-2"
             >
               <MediaAsset
                 src={venusAuto.src}
                 alt={venusAuto.alt}
-                ratio="wide"
+                ratio="video"
                 fit="cover"
                 className="rounded-none border-0"
               />

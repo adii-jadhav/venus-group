@@ -215,20 +215,20 @@ function ContactPage() {
                     +91 90490 01430
                   </a>{" "}
                   /{" "}
-                  <a href="tel:+918484937681" className="hover:text-primary">
-                    +91 84849 37681
+                  <a href="tel:+918830603858" className="hover:text-primary">
+                    +91 88306 03858
                   </a>
                 </Info>
                 <Info icon={<Mail className="h-5 w-5" />} title="Business Development">
                   <a
-                    href="mailto:bd.corp@venusgroup.co.in"
+                    href="mailto:msnayak@venusgroup.co.in"
                     className="break-all hover:text-primary"
                   >
-                    bd.corp@venusgroup.co.in
+                    msnayak@venusgroup.co.in
                   </a>
                   <br />
-                  <a href="mailto:admin@venusgroup.co.in" className="break-all hover:text-primary">
-                    admin@venusgroup.co.in
+                  <a href="mailto:sathvik@venusgroup.co.in" className="break-all hover:text-primary">
+                    sathvik@venusgroup.co.in
                   </a>
                 </Info>
               </ul>

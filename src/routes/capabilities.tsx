@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHero } from "./about";
-import { Layers, Factory, Hammer, Wrench, Cog, Cpu, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { MediaAsset } from "@/components/site/MediaAsset";
 import plasticInjectionMouldsAsset from "@/assets/Plastic_injection_moulds.png.asset.json";
@@ -33,106 +33,59 @@ export const Route = createFileRoute("/capabilities")({
   component: CapabilitiesPage,
 });
 
-const services = [
-  {
-    icon: Layers,
-    title: "PLASTIC INJECTION MOULDS AND COMPONENTS",
-    desc: "Precision plastic injection moulds engineered for high precision and repeatability — designed and built in-house with rigorous DFM and validation.",
-    bullets: [
-      "Single & multi-cavity tools",
-      "Hot runner & cold runner systems",
-      "Mould flow analysis",
-    ],
-  },
-  {
-    icon: Factory,
-    title: "HPDC DIES AND COMPONENTS",
-    desc: "Aluminum & Zinc PDC components,\ncold chamber and hot chamber components.",
-    bullets: [
-      "Aluminum & zinc components",
-      "Tooling + production under one roof",
-      "Export-quality castings",
-    ],
-  },
-  {
-    icon: Hammer,
-    title: "PROGRESSIVE & STAMPING TOOLS AND COMPONENTS",
-    desc: "High precision stamping dies, lamination tools and progressive tools — engineered for high-volume series production.",
-    bullets: ["Progressive die design", "Lamination & E-cores", "Press tonnage 5T–200T"],
-  },
-  {
-    icon: Wrench,
-    title: "Proto Tool Development",
-    desc: "Proto tool components for plastic, aluminum and sheet metal parts.",
-    bullets: ["Plastic prototypes", "Aluminum & sheet metal protos", "Faster design validation"],
-  },
-  {
-    icon: Cog,
-    title: "Sub Assembly",
-    desc: "plastic, sheet metal and aluminum sub assembly capability under one roof.",
-    bullets: ["Stamped component development", "Sub-assembly", "Single-source supply"],
-  },
-  {
-    icon: Cpu,
-    title: "Engineering Design & Development",
-    desc: "Commercial design centre staffed by 10+ engineers covering CAD/CAM, DFM reports, complex mould design and engineered work cells.",
-    bullets: ["CAD/CAM design", "DFM report", "Complex mould design"],
-  },
-];
-
 const showcaseItems = [
   {
-    label: "Plastic Injection Mould",
+    label: "Plastic Injection Moulds",
     src: plasticInjectionMouldsAsset.url,
     alt: "Plastic injection moulds manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
-    label: "HPDC Die",
+    label: "HPDC Dies",
     src: hpdcDiesAsset.url,
     alt: "High pressure die casting dies manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
-    label: "Progressive Stamping Tool",
+    label: "Progressive Stamping Tools",
     src: progressiveStampingToolsAsset.url,
     alt: "Progressive stamping tools manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
-    label: "HPDC & Export Component",
+    label: "HPDC Components",
     src: hpdcAndExportComponentAsset.url,
-    alt: "HPDC and export components produced by Venus Group",
+    alt: "HPDC components produced by Venus Group",
     fit: "contain" as const,
   },
   {
-    label: "Lamination Component",
+    label: "Lamination Components",
     src: laminationComponentAsset.url,
     alt: "Lamination components manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
-    label: "Sheet Metal Component",
+    label: "Sheet Metal Components",
     src: sheetMetalComponentAsset.url,
     alt: "Sheet metal components manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
-    label: "Plastic Component",
+    label: "Plastic Components",
     src: plasticComponentAsset.url,
     alt: "Plastic components manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
-    label: "Small Terminal Component",
+    label: "Electrical Terminal Components",
     src: smallTerminalComponentAsset.url,
-    alt: "Small terminal components manufactured by Venus Group",
+    alt: "Electrical terminal components manufactured by Venus Group",
     fit: "contain" as const,
   },
   {
-    label: "High Precision Machine Work",
+    label: "High Precision Machining Components",
     src: highPrecisionMachineWorkAsset.url,
-    alt: "High precision machine work CAD models by Venus Group",
+    alt: "High precision machining components by Venus Group",
     fit: "contain" as const,
   },
 ];
@@ -140,11 +93,12 @@ const showcaseItems = [
 const projectFlow = [
   { n: "01", t: "Quotation", d: "Reply within 1–3 working days." },
   { n: "02", t: "Project Kick-off", d: "Project starts upon receipt of PO." },
-  { n: "03", t: "Mould Design", d: "Design and structural analysis." },
+  { n: "03", t: "Flow Analysis & Design", d: "Simulation-driven analysis and design validation to optimize manufacturability, performance, and production efficiency." },
   { n: "04", t: "Procurement", d: "Order steel and standard components." },
   { n: "05", t: "Processing", d: "Machining, processing and inspection." },
   { n: "06", t: "Reporting", d: "Weekly reports and in-process photos." },
   { n: "07", t: "Trial & Approval", d: "Inspect mould to satisfy customer quality requirements." },
+  { n: "08", t: "P-PAP", d: "Comprehensive Part Production Approval Process ensuring components meet customer specifications, quality requirements, and manufacturing standards before mass production." },
 ];
 
 function CapabilitiesPage() {
@@ -155,35 +109,6 @@ function CapabilitiesPage() {
         title="END-TO-END PRECISION MANUFACTURING"
         subtitle="From design and prototyping to series production — engineered for the most demanding applications."
       />
-
-      <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
-        <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <Reveal
-              as="article"
-              key={s.title}
-              delay={(i % 3) * 80}
-              className="bg-background p-7 md:p-8 card-lift"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10 text-primary">
-                <s.icon className="h-6 w-6" />
-              </div>
-              <h3 className="mt-5 font-display text-lg font-bold uppercase tracking-wide text-foreground">
-                {s.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-              <ul className="mt-4 space-y-1.5">
-                {s.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-sm bg-primary" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-          ))}
-        </div>
-      </section>
 
       <section className="border-y bg-secondary/60">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
@@ -205,7 +130,6 @@ function CapabilitiesPage() {
                   alt={item.alt}
                   ratio="square"
                   fit={item.fit}
-                  
                   className="rounded-none border-0 bg-background"
                   imageClassName="p-4"
                 />
