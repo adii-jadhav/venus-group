@@ -193,37 +193,6 @@ function InfraPage() {
         </div>
       </section>
 
-      <section className="container-px mx-auto max-w-7xl py-16 md:py-24">
-        <SectionHeading
-          eyebrow="TOOL ROOM & MACHINERY"
-          title="A COMPLETE IN-HOUSE MANUFACTURING CAPABILITY"
-        />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {machineShowcase.map((machine, i) => (
-            <Reveal
-              key={machine.title}
-              as="article"
-              delay={(i % 4) * 70}
-              className="group overflow-hidden rounded-sm border border-border bg-card card-lift"
-            >
-              <MediaAsset
-                src={machine.src}
-                alt={machine.alt}
-                ratio="video"
-                fit={machine.fit}
-                className="rounded-none border-0 bg-background"
-                imageClassName="p-4"
-              />
-              <div className="border-t border-border p-4">
-                <h3 className="font-display text-sm font-bold uppercase tracking-wide text-foreground">
-                  {machine.title}
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">{machine.meta}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
 
       <section className="border-y bg-secondary/60">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
