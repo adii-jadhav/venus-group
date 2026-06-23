@@ -39,18 +39,6 @@ export const Route = createFileRoute("/infrastructure")({
   component: InfraPage,
 });
 
-const machines = [
-  { name: "VMC Machines", spec: "Max. size 2000 × 1500 mm" },
-  { name: "Milling Machines", spec: "Conventional milling capability" },
-  { name: "Lathe Machines", spec: "Turning operations" },
-  { name: "Radial Drills", spec: "Heavy-duty drilling" },
-  { name: "CNC EDM Machines (incl. double-head)", spec: "Max 1000 × 2200 mm (HSPK)" },
-  { name: "Wire Cut Machines", spec: "Precision wire cut EDM capability" },
-  { name: "Graphite Machining Centers", spec: "High-speed graphite machining · 24,000 rpm" },
-  { name: "Press Machines", spec: "Capacity 5T – 200T" },
-  { name: "Laser Cutting Machines", spec: "Max. 3000 × 1500 mm · 3 KW" },
-  { name: "HPDC Die Casting Lines", spec: "High pressure aluminum and zinc die casting" },
-];
 
 const machineShowcase = [
   {
