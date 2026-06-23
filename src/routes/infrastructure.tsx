@@ -210,17 +210,6 @@ function InfraPage() {
           eyebrow="TOOL ROOM & MACHINERY"
           title="A COMPLETE IN-HOUSE MANUFACTURING CAPABILITY"
         />
-        <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-          {machines.map((m, i) => (
-            <Reveal key={m.name} delay={(i % 3) * 70} className="bg-background p-6 card-lift">
-              <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">
-                {m.name}
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground">{m.spec}</p>
-            </Reveal>
-          ))}
-        </div>
-
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {machineShowcase.map((machine, i) => (
             <Reveal
