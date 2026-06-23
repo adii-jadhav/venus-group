@@ -39,18 +39,6 @@ export const Route = createFileRoute("/infrastructure")({
   component: InfraPage,
 });
 
-const machines = [
-  { name: "VMC Machines", spec: "Max. size 2000 × 1500 mm" },
-  { name: "Milling Machines", spec: "Conventional milling capability" },
-  { name: "Lathe Machines", spec: "Turning operations" },
-  { name: "Radial Drills", spec: "Heavy-duty drilling" },
-  { name: "CNC EDM Machines (incl. double-head)", spec: "Max 1000 × 2200 mm (HSPK)" },
-  { name: "Wire Cut Machines", spec: "Precision wire cut EDM capability" },
-  { name: "Graphite Machining Centers", spec: "High-speed graphite machining · 24,000 rpm" },
-  { name: "Press Machines", spec: "Capacity 5T – 200T" },
-  { name: "Laser Cutting Machines", spec: "Max. 3000 × 1500 mm · 3 KW" },
-  { name: "HPDC Die Casting Lines", spec: "High pressure aluminum and zinc die casting" },
-];
 
 const machineShowcase = [
   {
@@ -210,17 +198,6 @@ function InfraPage() {
           eyebrow="TOOL ROOM & MACHINERY"
           title="A COMPLETE IN-HOUSE MANUFACTURING CAPABILITY"
         />
-        <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-          {machines.map((m, i) => (
-            <Reveal key={m.name} delay={(i % 3) * 70} className="bg-background p-6 card-lift">
-              <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">
-                {m.name}
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground">{m.spec}</p>
-            </Reveal>
-          ))}
-        </div>
-
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {machineShowcase.map((machine, i) => (
             <Reveal
