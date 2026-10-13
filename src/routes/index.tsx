@@ -10,8 +10,6 @@ import certIso from "@/assets/cert-iso-9001.png";
 import certIatf from "@/assets/cert-iatf-16949.png";
 import heroExterior from "@/assets/venus-factory-exterior-hero.webp.asset.json";
 import floorWide from "@/assets/venus-manufacturing-floor.webp.asset.json";
-import facilitySign from "@/assets/h3.png.asset.json";
-import manufacturingFloor from "@/assets/h5.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -165,26 +163,6 @@ function HomePage() {
                   />
                 </div>
               </figure>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <SmartImg
-                      src={facilitySign.url}
-                      alt="Venus signage at the manufacturing facility"
-                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
-                    />
-                  </div>
-                </figure>
-                <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <SmartImg
-                      src={manufacturingFloor.url}
-                      alt="Venus Group manufacturing environment and shop floor"
-                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
-                    />
-                  </div>
-                </figure>
-              </div>
             </div>
           </div>
         </div>
