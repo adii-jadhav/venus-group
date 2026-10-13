@@ -1,4 +1,4 @@
-import { useState, type ImgHTMLAttributes } from "react";
+import { useEffect, useRef, useState, type ImgHTMLAttributes } from "react";
 
 type Props = ImgHTMLAttributes<HTMLImageElement> & {
   wrapperClassName?: string;
@@ -16,14 +16,25 @@ export function SmartImg({
   onError,
   ...rest
 }: Props) {
+  const imgRef = useRef<HTMLImageElement | null>(null);
   const [loaded, setLoaded] = useState(false);
+
+  // A cached or already-complete image can finish before React attaches its
+  // load listener, which would leave the skeleton up forever.
+  useEffect(() => {
+    const el = imgRef.current;
+    if (el && el.complete) setLoaded(true);
+  }, []);
+
   return (
     <div className={`relative h-full w-full overflow-hidden ${wrapperClassName}`}>
-      {!loaded && (
-        <div aria-hidden="true" className="absolute inset-0 shimmer-skeleton" />
-      )}
+      {!loaded && <div aria-hidden="true" className="absolute inset-0 shimmer-skeleton" />}
       <img
         {...rest}
+        ref={(node) => {
+          imgRef.current = node;
+          if (node?.complete) setLoaded(true);
+        }}
         loading={rest.loading ?? "lazy"}
         decoding={rest.decoding ?? "async"}
         onLoad={(e) => {

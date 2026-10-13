@@ -126,7 +126,7 @@ function HomePage() {
 
       {/* ABOUT */}
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
           <div className="lg:col-span-6">
             <SectionHeading
               eyebrow="ABOUT VENUS"

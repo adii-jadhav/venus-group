@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 interface Props {
   src?: string;
@@ -28,22 +28,25 @@ export function MediaAsset({
   reservedLabel,
   eager = false,
 }: Props) {
+  const imgRef = useRef<HTMLImageElement | null>(null);
   const [loaded, setLoaded] = useState(false);
+
+  // A cached or already-complete image can finish before React attaches its
+  // load listener, which would leave the skeleton up forever.
   return (
     <div
       className={`group relative w-full overflow-hidden rounded-sm border border-border bg-muted ${ratioMap[ratio]} ${className}`}
     >
       {src ? (
         <>
-          {!loaded && (
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 shimmer-skeleton"
-            />
-          )}
+          {!loaded && <div aria-hidden="true" className="absolute inset-0 shimmer-skeleton" />}
           <img
             src={src}
             alt={alt}
+            ref={(node) => {
+              imgRef.current = node;
+              if (node?.complete) setLoaded(true);
+            }}
             loading={eager ? "eager" : "lazy"}
             decoding="async"
             onLoad={() => setLoaded(true)}
