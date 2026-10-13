@@ -8,7 +8,8 @@ import { SmartImg } from "@/components/site/SmartImg";
 import { useState } from "react";
 import certIso from "@/assets/cert-iso-9001.png";
 import certIatf from "@/assets/cert-iatf-16949.png";
-import facilityExterior from "@/assets/h2.png.asset.json";
+import heroExterior from "@/assets/venus-factory-exterior-hero.webp.asset.json";
+import floorWide from "@/assets/venus-manufacturing-floor.webp.asset.json";
 import facilitySign from "@/assets/h3.png.asset.json";
 import manufacturingFloor from "@/assets/h5.png.asset.json";
 
@@ -62,7 +63,20 @@ function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative hero-surface text-white">
+      <section className="relative overflow-hidden hero-surface text-white">
+        <img
+          src={heroExterior.url}
+          alt=""
+          aria-hidden="true"
+          width={1600}
+          height={900}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover object-[65%_center] md:object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--steel)] via-[var(--steel)]/85 to-[var(--steel)]/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--steel)]/90 via-transparent to-[var(--steel)]/40" />
         <div className="absolute inset-0 industrial-grid opacity-[0.08]" />
         <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-40">
           <div className="max-w-3xl hero-rise">
@@ -141,11 +155,13 @@ function HomePage() {
           <div className="lg:col-span-6">
             <div className="grid gap-4">
               <figure className="group overflow-hidden rounded-sm border border-border bg-card shadow-sm">
-                <div className="aspect-[16/10] overflow-hidden">
+                <div className="aspect-[16/9] overflow-hidden">
                   <SmartImg
-                    src={facilityExterior.url}
-                    alt="Venus Group facility exterior in Pune"
-                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+                    src={floorWide.url}
+                    alt="Precision manufacturing floor with machining centres and tooling"
+                    width={1600}
+                    height={900}
+                    className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.015]"
                   />
                 </div>
               </figure>
