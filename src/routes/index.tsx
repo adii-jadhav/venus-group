@@ -163,6 +163,8 @@ function HomePage() {
                   />
                 </div>
               </figure>
+            </div>
+          </div>
         </div>
       </section>
 
