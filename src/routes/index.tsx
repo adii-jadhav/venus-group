@@ -8,7 +8,7 @@ import { SmartImg } from "@/components/site/SmartImg";
 import { useState } from "react";
 import certIso from "@/assets/cert-iso-9001.png";
 import certIatf from "@/assets/cert-iatf-16949.png";
-import heroExterior from "@/assets/venus-factory-exterior-hero-2026.webp.asset.json";
+import heroExterior from "@/assets/venus-factory-banner.webp.asset.json";
 import floorWide from "@/assets/venus-manufacturing-floor.webp.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -66,18 +66,17 @@ function HomePage() {
           src={heroExterior.url}
           alt=""
           aria-hidden="true"
-          width={1600}
-          height={1068}
+          width={1535}
+          height={1025}
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="hero-factory-photo absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--steel)] via-[var(--steel)]/85 to-[var(--steel)]/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--steel)]/90 via-transparent to-[var(--steel)]/40" />
+        <div className="hero-factory-overlay absolute inset-0" />
         <div className="absolute inset-0 industrial-grid opacity-[0.08]" />
         <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-40">
-          <div className="max-w-3xl hero-rise">
+          <div className="max-w-3xl lg:max-w-xl hero-rise">
             <div className="inline-flex items-center gap-2 rounded-sm border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               ISO 9001:2015 · IATF 16949:2016 Certified
