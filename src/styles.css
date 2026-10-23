@@ -156,7 +156,7 @@
   @media (min-width: 1024px) {
     .hero-factory-photo {
       object-position: left center;
-      transform: none;
+      transform: translateX(28%);
     }
     .hero-factory-overlay {
       background:

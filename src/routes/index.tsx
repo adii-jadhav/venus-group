@@ -75,13 +75,13 @@ function HomePage() {
         />
         <div className="hero-factory-overlay absolute inset-0" />
         <div className="absolute inset-0 industrial-grid opacity-[0.08]" />
-        <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-40">
-          <div className="max-w-3xl lg:max-w-xl hero-rise">
+        <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-24">
+          <div className="max-w-3xl lg:w-[68%] hero-rise">
             <div className="inline-flex items-center gap-2 rounded-sm border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               ISO 9001:2015 · IATF 16949:2016 Certified
             </div>
-            <h1 className="mt-6 font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
               Precision Engineering.
               <br />
               <span className="text-primary">Trusted Manufacturing.</span>
