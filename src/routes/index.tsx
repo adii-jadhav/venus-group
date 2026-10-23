@@ -8,7 +8,7 @@ import { SmartImg } from "@/components/site/SmartImg";
 import { useState } from "react";
 import certIso from "@/assets/cert-iso-9001.png";
 import certIatf from "@/assets/cert-iatf-16949.png";
-import heroExterior from "@/assets/venus-factory-exterior-hero.webp.asset.json";
+import heroExterior from "@/assets/venus-factory-exterior-hero-2026.webp.asset.json";
 import floorWide from "@/assets/venus-manufacturing-floor.webp.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -67,7 +67,7 @@ function HomePage() {
           alt=""
           aria-hidden="true"
           width={1600}
-          height={900}
+          height={1068}
           loading="eager"
           fetchPriority="high"
           decoding="async"
