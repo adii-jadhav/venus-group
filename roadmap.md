@@ -1,5 +1,5 @@
 # Final QA
-- [ ] Restore the charcoal homepage hero and place the existing factory photo separately beneath it; validate responsive framing and unchanged scrolling.
+- [x] Restore the charcoal homepage hero and place the existing factory photo separately beneath it; validate responsive framing and unchanged scrolling.
 - [x] Fix homepage refresh restoration and photo framing/contrast.
 - [x] Apply confirmed animation, mobile menu, image sizing, and stale-copy fixes.
 - [x] Validate six routes, navigation, history, images, and contact validation; report limits.
