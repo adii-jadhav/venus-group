@@ -159,43 +159,6 @@
       ),
       linear-gradient(180deg, var(--steel) 0%, oklch(0.16 0.012 250) 100%);
   }
-  .hero-factory-photo {
-    height: 180px;
-    object-position: center 65%;
-  }
-  .hero-factory-overlay {
-    background: linear-gradient(
-      180deg,
-      color-mix(in oklab, var(--steel) 10%, transparent) 0px,
-      color-mix(in oklab, var(--steel) 18%, transparent) 70px,
-      color-mix(in oklab, var(--steel) 90%, transparent) 130px,
-      var(--steel) 180px
-    );
-  }
-  @media (min-width: 1024px) {
-    .hero-factory-photo {
-      left: 40%;
-      width: 60%;
-      height: 100%;
-      object-position: center;
-    }
-    .hero-factory-overlay {
-      background:
-        linear-gradient(
-          90deg,
-          var(--steel) 0%,
-          var(--steel) 40%,
-          color-mix(in oklab, var(--steel) 85%, transparent) 54%,
-          color-mix(in oklab, var(--steel) 12%, transparent) 66%,
-          color-mix(in oklab, var(--steel) 12%, transparent) 100%
-        ),
-        linear-gradient(
-          0deg,
-          color-mix(in oklab, var(--steel) 85%, transparent) 0%,
-          transparent 45%
-        );
-    }
-  }
   .accent-bar::before {
     content: "";
     display: inline-block;

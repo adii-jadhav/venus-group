@@ -108,18 +108,6 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden hero-surface text-white">
-        <img
-          src={heroExterior.url}
-          alt=""
-          aria-hidden="true"
-          width={1535}
-          height={1025}
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          className="hero-factory-photo absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="hero-factory-overlay absolute inset-0" />
         <div className="absolute inset-0 industrial-grid opacity-[0.08]" />
         <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-24">
           <div className="max-w-3xl lg:w-[60%] hero-rise">
@@ -173,6 +161,34 @@ function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* OUR FACILITY */}
+      <section
+        aria-label="Our Facility"
+        className="container-px mx-auto w-full max-w-7xl pt-20 md:pt-28"
+      >
+        <Reveal>
+          <p className="accent-bar mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            OUR FACILITY
+          </p>
+          <figure>
+            <div className="aspect-[4/3] overflow-hidden rounded-sm border border-border bg-muted shadow-sm sm:aspect-video">
+              <SmartImg
+                src={heroExterior.url}
+                alt="Venus Group factory exterior in Pune with the VENUS sign on the white facade and the entrance gate"
+                width={1535}
+                height={1025}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
+            <figcaption className="mt-4 text-sm text-muted-foreground">
+              Venus Group Manufacturing Facility · Pune, India
+            </figcaption>
+          </figure>
+        </Reveal>
       </section>
 
       {/* ABOUT */}
