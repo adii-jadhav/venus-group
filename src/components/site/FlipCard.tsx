@@ -39,7 +39,7 @@ export function FlipCard({ front, back, className = "", active, onActivate }: Pr
       aria-pressed={flipped}
     >
       <div
-        className="relative h-full w-full transition-transform duration-500 ease-in-out"
+        className="relative h-full w-full transition-transform duration-500 ease-in-out motion-reduce:transition-none"
         style={{
           transformStyle: "preserve-3d",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",

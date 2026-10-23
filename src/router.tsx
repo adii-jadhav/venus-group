@@ -1,6 +1,7 @@
 import { createRouter, useRouter } from "@tanstack/react-router";
 import type { ErrorComponentProps } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
+import { shouldResetHomeEntry } from "./lib/home-entry-scroll";
 
 function DefaultErrorComponent({ error, reset }: ErrorComponentProps) {
   const router = useRouter();
@@ -56,13 +57,32 @@ function DefaultErrorComponent({ error, reset }: ErrorComponentProps) {
 }
 
 export const getRouter = () => {
+  let initialHomeEntry =
+    typeof window !== "undefined" &&
+    shouldResetHomeEntry(
+      window.location.pathname,
+      window.location.hash,
+      (performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined)
+        ?.type,
+    );
   const router = createRouter({
     routeTree,
     context: {},
     scrollRestoration: true,
+    getScrollRestorationKey: (location) => {
+      const key = location.state.__TSR_key || location.href;
+      // Ignore a persisted offset only on this fresh document's first home render.
+      // Subsequent snapshots and history traversals use the normal entry key.
+      return initialHomeEntry && location.pathname === "/" ? `${key}:initial-top` : key;
+    },
     defaultPreload: "intent",
     defaultPreloadStaleTime: 0,
     defaultErrorComponent: DefaultErrorComponent,
+  });
+
+  const unsubscribe = router.subscribe("onRendered", () => {
+    initialHomeEntry = false;
+    unsubscribe();
   });
 
   return router;

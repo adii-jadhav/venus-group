@@ -9,6 +9,8 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Contact Venus Group — Request a Quote | ALL UNDER ONE ROOF" },
       {
         name: "description",
@@ -227,7 +229,10 @@ function ContactPage() {
                     msnayak@venusgroup.co.in
                   </a>
                   <br />
-                  <a href="mailto:sathvik@venusgroup.co.in" className="break-all hover:text-primary">
+                  <a
+                    href="mailto:sathvik@venusgroup.co.in"
+                    className="break-all hover:text-primary"
+                  >
                     sathvik@venusgroup.co.in
                   </a>
                 </Info>
@@ -273,6 +278,7 @@ function Field({
       <input
         type={type}
         name={name}
+        required={name !== "company"}
         autoComplete={autoComplete}
         placeholder={placeholder}
         className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
@@ -296,7 +302,7 @@ function Info({
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-primary/10 text-primary">
         {icon}
       </div>
-      <div>
+      <div className="min-w-0 break-words">
         <div className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
           {title}
         </div>

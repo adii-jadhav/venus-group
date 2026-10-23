@@ -44,16 +44,34 @@ export function Header() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const closeOnDesktop = () => {
+      if (desktop.matches) setOpen(false);
+    };
+    closeOnDesktop();
+    window.addEventListener("keydown", onKey);
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      desktop.removeEventListener("change", closeOnDesktop);
+    };
+  }, [open]);
+
   return (
     <header
       className={`sticky top-0 z-50 w-full border-b transition-[box-shadow,border-color] duration-200 ease-out bg-background ${
         scrolled ? "shadow-sm" : "border-transparent"
       }`}
     >
-      <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
-        <Link to="/" className="flex shrink-0 items-center gap-3">
+      <div className="container-px mx-auto grid h-16 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 sm:flex sm:justify-between md:h-20">
+        <Link to="/" onClick={() => setOpen(false)} className="flex min-w-0 items-center gap-3">
           <img src={logo} alt="Venus Group logo" className="h-10 w-auto md:h-12" />
-          <div className="hidden sm:block leading-tight">
+          <div className="hidden min-w-0 sm:block leading-tight">
             <div className="font-display text-base font-bold tracking-wide text-foreground md:text-lg">
               VENUS GROUP
             </div>
@@ -77,7 +95,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
           <Link
             to="/contact"
             className="hidden md:inline-flex whitespace-nowrap items-center justify-center rounded-sm bg-primary px-5 py-2.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
@@ -87,6 +105,8 @@ export function Header() {
           <button
             type="button"
             aria-label="Toggle menu"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
             className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-sm border border-border text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             onClick={() => setOpen((v) => !v)}
           >
@@ -96,7 +116,10 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t bg-background animate-in fade-in slide-in-from-top-2 duration-200">
+        <div
+          id="mobile-navigation"
+          className="lg:hidden max-h-[calc(100dvh-5rem)] overflow-y-auto border-t bg-background animate-in fade-in slide-in-from-top-2 duration-200"
+        >
           <nav className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
             {NAV.map((n) => (
               <Link

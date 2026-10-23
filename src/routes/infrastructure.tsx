@@ -23,6 +23,8 @@ import cncAsset from "@/assets/venus-cnc-machining.webp.asset.json";
 export const Route = createFileRoute("/infrastructure")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Infrastructure & Facilities — Tool Room, HPDC, Press Shop | Venus Pune" },
       {
         name: "description",
@@ -39,7 +41,6 @@ export const Route = createFileRoute("/infrastructure")({
   }),
   component: InfraPage,
 });
-
 
 const machineShowcase = [
   {
@@ -192,7 +193,10 @@ function InfraPage() {
             </Reveal>
           ))}
         </div>
-        <Reveal as="article" className="mt-10 overflow-hidden rounded-sm border border-border bg-card shadow-sm">
+        <Reveal
+          as="article"
+          className="mt-10 overflow-hidden rounded-sm border border-border bg-card shadow-sm"
+        >
           <MediaAsset
             src={cncAsset.url}
             alt="Precision CNC machining of a tool steel workpiece"
@@ -205,7 +209,6 @@ function InfraPage() {
           </div>
         </Reveal>
       </section>
-
 
       <section className="border-y bg-secondary/60">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">

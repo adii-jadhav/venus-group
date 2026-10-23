@@ -27,7 +27,9 @@ export function SmartImg({
   }, []);
 
   return (
-    <div className={`relative h-full w-full overflow-hidden ${wrapperClassName}`}>
+    <div
+      className={`motion-safe-transition relative h-full w-full overflow-hidden ${wrapperClassName}`}
+    >
       {!loaded && <div aria-hidden="true" className="absolute inset-0 shimmer-skeleton" />}
       <img
         {...rest}
@@ -45,7 +47,7 @@ export function SmartImg({
           setLoaded(true);
           onError?.(e);
         }}
-        className={`${className} transition-opacity duration-300 ease-out ${
+        className={`${className} motion-safe-transition transition-opacity duration-300 ease-out ${
           loaded ? "opacity-100" : "opacity-0"
         }`}
       />

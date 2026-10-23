@@ -17,6 +17,8 @@ import highPrecisionMachineWorkAsset from "@/assets/High_precision_machine_work.
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Capabilities — Injection Moulding, Die Casting & Stamping Tools | Venus" },
       {
         name: "description",
@@ -93,12 +95,20 @@ const showcaseItems = [
 const projectFlow = [
   { n: "01", t: "Quotation", d: "Reply within 1–3 working days." },
   { n: "02", t: "Project Kick-off", d: "Project starts upon receipt of PO." },
-  { n: "03", t: "Flow Analysis & Design", d: "Simulation-driven analysis and design validation to optimize manufacturability, performance, and production efficiency." },
+  {
+    n: "03",
+    t: "Flow Analysis & Design",
+    d: "Simulation-driven analysis and design validation to optimize manufacturability, performance, and production efficiency.",
+  },
   { n: "04", t: "Procurement", d: "Order steel and standard components." },
   { n: "05", t: "Processing", d: "Machining, processing and inspection." },
   { n: "06", t: "Reporting", d: "Weekly reports and in-process photos." },
   { n: "07", t: "Trial & Approval", d: "Inspect mould to satisfy customer quality requirements." },
-  { n: "08", t: "P-PAP", d: "Comprehensive Part Production Approval Process ensuring components meet customer specifications, quality requirements, and manufacturing standards before mass production." },
+  {
+    n: "08",
+    t: "P-PAP",
+    d: "Comprehensive Part Production Approval Process ensuring components meet customer specifications, quality requirements, and manufacturing standards before mass production.",
+  },
 ];
 
 function CapabilitiesPage() {

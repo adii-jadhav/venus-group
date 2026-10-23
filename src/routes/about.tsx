@@ -6,6 +6,8 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "About Venus Group — 26+ Years of Precision Engineering in Pune" },
       {
         name: "description",
@@ -13,7 +15,10 @@ export const Route = createFileRoute("/about")({
           "Founded in 1999 in Pune, Venus Group is a precision engineering manufacturer of injection moulds, die casting and stamping tools. Quality, innovation and customer satisfaction.",
       },
       { property: "og:title", content: "About Venus Group Pvt. Ltd." },
-      { property: "og:description", content: "Pune-based dies and moulds manufacturer with 26+ years of trusted manufacturing." },
+      {
+        property: "og:description",
+        content: "Pune-based dies and moulds manufacturer with 26+ years of trusted manufacturing.",
+      },
     ],
   }),
   component: AboutPage,
@@ -21,14 +26,23 @@ export const Route = createFileRoute("/about")({
 
 const milestones = [
   { y: "2026", t: "Added double-head CNC EDM machine." },
-  { y: "2025", t: "Added 2 brand-new Mitsubishi MV2400S-D Cube & MV1200S-D Cube wire cut machines." },
+  {
+    y: "2025",
+    t: "Added 2 brand-new Mitsubishi MV2400S-D Cube & MV1200S-D Cube wire cut machines.",
+  },
   { y: "2024", t: "Added new laser cutting machine." },
   { y: "2022", t: "Plant expansion at D-89 Phase-2 MIDC Chakan." },
-  { y: "2019", t: "Embraced renewable energy with the commissioning of a 300 KVA roof-top solar system — advancing sustainable operations, reducing carbon footprint and reinforcing our commitment to environmental responsibility." },
+  {
+    y: "2019",
+    t: "Embraced renewable energy with the commissioning of a 300 KVA roof-top solar system — advancing sustainable operations, reducing carbon footprint and reinforcing our commitment to environmental responsibility.",
+  },
   { y: "2018", t: "Takeover of PDC plant at B-32, Phase-2 MIDC Chakan." },
   { y: "2016", t: "Established stamping production plant at C-19, MIDC Chakan." },
   { y: "2013", t: "Established progressive press tools manufacturing plant at Chinchwad." },
-  { y: "2005", t: "Started manufacturing of plastic injection moulds & sheet metal dies at MIDC Bhosari." },
+  {
+    y: "2005",
+    t: "Started manufacturing of plastic injection moulds & sheet metal dies at MIDC Bhosari.",
+  },
   { y: "2002", t: "Shifted to Gulvevasti — added VMC and Sodick W/c." },
   { y: "1999", t: "Initiated with job work on used CNC Wire EDM at Landewadi, Bhosari." },
 ];
@@ -51,21 +65,25 @@ function AboutPage() {
       />
 
       <section className="container-px mx-auto max-w-5xl py-20 md:py-28">
-        <SectionHeading eyebrow="OUR STORY" title="FROM A SINGLE CNC MACHINE TO A MULTI-PLANT MANUFACTURING GROUP" />
+        <SectionHeading
+          eyebrow="OUR STORY"
+          title="FROM A SINGLE CNC MACHINE TO A MULTI-PLANT MANUFACTURING GROUP"
+        />
         <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
           <p>
-            In 1999, Venus Group began as a small job-work unit in Bhosari with a single used CNC Wire EDM and one
-            operator. What we lacked in scale, we made up for in commitment to quality and on-time delivery.
+            In 1999, Venus Group began as a small job-work unit in Bhosari with a single used CNC
+            Wire EDM and one operator. What we lacked in scale, we made up for in commitment to
+            quality and on-time delivery.
           </p>
           <p>
-            Two and a half decades later, Venus operates six dedicated manufacturing plants across Chinchwad and
-            Chakan MIDC - covering the entire value chain from design and prototyping to high pressure die casting,
-            stamping and sub-assembly.
+            Two and a half decades later, Venus operates six dedicated manufacturing plants across
+            Chinchwad and Chakan MIDC - covering the entire value chain from design and prototyping
+            to high pressure die casting, stamping and sub-assembly.
           </p>
           <p>
-            Our quality policy commits us to continual improvement through innovation and a robust quality
-            management system - backed by skilled people, modern infrastructure and ISO 9001:2015 / IATF 16949:2016
-            certifications.
+            Our quality policy commits us to continual improvement through innovation and a robust
+            quality management system - backed by skilled people, modern infrastructure and ISO
+            9001:2015 / IATF 16949:2016 certifications.
           </p>
         </div>
       </section>
@@ -80,7 +98,12 @@ function AboutPage() {
               "We are committed to continual improvement through innovation and our quality management system to meet customer needs with increased morale of our personnel.",
               "We create an environment that encourages all our employees and stakeholders to prevent defects and strive for excellence.",
             ].map((q, i) => (
-              <Reveal as="li" key={q} delay={i * 80} className="rounded-sm border border-border bg-background p-7 card-lift">
+              <Reveal
+                as="li"
+                key={q}
+                delay={i * 80}
+                className="rounded-sm border border-border bg-background p-7 card-lift"
+              >
                 <CheckCircle2 className="h-6 w-6 text-primary" />
                 <p className="mt-4 text-sm leading-relaxed text-foreground">{q}</p>
               </Reveal>
@@ -92,7 +115,12 @@ function AboutPage() {
       {/* Core Values */}
       <section className="bg-[var(--steel)] text-white">
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
-          <SectionHeading eyebrow="CORE VALUES" title="THE PRINCIPLES THAT GUIDE EVERY DECISION" align="center" titleClassName="text-white" />
+          <SectionHeading
+            eyebrow="CORE VALUES"
+            title="THE PRINCIPLES THAT GUIDE EVERY DECISION"
+            align="center"
+            titleClassName="text-white"
+          />
           <div className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {coreValues.map((v, i) => (
               <Reveal
@@ -101,7 +129,9 @@ function AboutPage() {
                 className="flex flex-col items-center justify-center rounded-sm border border-white/10 bg-white/5 p-6 text-center card-lift"
               >
                 <div className="font-display text-3xl font-bold text-primary">0{i + 1}</div>
-                <div className="mt-3 text-sm font-semibold uppercase tracking-wide text-white">{v}</div>
+                <div className="mt-3 text-sm font-semibold uppercase tracking-wide text-white">
+                  {v}
+                </div>
               </Reveal>
             ))}
           </div>
@@ -124,7 +154,9 @@ function AboutPage() {
                   }`}
                 >
                   <div className="absolute left-4 top-2 h-3 w-3 -translate-x-1/2 rounded-full bg-primary ring-4 ring-background md:left-1/2" />
-                  <div className={`pl-12 md:w-1/2 md:pl-0 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
+                  <div
+                    className={`pl-12 md:w-1/2 md:pl-0 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}
+                  >
                     <div className="font-display text-2xl font-bold text-primary">{m.y}</div>
                     <p className="mt-1 text-sm text-muted-foreground">{m.t}</p>
                   </div>
@@ -142,16 +174,24 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
-}: { eyebrow: string; title: string; subtitle?: string }) {
+}: {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+}) {
   return (
     <section className="hero-surface text-white border-b border-white/10">
       <div className="absolute inset-0 industrial-grid opacity-[0.06]" />
       <div className="container-px relative mx-auto max-w-7xl py-16 md:py-24">
-        <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{eyebrow}</div>
+        <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+          {eyebrow}
+        </div>
         <h1 className="mt-3 font-display text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
           {title}
         </h1>
-        {subtitle && <p className="mt-5 max-w-2xl text-base text-white/75 md:text-lg">{subtitle}</p>}
+        {subtitle && (
+          <p className="mt-5 max-w-2xl text-base text-white/75 md:text-lg">{subtitle}</p>
+        )}
       </div>
     </section>
   );
