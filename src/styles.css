@@ -143,6 +143,33 @@
       radial-gradient(ellipse at top right, color-mix(in oklab, var(--primary) 14%, transparent), transparent 60%),
       linear-gradient(180deg, var(--steel) 0%, oklch(0.16 0.012 250) 100%);
   }
+  .hero-factory-photo {
+    object-position: 38% center;
+    transform: translateY(-32%);
+  }
+  .hero-factory-overlay {
+    background: linear-gradient(180deg,
+      color-mix(in oklab, var(--steel) 35%, transparent) 0%,
+      color-mix(in oklab, var(--steel) 65%, transparent) 34%,
+      color-mix(in oklab, var(--steel) 92%, transparent) 70%);
+  }
+  @media (min-width: 1024px) {
+    .hero-factory-photo {
+      object-position: left center;
+      transform: none;
+    }
+    .hero-factory-overlay {
+      background:
+        linear-gradient(90deg,
+          color-mix(in oklab, var(--steel) 96%, transparent) 0%,
+          color-mix(in oklab, var(--steel) 88%, transparent) 32%,
+          color-mix(in oklab, var(--steel) 20%, transparent) 58%,
+          color-mix(in oklab, var(--steel) 12%, transparent) 100%),
+        linear-gradient(0deg,
+          color-mix(in oklab, var(--steel) 85%, transparent) 0%,
+          transparent 45%);
+    }
+  }
   .accent-bar::before {
     content: "";
     display: inline-block;
