@@ -164,7 +164,10 @@ function HomePage() {
       </section>
 
       {/* OUR FACILITY */}
-      <section aria-label="Our Facility" className="container-px mx-auto w-full max-w-7xl pt-20 md:pt-28">
+      <section
+        aria-label="Our Facility"
+        className="container-px mx-auto w-full max-w-7xl pt-20 md:pt-28"
+      >
         <Reveal>
           <p className="accent-bar mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             OUR FACILITY
