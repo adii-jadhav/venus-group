@@ -145,6 +145,7 @@
   }
   .hero-factory-photo {
     object-position: 38% center;
+    transform: translateY(-32%);
   }
   .hero-factory-overlay {
     background: linear-gradient(180deg,
@@ -153,7 +154,10 @@
       color-mix(in oklab, var(--steel) 92%, transparent) 70%);
   }
   @media (min-width: 1024px) {
-    .hero-factory-photo { object-position: left center; }
+    .hero-factory-photo {
+      object-position: left center;
+      transform: none;
+    }
     .hero-factory-overlay {
       background:
         linear-gradient(90deg,
