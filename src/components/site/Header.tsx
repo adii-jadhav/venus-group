@@ -51,7 +51,7 @@ export function Header() {
       }`}
     >
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex shrink-0 items-center gap-3">
           <img src={logo} alt="Venus Group logo" className="h-10 w-auto md:h-12" />
           <div className="hidden sm:block leading-tight">
             <div className="font-display text-base font-bold tracking-wide text-foreground md:text-lg">
@@ -63,12 +63,12 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
           {NAV.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm font-medium uppercase tracking-wide text-foreground/80 transition-colors hover:text-primary"
+              className="text-xs xl:text-sm font-medium uppercase tracking-wide text-foreground/80 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
               activeOptions={{ exact: n.to === "/" }}
             >
@@ -80,7 +80,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             to="/contact"
-            className="hidden md:inline-flex items-center justify-center rounded-sm bg-primary px-5 py-2.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            className="hidden md:inline-flex whitespace-nowrap items-center justify-center rounded-sm bg-primary px-5 py-2.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             GET A QUOTE
           </Link>

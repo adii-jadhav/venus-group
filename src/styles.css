@@ -156,14 +156,15 @@
   @media (min-width: 1024px) {
     .hero-factory-photo {
       object-position: left center;
-      transform: none;
+      transform: translateX(28%);
     }
     .hero-factory-overlay {
       background:
         linear-gradient(90deg,
-          color-mix(in oklab, var(--steel) 96%, transparent) 0%,
-          color-mix(in oklab, var(--steel) 88%, transparent) 32%,
-          color-mix(in oklab, var(--steel) 20%, transparent) 58%,
+          var(--steel) 0%,
+          var(--steel) 28%,
+          color-mix(in oklab, var(--steel) 85%, transparent) 43%,
+          color-mix(in oklab, var(--steel) 20%, transparent) 68%,
           color-mix(in oklab, var(--steel) 12%, transparent) 100%),
         linear-gradient(0deg,
           color-mix(in oklab, var(--steel) 85%, transparent) 0%,
