@@ -71,7 +71,7 @@ function HomePage() {
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-0 h-full w-full object-cover object-[65%_center] md:object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--steel)] via-[var(--steel)]/85 to-[var(--steel)]/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--steel)]/90 via-transparent to-[var(--steel)]/40" />
