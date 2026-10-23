@@ -14,7 +14,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
   useEffect(() => {
     if (typeof window === "undefined") return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
+    if (reduce || !("IntersectionObserver" in window)) {
       setShown(true);
       return;
     }

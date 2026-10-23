@@ -1,5 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Award, Cog, Factory, ShieldCheck, Wrench, Layers, Cpu, Hammer } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  Cog,
+  Factory,
+  ShieldCheck,
+  Wrench,
+  Layers,
+  Cpu,
+  Hammer,
+} from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
@@ -14,6 +24,8 @@ import floorWide from "@/assets/venus-manufacturing-floor.webp.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Venus Group — Precision Engineering, Pune" },
       {
         name: "description",
@@ -32,12 +44,36 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: Layers, title: "PLASTIC INJECTION MOULDS AND COMPONENTS", desc: "Plastic injection moulds engineered for high precision and repeatability." },
-  { icon: Factory, title: "HPDC DIES AND COMPONENTS", desc: "Aluminum & Zinc PDC components,\ncold chamber and hot chamber components." },
-  { icon: Hammer, title: "PROGRESSIVE & STAMPING TOOLS AND COMPONENTS", desc: "High precision stamping dies, lamination and progressive tools for series production." },
-  { icon: Wrench, title: "Proto Tool Development", desc: "Proto tool components for plastic, aluminum and sheet metal parts." },
-  { icon: Cog, title: "Sub Assembly", desc: "plastic, sheet metal and aluminum sub assembly capability under one roof." },
-  { icon: Cpu, title: "LASER CUT & CNC WIRE CUT SERVICES", desc: "Reliable CNC wire cut and Laser cut services for high-quality production" },
+  {
+    icon: Layers,
+    title: "PLASTIC INJECTION MOULDS AND COMPONENTS",
+    desc: "Plastic injection moulds engineered for high precision and repeatability.",
+  },
+  {
+    icon: Factory,
+    title: "HPDC DIES AND COMPONENTS",
+    desc: "Aluminum & Zinc PDC components,\ncold chamber and hot chamber components.",
+  },
+  {
+    icon: Hammer,
+    title: "PROGRESSIVE & STAMPING TOOLS AND COMPONENTS",
+    desc: "High precision stamping dies, lamination and progressive tools for series production.",
+  },
+  {
+    icon: Wrench,
+    title: "Proto Tool Development",
+    desc: "Proto tool components for plastic, aluminum and sheet metal parts.",
+  },
+  {
+    icon: Cog,
+    title: "Sub Assembly",
+    desc: "plastic, sheet metal and aluminum sub assembly capability under one roof.",
+  },
+  {
+    icon: Cpu,
+    title: "LASER CUT & CNC WIRE CUT SERVICES",
+    desc: "Reliable CNC wire cut and Laser cut services for high-quality production",
+  },
 ];
 
 const strengths = [
@@ -52,8 +88,18 @@ const strengths = [
 ];
 
 const certifications = [
-  { t: "ISO 9001:2015", d: "Quality Management System certified for consistent processes and customer focus.", img: certIso, alt: "ISO 9001:2015 Certificate" },
-  { t: "IATF 16949:2016", d: "Automotive quality management standard demonstrating fitness for global supply chains.", img: certIatf, alt: "IATF 16949:2016 Certificate" },
+  {
+    t: "ISO 9001:2015",
+    d: "Quality Management System certified for consistent processes and customer focus.",
+    img: certIso,
+    alt: "ISO 9001:2015 Certificate",
+  },
+  {
+    t: "IATF 16949:2016",
+    d: "Automotive quality management standard demonstrating fitness for global supply chains.",
+    img: certIatf,
+    alt: "IATF 16949:2016 Certificate",
+  },
 ];
 
 function HomePage() {
@@ -76,7 +122,7 @@ function HomePage() {
         <div className="hero-factory-overlay absolute inset-0" />
         <div className="absolute inset-0 industrial-grid opacity-[0.08]" />
         <div className="container-px relative mx-auto max-w-7xl py-20 md:py-32 lg:py-24">
-          <div className="max-w-3xl lg:w-[68%] hero-rise">
+          <div className="max-w-3xl lg:w-[60%] hero-rise">
             <div className="inline-flex items-center gap-2 rounded-sm border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               ISO 9001:2015 · IATF 16949:2016 Certified
@@ -87,14 +133,18 @@ function HomePage() {
               <span className="text-primary">Trusted Manufacturing.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-              Venus Group is a Pune-based precision engineering company delivering Injection Moulds, High Pressure Casting Dies, Sheet Metal Tools, Components and Assemblies in all three verticals to global manufacturers, with 26+ years of proven quality, innovation and on-time delivery.
+              Venus Group is a Pune-based precision engineering company delivering Injection Moulds,
+              High Pressure Casting Dies, Sheet Metal Tools, Components and Assemblies in all three
+              verticals to global manufacturers, with 26+ years of proven quality, innovation and
+              on-time delivery.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 to="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5"
               >
-                GET A QUOTE <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                GET A QUOTE{" "}
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
                 to="/capabilities"
@@ -116,7 +166,9 @@ function HomePage() {
                 <div className="font-display text-3xl font-bold text-primary md:text-4xl">
                   <CountUp value={s.k} />
                 </div>
-                <div className="mt-1 text-xs uppercase tracking-[0.16em] text-white/60 md:text-sm whitespace-pre-line">{s.v}</div>
+                <div className="mt-1 text-xs uppercase tracking-[0.16em] text-white/60 md:text-sm whitespace-pre-line">
+                  {s.v}
+                </div>
               </Reveal>
             ))}
           </div>
@@ -134,12 +186,12 @@ function HomePage() {
             />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                We continuously strive for customer satisfaction by providing timely qualitative products and hassle-free
-                services. Our quality management system, innovation and committed people enable us to consistently
-                exceed customer needs and expectations.
+                We continuously strive for customer satisfaction by providing timely qualitative
+                products and hassle-free services. Our quality management system, innovation and
+                committed people enable us to consistently exceed customer needs and expectations.
               </p>
               <p>
-                Today, Venus operates five dedicated manufacturing units across Chinchwad and Chakan MIDC.
+                Today, Venus operates six manufacturing plants across Chinchwad and Chakan MIDC.
               </p>
             </div>
             <Link
@@ -212,7 +264,10 @@ function HomePage() {
           />
           <ul className="grid gap-3 sm:grid-cols-2">
             {strengths.map((s) => (
-              <li key={s} className="flex items-start gap-3 rounded-sm border border-border bg-card p-4">
+              <li
+                key={s}
+                className="flex items-start gap-3 rounded-sm border border-border bg-card p-4"
+              >
                 <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <span className="text-sm font-medium text-foreground">{s}</span>
               </li>
@@ -226,17 +281,21 @@ function HomePage() {
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <div className="grid gap-px bg-white/10 md:grid-cols-2">
             <div className="bg-[var(--steel)] p-8 md:p-12">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">MISSION</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+                MISSION
+              </div>
               <p className="mt-5 font-display text-2xl font-semibold uppercase leading-snug md:text-3xl">
                 To be the number one preferred vendor to our esteemed clients with our motto being{" "}
                 <span className="text-primary">leadership through quality.</span>
               </p>
             </div>
             <div className="bg-[var(--steel)] p-8 md:p-12">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">VISION</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+                VISION
+              </div>
               <p className="mt-5 font-display text-2xl font-semibold uppercase leading-snug md:text-3xl">
-                To be a complete solution to all customer needs in terms of innovation, development, quality, delivery,
-                cost <span className="text-primary">& its core values.</span>
+                To be a complete solution to all customer needs in terms of innovation, development,
+                quality, delivery, cost <span className="text-primary">& its core values.</span>
               </p>
             </div>
           </div>
@@ -261,9 +320,13 @@ function HomePage() {
                     <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
                       <Award className="h-7 w-7" />
                     </div>
-                    <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">{c.t}</h3>
+                    <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">
+                      {c.t}
+                    </h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
-                    <span className="mt-4 text-[11px] uppercase tracking-wider text-primary/80">Tap to view certificate</span>
+                    <span className="mt-4 text-[11px] uppercase tracking-wider text-primary/80">
+                      Tap to view certificate
+                    </span>
                   </div>
                 }
                 back={
@@ -292,7 +355,8 @@ function HomePage() {
                 HAVE A PROJECT IN MIND?
               </h3>
               <p className="mt-2 max-w-xl text-sm text-primary-foreground/90 md:text-base">
-                Share your drawings or requirements — our engineering team will respond with a quote in 1–3 working days.
+                Share your drawings or requirements — our engineering team will respond with a quote
+                in 1–3 working days.
               </p>
             </div>
             <Link

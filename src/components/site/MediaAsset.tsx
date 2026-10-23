@@ -35,7 +35,7 @@ export function MediaAsset({
   // load listener, which would leave the skeleton up forever.
   return (
     <div
-      className={`group relative w-full overflow-hidden rounded-sm border border-border bg-muted ${ratioMap[ratio]} ${className}`}
+      className={`motion-safe-transition group relative w-full overflow-hidden rounded-sm border border-border bg-muted ${ratioMap[ratio]} ${className}`}
     >
       {src ? (
         <>

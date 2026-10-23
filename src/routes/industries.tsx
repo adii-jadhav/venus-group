@@ -11,6 +11,8 @@ import customersLogos from "@/assets/customers-logos.png";
 export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Industries Served — Automotive, Electrical, Defense & More | Venus" },
       {
         name: "description",
@@ -18,19 +20,46 @@ export const Route = createFileRoute("/industries")({
           "Venus Group serves automotive, electrical, textile, household, defense and other industrial segments with precision moulds, dies and components.",
       },
       { property: "og:title", content: "Industries We Serve — Venus Group" },
-      { property: "og:description", content: "Trusted by leading OEMs across automotive, electrical and defense sectors." },
+      {
+        property: "og:description",
+        content: "Trusted by leading OEMs across automotive, electrical and defense sectors.",
+      },
     ],
   }),
   component: IndustriesPage,
 });
 
 const sectors = [
-  { icon: Car, title: "Automotive", desc: "Precision moulds, HPDC components and stamped parts for global automotive OEMs and tier-1 suppliers." },
-  { icon: Zap, title: "Electrical", desc: "Lamination components, terminal parts and engineered tooling for electrical equipment manufacturers." },
-  { icon: Shirt, title: "Textile", desc: "Custom dies and components for textile machinery and process equipment." },
-  { icon: Home, title: "Household", desc: "Plastic and metal components for household appliances and consumer durable products." },
-  { icon: Shield, title: "Defense", desc: "Precision-engineered components meeting stringent defense quality standards." },
-  { icon: Boxes, title: "Other Segments", desc: "General engineering, industrial and export components produced to customer specifications." },
+  {
+    icon: Car,
+    title: "Automotive",
+    desc: "Precision moulds, HPDC components and stamped parts for global automotive OEMs and tier-1 suppliers.",
+  },
+  {
+    icon: Zap,
+    title: "Electrical",
+    desc: "Lamination components, terminal parts and engineered tooling for electrical equipment manufacturers.",
+  },
+  {
+    icon: Shirt,
+    title: "Textile",
+    desc: "Custom dies and components for textile machinery and process equipment.",
+  },
+  {
+    icon: Home,
+    title: "Household",
+    desc: "Plastic and metal components for household appliances and consumer durable products.",
+  },
+  {
+    icon: Shield,
+    title: "Defense",
+    desc: "Precision-engineered components meeting stringent defense quality standards.",
+  },
+  {
+    icon: Boxes,
+    title: "Other Segments",
+    desc: "General engineering, industrial and export components produced to customer specifications.",
+  },
 ];
 
 function IndustriesPage() {
@@ -45,7 +74,12 @@ function IndustriesPage() {
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
           {sectors.map((s, i) => (
-            <Reveal as="article" key={s.title} delay={(i % 3) * 80} className="group bg-background p-7 md:p-8 transition-colors hover:bg-card card-lift">
+            <Reveal
+              as="article"
+              key={s.title}
+              delay={(i % 3) * 80}
+              className="group bg-background p-7 md:p-8 transition-colors hover:bg-card card-lift"
+            >
               <div className="flex h-14 w-14 items-center justify-center rounded-sm bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <s.icon className="h-7 w-7" />
               </div>
@@ -69,6 +103,8 @@ function IndustriesPage() {
           <Reveal className="mx-auto mt-12 max-w-5xl">
             <SmartImg
               src={customersLogos}
+              width={1400}
+              height={900}
               alt="Logos of leading manufacturers served by Venus Group"
               className="mx-auto h-auto w-full object-contain"
             />
@@ -86,19 +122,33 @@ function IndustriesPage() {
           align="center"
         />
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
-          <Reveal delay={0} className="group rounded-sm border border-border bg-card p-8 text-center card-lift">
-            <div className="font-display text-base font-bold uppercase tracking-wide text-primary">Award</div>
-            <h3 className="mt-3 font-display text-xl font-bold uppercase text-foreground">Best Upcoming Industry</h3>
+          <Reveal
+            delay={0}
+            className="group rounded-sm border border-border bg-card p-8 text-center card-lift"
+          >
+            <div className="font-display text-base font-bold uppercase tracking-wide text-primary">
+              Award
+            </div>
+            <h3 className="mt-3 font-display text-xl font-bold uppercase text-foreground">
+              Best Upcoming Industry
+            </h3>
             <div className="mt-6 overflow-hidden rounded-sm">
               <SmartImg
                 src={awardBia}
+                width={1400}
+                height={1050}
                 alt="Best Upcoming Industry award presented to Venus Group"
                 className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
               />
             </div>
           </Reveal>
-          <Reveal delay={100} className="group rounded-sm border border-border bg-card p-8 text-center card-lift">
-            <div className="font-display text-base font-bold uppercase tracking-wide text-primary">Award</div>
+          <Reveal
+            delay={100}
+            className="group rounded-sm border border-border bg-card p-8 text-center card-lift"
+          >
+            <div className="font-display text-base font-bold uppercase tracking-wide text-primary">
+              Award
+            </div>
             <h3 className="mt-3 font-display text-xl font-bold uppercase text-foreground">
               All India Achievers Foundation
             </h3>
@@ -108,6 +158,8 @@ function IndustriesPage() {
             <div className="mt-6 overflow-hidden rounded-sm">
               <SmartImg
                 src={awardAia}
+                width={1380}
+                height={900}
                 alt="Mr. M. Sadanand Nayak receiving the Indian Achievers Award"
                 className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
               />
