@@ -1,5 +1,5 @@
 # Final QA
-- [x] Replace the two Industries award photos with the supplied enhanced images; verify both display uncropped and responsive.
+- [x] Replace the two Industries award photos with the supplied enhanced images; even out the two award cards and verify both display uncropped and responsive.
 - [x] Remove the "Our Facility" photo section from the homepage; keep the charcoal hero and About section unchanged.
 - [x] Restore the charcoal homepage hero and place the existing factory photo separately beneath it; validate responsive framing and unchanged scrolling.
 - [x] Fix homepage refresh restoration and photo framing/contrast.
