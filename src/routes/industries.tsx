@@ -118,7 +118,9 @@ function IndustriesPage() {
                       height={c.height}
                       loading="lazy"
                       decoding="async"
-                      className="h-auto max-h-14 w-auto max-w-[85%] object-contain sm:max-h-16"
+                      className={`h-auto max-h-14 w-auto max-w-[85%] object-contain sm:max-h-16 ${
+                        c.name === "Solidus" ? "sm:max-h-[4.5rem] sm:max-w-[92%]" : ""
+                      }`}
                     />
                   ) : (
                     <span className="text-center font-display text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
