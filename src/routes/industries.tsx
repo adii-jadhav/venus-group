@@ -124,7 +124,7 @@ function IndustriesPage() {
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
           <Reveal
             delay={0}
-            className="group rounded-sm border border-border bg-card p-8 text-center card-lift"
+            className="group flex flex-col rounded-sm border border-border bg-card p-8 text-center card-lift"
           >
             <div className="font-display text-base font-bold uppercase tracking-wide text-primary">
               Award
@@ -132,19 +132,19 @@ function IndustriesPage() {
             <h3 className="mt-3 font-display text-xl font-bold uppercase text-foreground">
               Best Upcoming Industry
             </h3>
-            <div className="mt-6 overflow-hidden rounded-sm">
+            <div className="mt-auto flex aspect-[4/3] items-center justify-center overflow-hidden rounded-sm p-2 pt-8">
               <SmartImg
                 src={awardBia.url}
                 width={1200}
                 height={900}
                 alt="Best Upcoming Industry award presented to Venus Group"
-                className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
+                className="h-full w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
               />
             </div>
           </Reveal>
           <Reveal
             delay={100}
-            className="group rounded-sm border border-border bg-card p-8 text-center card-lift"
+            className="group flex flex-col rounded-sm border border-border bg-card p-8 text-center card-lift"
           >
             <div className="font-display text-base font-bold uppercase tracking-wide text-primary">
               Award
@@ -155,13 +155,13 @@ function IndustriesPage() {
             <p className="mt-2 text-sm text-muted-foreground">
               Indian Achievers Award for Industrial Development presented to Mr. M. Sadanand Nayak.
             </p>
-            <div className="mt-6 overflow-hidden rounded-sm">
+            <div className="mt-auto flex aspect-[4/3] items-center justify-center overflow-hidden rounded-sm p-2 pt-8">
               <SmartImg
                 src={awardAia.url}
                 width={1200}
                 height={783}
                 alt="Mr. M. Sadanand Nayak receiving the Indian Achievers Award"
-                className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
+                className="h-full w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
               />
             </div>
           </Reveal>
