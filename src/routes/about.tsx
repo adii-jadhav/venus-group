@@ -2,6 +2,25 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { SmartImg } from "@/components/site/SmartImg";
+import storyScooterAsset from "@/assets/venus-story-scooter.webp.asset.json";
+import storyMachineAsset from "@/assets/venus-story-workshop-machine.webp.asset.json";
+
+const storyPhotos = [
+  {
+    src: storyScooterAsset.url,
+    alt: "A man in an orange shirt riding a scooter along a paved road",
+    w: 374,
+    h: 467,
+  },
+  {
+    src: storyMachineAsset.url,
+    alt: "A blue and white industrial machine in a workshop, with a worker at its base",
+    w: 340,
+    h: 425,
+  },
+];
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -86,7 +105,27 @@ function AboutPage() {
             9001:2015 / IATF 16949:2016 certifications.
           </p>
         </div>
+
+        <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
+          {storyPhotos.map((p, i) => (
+            <Reveal
+              key={p.src}
+              delay={i * 90}
+              className="overflow-hidden rounded-sm border border-border bg-muted"
+            >
+              <SmartImg
+                src={p.src}
+                alt={p.alt}
+                width={p.w}
+                height={p.h}
+                className="h-auto w-full"
+                wrapperClassName="bg-muted"
+              />
+            </Reveal>
+          ))}
+        </div>
       </section>
+
 
       {/* Quality Policy */}
       <section className="bg-secondary/60 border-y">
