@@ -21,7 +21,6 @@ const storyPhotos = [
   },
 ];
 
-
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
@@ -125,7 +124,6 @@ function AboutPage() {
           ))}
         </div>
       </section>
-
 
       {/* Quality Policy */}
       <section className="bg-secondary/60 border-y">
