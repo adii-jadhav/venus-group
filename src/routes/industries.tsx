@@ -4,8 +4,8 @@ import { PageHero } from "./about";
 import { Car, Zap, Shirt, Home, Shield, Boxes } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { SmartImg } from "@/components/site/SmartImg";
-import awardBia from "@/assets/award-bia.jpg";
-import awardAia from "@/assets/award-aia.png";
+import awardBia from "@/assets/award-bia.jpg.asset.json";
+import awardAia from "@/assets/award-aia.jpg.asset.json";
 import customersLogos from "@/assets/customers-logos.png";
 
 export const Route = createFileRoute("/industries")({
@@ -134,9 +134,9 @@ function IndustriesPage() {
             </h3>
             <div className="mt-6 overflow-hidden rounded-sm">
               <SmartImg
-                src={awardBia}
-                width={1400}
-                height={1050}
+                src={awardBia.url}
+                width={1200}
+                height={900}
                 alt="Best Upcoming Industry award presented to Venus Group"
                 className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
               />
@@ -157,9 +157,9 @@ function IndustriesPage() {
             </p>
             <div className="mt-6 overflow-hidden rounded-sm">
               <SmartImg
-                src={awardAia}
-                width={1380}
-                height={900}
+                src={awardAia.url}
+                width={1200}
+                height={783}
                 alt="Mr. M. Sadanand Nayak receiving the Indian Achievers Award"
                 className="mx-auto h-auto w-full object-contain transition-transform duration-200 ease-out group-hover:scale-[1.02]"
               />
