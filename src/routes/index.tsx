@@ -18,7 +18,6 @@ import { SmartImg } from "@/components/site/SmartImg";
 import { useState } from "react";
 import certIso from "@/assets/cert-iso-9001.png";
 import certIatf from "@/assets/cert-iatf-16949.png";
-import heroExterior from "@/assets/venus-factory-banner.webp.asset.json";
 import floorWide from "@/assets/venus-manufacturing-floor.webp.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -161,34 +160,6 @@ function HomePage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* OUR FACILITY */}
-      <section
-        aria-label="Our Facility"
-        className="container-px mx-auto w-full max-w-7xl pt-20 md:pt-28"
-      >
-        <Reveal>
-          <p className="accent-bar mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            OUR FACILITY
-          </p>
-          <figure>
-            <div className="aspect-[4/3] overflow-hidden rounded-sm border border-border bg-muted shadow-sm sm:aspect-video">
-              <SmartImg
-                src={heroExterior.url}
-                alt="Venus Group factory exterior in Pune with the VENUS sign on the white facade and the entrance gate"
-                width={1535}
-                height={1025}
-                loading="lazy"
-                decoding="async"
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-            <figcaption className="mt-4 text-sm text-muted-foreground">
-              Venus Group Manufacturing Facility · Pune, India
-            </figcaption>
-          </figure>
-        </Reveal>
       </section>
 
       {/* ABOUT */}
