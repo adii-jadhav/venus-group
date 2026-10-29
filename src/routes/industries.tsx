@@ -6,7 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { SmartImg } from "@/components/site/SmartImg";
 import awardBia from "@/assets/award-bia.jpg.asset.json";
 import awardAia from "@/assets/award-aia.jpg.asset.json";
-import customersLogos from "@/assets/customers-logos.png";
+import { customers } from "@/lib/customers";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
@@ -100,15 +100,35 @@ function IndustriesPage() {
             subtitle="A select list of esteemed brands we have served as a precision engineering partner."
             align="center"
           />
-          <Reveal className="mx-auto mt-12 max-w-5xl">
-            <SmartImg
-              src={customersLogos}
-              width={1400}
-              height={900}
-              alt="Logos of leading manufacturers served by Venus Group"
-              className="mx-auto h-auto w-full object-contain"
-            />
-          </Reveal>
+          <ul
+            className="mx-auto mt-12 grid max-w-6xl grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4 lg:grid-cols-5"
+            aria-label="Customers"
+          >
+            {customers.map((c, i) => (
+              <Reveal as="li" key={c.name} delay={(i % 5) * 40}>
+                <div
+                  className="flex h-24 items-center justify-center rounded-sm border bg-background px-4 py-3 transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:h-28"
+                  title={c.name}
+                >
+                  {c.logo ? (
+                    <img
+                      src={c.logo}
+                      alt={`${c.name} logo`}
+                      width={c.width}
+                      height={c.height}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-auto max-h-14 w-auto max-w-[85%] object-contain sm:max-h-16"
+                    />
+                  ) : (
+                    <span className="text-center font-display text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                      {c.name}
+                    </span>
+                  )}
+                </div>
+              </Reveal>
+            ))}
+          </ul>
           <p className="mt-6 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
             Brand names belong to their respective owners.
           </p>
