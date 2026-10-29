@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHero } from "./about";
-import { MapPin, Phone, Building2 } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
 import { MediaAsset } from "@/components/site/MediaAsset";
@@ -9,7 +9,8 @@ import progressiveToolsPlantAsset from "@/assets/progressive_tools.png.asset.jso
 import plasticInjectionPlantAsset from "@/assets/plastic_injection.png.asset.json";
 import pressPartsPlantAsset from "@/assets/press_parts.png.asset.json";
 import hpdcProductionPlantAsset from "@/assets/HPDC_Production.png.asset.json";
-import venusAutoAsset from "@/assets/Venus_Auto.webp.asset.json";
+import venusAutoAsset from "@/assets/venus-auto-chinchwad.png.asset.json";
+import upcomingFacilityAsset from "@/assets/upcoming-facility.png.asset.json";
 import ezrAsset from "@/assets/ezr.png.asset.json";
 import rtxAsset from "@/assets/rtx.png.asset.json";
 import ezAsset from "@/assets/ez.png.asset.json";
@@ -133,7 +134,7 @@ const venusAuto = {
   addr: "Chinchwad MIDC, Pune",
   phone: "80622 45037",
   src: venusAutoAsset.url,
-  alt: "Venus Auto service center signage in Chinchwad",
+  alt: "Venus Auto service centre building with signage and parked cars in Chinchwad",
 };
 
 const stats = [
@@ -219,18 +220,15 @@ function InfraPage() {
             <Reveal
               as="article"
               delay={0}
-              className="flex h-full flex-col overflow-hidden rounded-sm border border-dashed border-border bg-background card-lift"
+              className="flex h-full flex-col overflow-hidden rounded-sm border border-border bg-background card-lift"
             >
-              <div className="relative aspect-video w-full overflow-hidden bg-secondary/60 industrial-grid">
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Building2 className="h-7 w-7" />
-                  </div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                    Coming Soon
-                  </div>
-                </div>
-              </div>
+              <MediaAsset
+                src={upcomingFacilityAsset.url}
+                alt="Illustrative concept of a Venus-branded manufacturing facility exterior"
+                ratio="video"
+                fit="cover"
+                className="rounded-none border-0"
+              />
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">
                   Upcoming Manufacturing Facility
