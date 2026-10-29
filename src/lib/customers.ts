@@ -17,6 +17,7 @@ import modine from "@/assets/customers/modine.svg";
 import marquardt from "@/assets/customers/marquardt.svg";
 import europa from "@/assets/customers/europa.webp";
 import brakesindia from "@/assets/customers/brakesindia.webp";
+import solidus from "@/assets/customers/solidus.png";
 
 export interface Customer {
   name: string;
@@ -37,7 +38,7 @@ export const customers: Customer[] = [
   { name: "ACS Industries, Inc.", logo: acs, width: 449, height: 200 },
   { name: "Lear Corporation", logo: lear, width: 206, height: 58 },
   { name: "Larsen & Toubro", logo: lt, width: 100, height: 100 },
-  { name: "Solidus", width: 0, height: 0 },
+  { name: "Solidus", logo: solidus, width: 290, height: 98 },
   { name: "Schneider Electric", logo: schneider, width: 230, height: 100 },
   { name: "Godrej", logo: godrej, width: 230, height: 110 },
   { name: "Modine", logo: modine, width: 280, height: 85 },
