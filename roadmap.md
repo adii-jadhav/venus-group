@@ -1,4 +1,5 @@
 # Final QA
+- [x] Add the two story photographs below the "OUR STORY" paragraphs on About; strip the slide frame, cut-off text and graphic overlap, then verify both display aligned and responsive.
 - [x] Replace the five Manufacturing Units photos (Progressive Tools, Plastic Injection, Press Parts, HPDC Production, Venus Auto) with the newly supplied images; verify each card shows the right photo at phone and desktop widths.
 - [x] Replace the two Industries award photos with the supplied enhanced images; even out the two award cards and verify both display uncropped and responsive.
 - [x] Remove the "Our Facility" photo section from the homepage; keep the charcoal hero and About section unchanged.
