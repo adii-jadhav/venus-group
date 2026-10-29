@@ -130,38 +130,10 @@ const plants = [
 
 const venusAuto = {
   title: "Venus Auto – Chinchwad",
-  subtitle: "Automotive Service & Maintenance Facility",
   addr: "Chinchwad MIDC, Pune",
   phone: "80622 45037",
   src: venusAutoAsset.url,
   alt: "Venus Auto service center signage in Chinchwad",
-  services: [
-    {
-      cat: "Engine & Mechanical",
-      items: [
-        "Engine diagnostics & tuning",
-        "Suspension & steering repairs",
-        "Transmission service",
-        "Cooling system maintenance",
-      ],
-    },
-    {
-      cat: "Maintenance",
-      items: ["Oil changes", "Filter replacements", "Fluid checks"],
-    },
-    {
-      cat: "Repairs",
-      items: ["Brake system repair", "Electrical system repair", "Exhaust system repairs"],
-    },
-    {
-      cat: "Vehicle Care",
-      items: ["Tire services & alignment", "Cleaning & detailing", "Pre-purchase inspections"],
-    },
-    {
-      cat: "Body Work",
-      items: ["Denting & painting", "Minor body repairs", "Interior fixes"],
-    },
-  ],
 };
 
 const stats = [
@@ -273,7 +245,7 @@ function InfraPage() {
             <Reveal
               as="article"
               delay={90}
-              className="overflow-hidden rounded-sm border border-border bg-background card-lift md:col-span-2"
+              className="flex h-full flex-col overflow-hidden rounded-sm border border-border bg-background card-lift"
             >
               <MediaAsset
                 src={venusAuto.src}
@@ -282,46 +254,22 @@ function InfraPage() {
                 fit="cover"
                 className="rounded-none border-0"
               />
-              <div className="p-6">
+              <div className="flex flex-1 flex-col p-6">
                 <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">
                   {venusAuto.title}
                 </h3>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  {venusAuto.subtitle}
+                <div className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                  {venusAuto.addr}
                 </div>
-
-                <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {venusAuto.services.map((s) => (
-                    <div key={s.cat}>
-                      <div className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
-                        {s.cat}
-                      </div>
-                      <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                        {s.items.map((it) => (
-                          <li key={it} className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />
-                            <span>{it}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 flex flex-col gap-2 border-t border-border pt-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:gap-6">
-                  <div className="flex items-start gap-2">
-                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    {venusAuto.addr}
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <a
-                      href={`tel:+91${venusAuto.phone.replace(/\s/g, "")}`}
-                      className="hover:text-primary"
-                    >
-                      {venusAuto.phone}
-                    </a>
-                  </div>
+                <div className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                  <a
+                    href={`tel:+91${venusAuto.phone.replace(/\s/g, "")}`}
+                    className="hover:text-primary"
+                  >
+                    +91 {venusAuto.phone}
+                  </a>
                 </div>
               </div>
             </Reveal>
