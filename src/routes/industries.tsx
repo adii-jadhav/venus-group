@@ -134,7 +134,7 @@ function IndustriesPage() {
             </h3>
             <div className="mt-6 overflow-hidden rounded-sm">
               <SmartImg
-                src={awardBia}
+                src={awardBia.url}
                 width={1200}
                 height={900}
                 alt="Best Upcoming Industry award presented to Venus Group"
@@ -157,7 +157,7 @@ function IndustriesPage() {
             </p>
             <div className="mt-6 overflow-hidden rounded-sm">
               <SmartImg
-                src={awardAia}
+                src={awardAia.url}
                 width={1200}
                 height={783}
                 alt="Mr. M. Sadanand Nayak receiving the Indian Achievers Award"
