@@ -19,7 +19,6 @@ import zhAsset from "@/assets/zh.png.asset.json";
 import eu5Asset from "@/assets/eu5.png.asset.json";
 import dgAsset from "@/assets/dg.png.asset.json";
 import tyAsset from "@/assets/ty.png.asset.json";
-import cncAsset from "@/assets/venus-cnc-machining.webp.asset.json";
 
 export const Route = createFileRoute("/infrastructure")({
   head: () => ({
