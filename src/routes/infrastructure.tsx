@@ -19,7 +19,6 @@ import zhAsset from "@/assets/zh.png.asset.json";
 import eu5Asset from "@/assets/eu5.png.asset.json";
 import dgAsset from "@/assets/dg.png.asset.json";
 import tyAsset from "@/assets/ty.png.asset.json";
-import cncAsset from "@/assets/venus-cnc-machining.webp.asset.json";
 
 export const Route = createFileRoute("/infrastructure")({
   head: () => ({
@@ -166,21 +165,6 @@ function InfraPage() {
             </Reveal>
           ))}
         </div>
-        <Reveal
-          as="article"
-          className="mt-10 overflow-hidden rounded-sm border border-border bg-card shadow-sm"
-        >
-          <MediaAsset
-            src={cncAsset.url}
-            alt="Precision CNC machining of a tool steel workpiece"
-            ratio="video"
-            fit="cover"
-            className="rounded-none border-0"
-          />
-          <div className="px-6 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
-            Precision CNC Machining
-          </div>
-        </Reveal>
       </section>
 
       <section className="border-y bg-secondary/60">

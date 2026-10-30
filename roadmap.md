@@ -1,4 +1,5 @@
 # Final QA
+- [x] Remove the "Precision CNC Machining" photo box from Infrastructure; keep the stats row and six Manufacturing Units cards unchanged.
 - [x] Replace the Solidus text fallback in the Industries customer grid with the official Solidus Hi-Tech Products logo; verify it loads and stays legible at phone and desktop widths.
 - [x] Add the two story photographs below the "OUR STORY" paragraphs on About; strip the slide frame, cut-off text and graphic overlap, then verify both display aligned and responsive.
 - [x] Replace the five Manufacturing Units photos (Progressive Tools, Plastic Injection, Press Parts, HPDC Production, Venus Auto) with the newly supplied images; verify each card shows the right photo at phone and desktop widths.
