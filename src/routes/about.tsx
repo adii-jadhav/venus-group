@@ -9,15 +9,15 @@ import storyMachineAsset from "@/assets/venus-story-workshop-machine.webp.asset.
 const storyPhotos = [
   {
     src: storyScooterAsset.url,
-    alt: "A man in an orange shirt riding a scooter along a paved road",
-    w: 374,
-    h: 467,
+    alt: "A smiling young man in an orange shirt sitting astride a vintage scooter on a paved road",
+    w: 1122,
+    h: 1402,
   },
   {
     src: storyMachineAsset.url,
-    alt: "A blue and white industrial machine in a workshop, with a worker at its base",
-    w: 340,
-    h: 425,
+    alt: "A blue industrial machine with a digital readout in a workshop, with a worker at its base",
+    w: 1122,
+    h: 1402,
   },
 ];
 
