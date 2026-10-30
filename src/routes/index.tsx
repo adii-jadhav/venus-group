@@ -19,6 +19,7 @@ import { useState } from "react";
 import certIso from "@/assets/cert-iso-9001.png";
 import certIatf from "@/assets/cert-iatf-16949.png";
 import floorWide from "@/assets/venus-manufacturing-floor.webp.asset.json";
+import { companyFacilityCounts } from "@/lib/company-facility-counts";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -145,7 +146,7 @@ function HomePage() {
           <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 md:mt-24 md:grid-cols-4">
             {[
               { k: "26+", v: "Years of Excellence" },
-              { k: "6", v: "Manufacturing Plants" },
+              { k: String(companyFacilityCounts.manufacturingPlants), v: "Manufacturing Plants" },
               { k: "100+", v: "TRUSTED CLIENTS" },
               { k: "100,000+", v: "SQ. FT. MANUFACTURING AREA" },
             ].map((s, i) => (
@@ -178,7 +179,7 @@ function HomePage() {
                 committed people enable us to consistently exceed customer needs and expectations.
               </p>
               <p>
-                Today, Venus operates six manufacturing plants across Chinchwad and Chakan MIDC.
+                Today, Venus operates five manufacturing plants across Chinchwad and Chakan MIDC.
               </p>
             </div>
             <Link
