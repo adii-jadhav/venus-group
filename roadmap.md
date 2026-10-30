@@ -1,4 +1,5 @@
 # Final QA
+- [ ] Correct manufacturing counts to five, separate Venus Auto as an automotive service facility, and verify counts, grouping, images, and responsive behavior without publishing.
 - [x] Replace the HPDC Production Plant photo in Infrastructure Manufacturing Units with the newly supplied building photo; verify it displays correctly at phone and desktop widths.
 - [x] Remove the "Precision CNC Machining" photo box from Infrastructure; keep the stats row and six Manufacturing Units cards unchanged.
 - [x] Replace the Solidus text fallback in the Industries customer grid with the official Solidus Hi-Tech Products logo; verify it loads and stays legible at phone and desktop widths.
