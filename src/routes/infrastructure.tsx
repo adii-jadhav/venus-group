@@ -224,14 +224,10 @@ function InfraPage() {
                 </div>
               </div>
             </Reveal>
-
           </div>
 
           <div className="mt-16 md:mt-20">
-            <SectionHeading
-              eyebrow="AUTOMOTIVE SERVICE FACILITY"
-              title="VENUS AUTO – CHINCHWAD"
-            />
+            <SectionHeading eyebrow="AUTOMOTIVE SERVICE FACILITY" title="VENUS AUTO – CHINCHWAD" />
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <Reveal
