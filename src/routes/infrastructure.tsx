@@ -19,6 +19,7 @@ import zhAsset from "@/assets/zh.png.asset.json";
 import eu5Asset from "@/assets/eu5.png.asset.json";
 import dgAsset from "@/assets/dg.png.asset.json";
 import tyAsset from "@/assets/ty.png.asset.json";
+import { companyFacilityCounts } from "@/lib/company-facility-counts";
 
 export const Route = createFileRoute("/infrastructure")({
   head: () => ({
@@ -137,7 +138,7 @@ const venusAuto = {
 };
 
 const stats = [
-  { k: "6", v: "Manufacturing plants" },
+  { k: String(companyFacilityCounts.manufacturingPlants), v: "Manufacturing plants" },
   { k: "350", v: "KVA roof-top solar system" },
   { k: "25+", v: "Design engineers" },
 ];
@@ -171,7 +172,7 @@ function InfraPage() {
         <div className="container-px mx-auto max-w-7xl py-20 md:py-28">
           <SectionHeading
             eyebrow="MANUFACTURING UNITS"
-            title="SIX DEDICATED UNITS ACROSS MIDC PUNE"
+            title="FIVE DEDICATED MANUFACTURING PLANTS ACROSS MIDC PUNE"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {plants.map((p, i) => (
@@ -224,6 +225,15 @@ function InfraPage() {
               </div>
             </Reveal>
 
+          </div>
+
+          <div className="mt-16 md:mt-20">
+            <SectionHeading
+              eyebrow="AUTOMOTIVE SERVICE FACILITY"
+              title="VENUS AUTO – CHINCHWAD"
+            />
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
             <Reveal
               as="article"
               delay={90}
