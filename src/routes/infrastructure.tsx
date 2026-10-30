@@ -166,21 +166,6 @@ function InfraPage() {
             </Reveal>
           ))}
         </div>
-        <Reveal
-          as="article"
-          className="mt-10 overflow-hidden rounded-sm border border-border bg-card shadow-sm"
-        >
-          <MediaAsset
-            src={cncAsset.url}
-            alt="Precision CNC machining of a tool steel workpiece"
-            ratio="video"
-            fit="cover"
-            className="rounded-none border-0"
-          />
-          <div className="px-6 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
-            Precision CNC Machining
-          </div>
-        </Reveal>
       </section>
 
       <section className="border-y bg-secondary/60">
