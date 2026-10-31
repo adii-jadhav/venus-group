@@ -1,6 +1,6 @@
 # Final QA
 
-- [ ] Add server-side permanent redirects for the ten specified legacy paths, handle both slash forms, and verify HTTP status and destination without publishing.
+- [x] Add server-side permanent redirects for the ten specified legacy paths, handle both slash forms, and verify HTTP status and destination without publishing. All 20 variants return HTTP 301 locally; four representative destination pages return 200 with JavaScript disabled; unrelated paths remain 404. Twenty-three Bun tests, targeted lint and formatting passed; full lint passed with the existing router warning; automatic build/TypeScript reports build OK. Published edge/custom-domain behaviour awaits authorised publication and domain connection.
 
 - [x] Refine typography, proofreading, restrained motion, accessibility and image reliability without redesigning or changing supplied assets.
 - [x] Implement canonical metadata, verified Organization data, absolute sitemap and robots for www.venusgroup.co.in.
