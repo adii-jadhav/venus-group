@@ -49,11 +49,12 @@ export function MediaAsset({
             }}
             loading={eager ? "eager" : "lazy"}
             decoding="async"
+            fetchPriority={eager ? "high" : undefined}
             onLoad={() => setLoaded(true)}
             onError={() => setLoaded(true)}
-            className={`h-full w-full transition-[transform,opacity] duration-300 ease-out motion-reduce:transition-none ${
+            className={`relative h-full w-full transition-transform duration-200 ease-out motion-reduce:transition-none ${
               fit === "contain" ? "object-contain" : "object-cover"
-            } ${imageClassName} ${loaded ? "opacity-100" : "opacity-0"} group-hover:scale-[1.02]`}
+            } ${imageClassName} group-hover:scale-[1.02]`}
           />
         </>
       ) : (

@@ -1,3 +1,5 @@
+import { organization } from "@/lib/site-seo";
+import favicon from "@/assets/venus-logo.png";
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -33,23 +35,22 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Venus Group — Precision Dies, Moulds & Die Casting Manufacturer, Pune" },
-      {
-        name: "description",
-        content:
-          "Venus Group — ISO 9001:2015 & IATF 16949:2016 certified manufacturer of plastic injection moulds, high pressure die casting, progressive & stamping tools in Pune, India.",
-      },
       { name: "author", content: "Venus Group" },
-      { property: "og:title", content: "Venus Group — Precision Engineering, Pune" },
-      {
-        property: "og:description",
-        content:
-          "Premium dies and moulds manufacturer in India. Injection moulding, die casting, stamping tools and end-to-end engineering solutions.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { name: "theme-color", content: "#302f32" },
+      { property: "og:site_name", content: "Venus Group" },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: favicon },
+      { rel: "apple-touch-icon", href: favicon },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(organization) }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -60,12 +61,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <HeadContent />
       </head>
       <body>

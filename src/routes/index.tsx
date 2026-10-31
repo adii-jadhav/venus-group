@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/site-seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -22,24 +23,13 @@ import floorWide from "@/assets/venus-manufacturing-floor.webp.asset.json";
 import { companyFacilityCounts } from "@/lib/company-facility-counts";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { title: "Venus Group — Precision Engineering, Pune" },
-      {
-        name: "description",
-        content:
-          "Precision engineering and trusted manufacturing since 1999. Plastic injection moulds, high pressure die casting and stamping tools manufacturer in Pune, India.",
-      },
-      { property: "og:title", content: "Venus Group — Precision Engineering, Pune" },
-      {
-        property: "og:description",
-        content:
-          "ISO 9001:2015 & IATF 16949:2016 certified dies and moulds manufacturer serving automotive, electrical and defense industries.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead(
+      "/",
+      "Venus Group | Precision Engineering and Manufacturing, Pune",
+      "Established in 1999, Venus Group manufactures plastic injection moulds, HPDC dies, stamping tools and components in Pune. ISO 9001:2015 and IATF 16949:2016 certified.",
+      floorWide.url,
+    ),
   component: HomePage,
 });
 
@@ -52,7 +42,7 @@ const services = [
   {
     icon: Factory,
     title: "HPDC DIES AND COMPONENTS",
-    desc: "Aluminum & Zinc PDC components,\ncold chamber and hot chamber components.",
+    desc: "Aluminium & Zinc PDC components,\ncold chamber and hot chamber components.",
   },
   {
     icon: Hammer,
@@ -62,29 +52,29 @@ const services = [
   {
     icon: Wrench,
     title: "Proto Tool Development",
-    desc: "Proto tool components for plastic, aluminum and sheet metal parts.",
+    desc: "Proto tool components for plastic, aluminium and sheet metal parts.",
   },
   {
     icon: Cog,
-    title: "Sub Assembly",
-    desc: "plastic, sheet metal and aluminum sub assembly capability under one roof.",
+    title: "Sub-assembly",
+    desc: "Plastic, sheet metal and aluminium sub-assembly capability under one roof.",
   },
   {
     icon: Cpu,
     title: "LASER CUT & CNC WIRE CUT SERVICES",
-    desc: "Reliable CNC wire cut and Laser cut services for high-quality production",
+    desc: "Reliable CNC wire cut and laser cutting services for high-quality production.",
   },
 ];
 
 const strengths = [
   "Diversified Business Profile",
-  "Experienced Professionals with robust technical capabilities",
+  "Experienced Professionals with strong technical capabilities",
   "Innovative Approach",
   "Continual Improvements",
   "Premium Quality",
-  "Optimum cost",
+  "Cost-effective solutions",
   "One-stop solution for all your queries",
-  "Market Presence since 26+ Years",
+  "Established in 1999",
 ];
 
 const certifications = [
@@ -115,28 +105,27 @@ function HomePage() {
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               ISO 9001:2015 · IATF 16949:2016 Certified
             </div>
-            <h1 className="mt-6 font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 font-display text-4xl font-bold uppercase leading-[1.05] tracking-normal sm:text-5xl md:text-5xl">
               Precision Engineering.
               <br />
               <span className="text-primary">Trusted Manufacturing.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
               Venus Group is a Pune-based precision engineering company delivering Injection Moulds,
-              High Pressure Casting Dies, Sheet Metal Tools, Components and Assemblies in all three
-              verticals to global manufacturers, with 26+ years of proven quality, innovation and
-              on-time delivery.
+              High Pressure Casting Dies, Sheet Metal Tools, Components and Assemblies for global
+              manufacturers, with 26+ years of proven quality, innovation and on-time delivery.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 to="/contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5"
+                className="group inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-[background-color,border-color,transform] duration-200 hover:bg-primary/90 hover:-translate-y-0.5"
               >
                 GET A QUOTE{" "}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
                 to="/capabilities"
-                className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/25 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
+                className="inline-flex items-center justify-center gap-2 rounded-sm border border-white/25 bg-transparent px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-[background-color,border-color,transform] duration-200 hover:bg-white/10 hover:border-white/50"
               >
                 EXPLORE CAPABILITIES
               </Link>
@@ -174,8 +163,8 @@ function HomePage() {
             />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                We continuously strive for customer satisfaction by providing timely qualitative
-                products and hassle-free services. Our quality management system, innovation and
+                We continuously strive for customer satisfaction by providing high-quality products
+                on time and hassle-free services. Our quality management system, innovation and
                 committed people enable us to consistently exceed customer needs and expectations.
               </p>
               <p>
@@ -184,7 +173,7 @@ function HomePage() {
             </div>
             <Link
               to="/about"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary hover:gap-3 transition-all"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary transition-colors hover:text-primary/80"
             >
               MORE ABOUT US <ArrowRight className="h-4 w-4" />
             </Link>
@@ -213,7 +202,7 @@ function HomePage() {
           <SectionHeading
             eyebrow="CAPABILITIES"
             title="END-TO-END MANUFACTURING UNDER ONE ROOF"
-            subtitle="From design and prototyping to series production - engineered for automotive, electrical, defense and industrial sectors."
+            subtitle="From design and prototyping to series production, engineered for automotive, electrical, defence and industrial sectors."
           />
           <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
@@ -226,7 +215,7 @@ function HomePage() {
                     {s.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-[background-color,border-color,transform] duration-200 group-hover:w-full" />
                 </div>
               </Reveal>
             ))}
@@ -294,7 +283,7 @@ function HomePage() {
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <SectionHeading
           eyebrow="QUALITY & CERTIFICATIONS"
-          title="BUILT ON SYSTEMS THAT GUARANTEE QUALITY"
+          title="BUILT ON SYSTEMS THAT SUPPORT CONSISTENT QUALITY"
           align="center"
         />
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
@@ -339,11 +328,11 @@ function HomePage() {
         <div className="container-px mx-auto max-w-7xl py-16 md:py-20">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div>
-              <h3 className="font-display text-3xl font-bold uppercase leading-tight md:text-4xl">
+              <h2 className="font-display text-3xl font-bold uppercase leading-tight md:text-4xl">
                 HAVE A PROJECT IN MIND?
-              </h3>
+              </h2>
               <p className="mt-2 max-w-xl text-sm text-primary-foreground/90 md:text-base">
-                Share your drawings or requirements — our engineering team will respond with a quote
+                Share your drawings or requirements, our engineering team will respond with a quote
                 in 1–3 working days.
               </p>
             </div>

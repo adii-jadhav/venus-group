@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/site-seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHero } from "./about";
@@ -22,24 +23,13 @@ import tyAsset from "@/assets/ty.png.asset.json";
 import { companyFacilityCounts } from "@/lib/company-facility-counts";
 
 export const Route = createFileRoute("/infrastructure")({
-  head: () => ({
-    meta: [
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { title: "Infrastructure & Facilities — Tool Room, HPDC, Press Shop | Venus Pune" },
-      {
-        name: "description",
-        content:
-          "Venus infrastructure: VMC, CNC EDM, Wire Cut, graphite machining, press machines 5T–200T, laser cutting and HPDC plant in Chakan, Pune.",
-      },
-      { property: "og:title", content: "Infrastructure & Manufacturing Units — Venus Group" },
-      {
-        property: "og:description",
-        content:
-          "Multi-plant precision manufacturing infrastructure across MIDC Chinchwad and Chakan, Pune.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead(
+      "/infrastructure",
+      "Infrastructure | Five Manufacturing Plants, Venus Group Pune",
+      "Explore Venus Group’s five manufacturing plant entries across Chinchwad and Chakan, Pune, and the separate Venus Auto automotive service facility.",
+      progressiveToolsPlantAsset.url,
+    ),
   component: InfraPage,
 });
 
@@ -53,14 +43,14 @@ const machineShowcase = [
   },
   {
     title: "VMC Machines",
-    meta: "Precision vertical machining centers",
+    meta: "Precision vertical machining centres",
     src: rtxAsset.url,
     alt: "VMC machine used in Venus Group tool room",
     fit: "contain" as const,
   },
   {
     title: "Graphite Machining Machines",
-    meta: "High-speed graphite machining centers",
+    meta: "High-speed graphite machining centres",
     src: ezAsset.url,
     alt: "Graphite machining center used in Venus Group tool room",
     fit: "contain" as const,
@@ -95,7 +85,7 @@ const machineShowcase = [
   },
   {
     title: "HPDC Die Casting Lines",
-    meta: "High pressure aluminum and zinc die casting lines",
+    meta: "High pressure aluminium and zinc die casting lines",
     src: tyAsset.url,
     alt: "HPDC production lines installed at Venus Group",
     fit: "contain" as const,
@@ -139,7 +129,7 @@ const venusAuto = {
 
 const stats = [
   { k: String(companyFacilityCounts.manufacturingPlants), v: "Manufacturing plants" },
-  { k: "350", v: "KVA roof-top solar system" },
+  { k: "350", v: "kVA rooftop solar system" },
   { k: "25+", v: "Design engineers" },
 ];
 
@@ -149,7 +139,7 @@ function InfraPage() {
       <PageHero
         eyebrow="INFRASTRUCTURE"
         title="ENGINEERED FOR PRECISION AT SCALE"
-        subtitle="A modern shop floor with VMC, CNC EDM, wire cut, press, laser cutting and HPDC machinery — built to deliver consistent quality on every job."
+        subtitle="A modern shop floor with VMC, CNC EDM, wire cut, press, laser cutting and HPDC machinery, built to deliver consistent quality on every job."
       />
 
       <section className="container-px mx-auto max-w-7xl py-16">
@@ -219,8 +209,8 @@ function InfraPage() {
                   PROPOSED MOULDING UNIT PLANT
                 </h3>
                 <div className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                  D - 89, MIDC Chakan, Pune – 410501
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />D - 89, MIDC Chakan,
+                  Pune – 410501
                 </div>
               </div>
             </Reveal>

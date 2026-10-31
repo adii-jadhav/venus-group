@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/site-seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHero } from "./about";
@@ -15,23 +16,13 @@ import smallTerminalComponentAsset from "@/assets/small_terminal_component.png.a
 import highPrecisionMachineWorkAsset from "@/assets/High_precision_machine_work.png.asset.json";
 
 export const Route = createFileRoute("/capabilities")({
-  head: () => ({
-    meta: [
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { title: "Capabilities — Injection Moulding, Die Casting & Stamping Tools | Venus" },
-      {
-        name: "description",
-        content:
-          "Plastic injection moulds, high pressure die casting, progressive & stamping tools, proto tool development and CAD/CAM design at Venus Group, Pune.",
-      },
-      { property: "og:title", content: "Manufacturing Capabilities — Venus Group" },
-      {
-        property: "og:description",
-        content: "End-to-end precision manufacturing capabilities under one roof in Pune.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead(
+      "/capabilities",
+      "Manufacturing Capabilities | Moulds, Dies and Components, Venus Group",
+      "Explore Venus Group’s plastic injection moulds, HPDC dies, stamping tools, precision components and project development capabilities in Pune.",
+      plasticInjectionMouldsAsset.url,
+    ),
   component: CapabilitiesPage,
 });
 
@@ -98,16 +89,20 @@ const projectFlow = [
   {
     n: "03",
     t: "Flow Analysis & Design",
-    d: "Simulation-driven analysis and design validation to optimize manufacturability, performance, and production efficiency.",
+    d: "Simulation-driven analysis and design validation to optimise manufacturability, performance, and production efficiency.",
   },
   { n: "04", t: "Procurement", d: "Order steel and standard components." },
   { n: "05", t: "Processing", d: "Machining, processing and inspection." },
   { n: "06", t: "Reporting", d: "Weekly reports and in-process photos." },
-  { n: "07", t: "Trial & Approval", d: "Inspect mould to satisfy customer quality requirements." },
+  {
+    n: "07",
+    t: "Trial & Approval",
+    d: "Inspect the mould to ensure it meets customer quality requirements.",
+  },
   {
     n: "08",
     t: "P-PAP",
-    d: "Comprehensive Part Production Approval Process ensuring components meet customer specifications, quality requirements, and manufacturing standards before mass production.",
+    d: "Production Part Approval Process ensuring components meet customer specifications, quality requirements, and manufacturing standards before mass production.",
   },
 ];
 
@@ -117,7 +112,7 @@ function CapabilitiesPage() {
       <PageHero
         eyebrow="CAPABILITIES"
         title="END-TO-END PRECISION MANUFACTURING"
-        subtitle="From design and prototyping to series production — engineered for the most demanding applications."
+        subtitle="From design and prototyping to series production, engineered for the most demanding applications."
       />
 
       <section className="border-y bg-secondary/60">
@@ -165,9 +160,9 @@ function CapabilitiesPage() {
                 <div className="font-display text-3xl font-bold text-primary">{p.n}</div>
                 <FileText className="h-5 w-5 text-muted-foreground" />
               </div>
-              <h4 className="mt-4 font-display text-base font-bold uppercase tracking-wide text-foreground">
+              <h3 className="mt-4 font-display text-base font-bold uppercase tracking-wide text-foreground">
                 {p.t}
-              </h4>
+              </h3>
               <p className="mt-1 text-sm text-muted-foreground">{p.d}</p>
             </Reveal>
           ))}

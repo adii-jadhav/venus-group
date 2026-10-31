@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/site-seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PageHero } from "./about";
@@ -9,23 +10,13 @@ import awardAia from "@/assets/award-aia.jpg.asset.json";
 import { customers } from "@/lib/customers";
 
 export const Route = createFileRoute("/industries")({
-  head: () => ({
-    meta: [
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { title: "Industries Served — Automotive, Electrical, Defense & More | Venus" },
-      {
-        name: "description",
-        content:
-          "Venus Group serves automotive, electrical, textile, household, defense and other industrial segments with precision moulds, dies and components.",
-      },
-      { property: "og:title", content: "Industries We Serve — Venus Group" },
-      {
-        property: "og:description",
-        content: "Trusted by leading OEMs across automotive, electrical and defense sectors.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead(
+      "/industries",
+      "Industries, Customers and Awards | Venus Group, Pune",
+      "Venus Group supplies precision moulds, dies and components for automotive, electrical, textile, household and defence applications. View customers and awards.",
+      awardBia.url,
+    ),
   component: IndustriesPage,
 });
 
@@ -52,8 +43,8 @@ const sectors = [
   },
   {
     icon: Shield,
-    title: "Defense",
-    desc: "Precision-engineered components meeting stringent defense quality standards.",
+    title: "Defence",
+    desc: "Precision-engineered components meeting stringent defence quality standards.",
   },
   {
     icon: Boxes,
@@ -68,7 +59,7 @@ function IndustriesPage() {
       <PageHero
         eyebrow="INDUSTRIES"
         title="TRUSTED ACROSS SECTORS THAT DEMAND PRECISION"
-        subtitle="From automotive to defense — Venus delivers engineered tools and components to industries where quality is non-negotiable."
+        subtitle="From automotive to defence, Venus delivers engineered tools and components to industries where quality is non-negotiable."
       />
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
@@ -83,9 +74,9 @@ function IndustriesPage() {
               <div className="flex h-14 w-14 items-center justify-center rounded-sm bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <s.icon className="h-7 w-7" />
               </div>
-              <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">
+              <h2 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-foreground">
                 {s.title}
-              </h3>
+              </h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
             </Reveal>
           ))}
@@ -140,7 +131,7 @@ function IndustriesPage() {
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
         <SectionHeading
           eyebrow="AWARDS & RECOGNITION"
-          title="RECOGNIZED FOR OUR CONTRIBUTION TO INDIAN MANUFACTURING"
+          title="RECOGNISED FOR OUR CONTRIBUTION TO INDIAN MANUFACTURING"
           align="center"
         />
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
