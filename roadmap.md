@@ -1,4 +1,5 @@
 # Final QA
+
 - [ ] Refine typography, proofreading, restrained motion, accessibility and image reliability without redesigning or changing supplied assets.
 - [ ] Implement canonical metadata, verified Organization data, absolute sitemap and robots for www.venusgroup.co.in.
 - [ ] Run regression tests, targeted/full lint, automatic build checks and seven-width browser QA, including contact mock submissions and history restoration.

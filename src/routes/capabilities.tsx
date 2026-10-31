@@ -16,7 +16,13 @@ import smallTerminalComponentAsset from "@/assets/small_terminal_component.png.a
 import highPrecisionMachineWorkAsset from "@/assets/High_precision_machine_work.png.asset.json";
 
 export const Route = createFileRoute("/capabilities")({
-  head: () => pageHead("/capabilities", "Manufacturing Capabilities | Moulds, Dies and Components, Venus Group", "Explore Venus Group’s plastic injection moulds, HPDC dies, stamping tools, precision components and project development capabilities in Pune.", plasticInjectionMouldsAsset.url),
+  head: () =>
+    pageHead(
+      "/capabilities",
+      "Manufacturing Capabilities | Moulds, Dies and Components, Venus Group",
+      "Explore Venus Group’s plastic injection moulds, HPDC dies, stamping tools, precision components and project development capabilities in Pune.",
+      plasticInjectionMouldsAsset.url,
+    ),
   component: CapabilitiesPage,
 });
 
@@ -88,7 +94,11 @@ const projectFlow = [
   { n: "04", t: "Procurement", d: "Order steel and standard components." },
   { n: "05", t: "Processing", d: "Machining, processing and inspection." },
   { n: "06", t: "Reporting", d: "Weekly reports and in-process photos." },
-  { n: "07", t: "Trial & Approval", d: "Inspect the mould to ensure it meets customer quality requirements." },
+  {
+    n: "07",
+    t: "Trial & Approval",
+    d: "Inspect the mould to ensure it meets customer quality requirements.",
+  },
   {
     n: "08",
     t: "P-PAP",

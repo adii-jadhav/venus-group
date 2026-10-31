@@ -23,7 +23,13 @@ import floorWide from "@/assets/venus-manufacturing-floor.webp.asset.json";
 import { companyFacilityCounts } from "@/lib/company-facility-counts";
 
 export const Route = createFileRoute("/")({
-  head: () => pageHead("/", "Venus Group | Precision Engineering and Manufacturing, Pune", "Established in 1999, Venus Group manufactures plastic injection moulds, HPDC dies, stamping tools and components in Pune. ISO 9001:2015 and IATF 16949:2016 certified.", floorWide.url),
+  head: () =>
+    pageHead(
+      "/",
+      "Venus Group | Precision Engineering and Manufacturing, Pune",
+      "Established in 1999, Venus Group manufactures plastic injection moulds, HPDC dies, stamping tools and components in Pune. ISO 9001:2015 and IATF 16949:2016 certified.",
+      floorWide.url,
+    ),
   component: HomePage,
 });
 
@@ -106,8 +112,8 @@ function HomePage() {
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
               Venus Group is a Pune-based precision engineering company delivering Injection Moulds,
-              High Pressure Casting Dies, Sheet Metal Tools, Components and Assemblies for global manufacturers, with 26+ years of proven quality, innovation and
-              on-time delivery.
+              High Pressure Casting Dies, Sheet Metal Tools, Components and Assemblies for global
+              manufacturers, with 26+ years of proven quality, innovation and on-time delivery.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -157,8 +163,8 @@ function HomePage() {
             />
             <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
               <p>
-                We continuously strive for customer satisfaction by providing high-quality
-                products on time and hassle-free services. Our quality management system, innovation and
+                We continuously strive for customer satisfaction by providing high-quality products
+                on time and hassle-free services. Our quality management system, innovation and
                 committed people enable us to consistently exceed customer needs and expectations.
               </p>
               <p>

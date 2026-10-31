@@ -12,28 +12,53 @@ export function Footer() {
               <img src={logo} alt="Venus logo" className="h-12 w-auto bg-white rounded-sm p-1" />
               <div className="leading-tight">
                 <div className="font-display text-lg font-bold">VENUS GROUP</div>
-                <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">ALL UNDER ONE ROOF</div>
+                <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">
+                  ALL UNDER ONE ROOF
+                </div>
               </div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/70">
-              Precision dies and moulds manufacturer in Pune, India. ISO 9001:2015 and IATF 16949:2016 certified
-              engineering partner serving automotive, electrical, defence and industrial sectors since 1999.
+              Precision dies and moulds manufacturer in Pune, India. ISO 9001:2015 and IATF
+              16949:2016 certified engineering partner serving automotive, electrical, defence and
+              industrial sectors since 1999.
             </p>
           </div>
 
           <div>
             <h2 className="font-display text-sm uppercase tracking-[0.18em] text-white">EXPLORE</h2>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
-              <li><Link to="/about" className="hover:text-primary">ABOUT US</Link></li>
-              <li><Link to="/capabilities" className="hover:text-primary">CAPABILITIES</Link></li>
-              <li><Link to="/infrastructure" className="hover:text-primary">INFRASTRUCTURE</Link></li>
-              <li><Link to="/industries" className="hover:text-primary">INDUSTRIES</Link></li>
-              <li><Link to="/contact" className="hover:text-primary">CONTACT</Link></li>
+              <li>
+                <Link to="/about" className="hover:text-primary">
+                  ABOUT US
+                </Link>
+              </li>
+              <li>
+                <Link to="/capabilities" className="hover:text-primary">
+                  CAPABILITIES
+                </Link>
+              </li>
+              <li>
+                <Link to="/infrastructure" className="hover:text-primary">
+                  INFRASTRUCTURE
+                </Link>
+              </li>
+              <li>
+                <Link to="/industries" className="hover:text-primary">
+                  INDUSTRIES
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-primary">
+                  CONTACT
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h2 className="font-display text-sm uppercase tracking-[0.18em] text-white">CAPABILITIES</h2>
+            <h2 className="font-display text-sm uppercase tracking-[0.18em] text-white">
+              CAPABILITIES
+            </h2>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               <li>PLASTIC INJECTION MOULDS</li>
               <li>HPDC DIES</li>
@@ -44,7 +69,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="font-display text-sm uppercase tracking-[0.18em] text-white">GET IN TOUCH</h2>
+            <h2 className="font-display text-sm uppercase tracking-[0.18em] text-white">
+              GET IN TOUCH
+            </h2>
             <ul className="mt-5 space-y-4 text-sm text-white/80">
               <li className="flex gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
@@ -53,17 +80,27 @@ export function Footer() {
               <li className="flex gap-3">
                 <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <a href="tel:+919049001430" className="hover:text-primary">+91 90490 01430</a>
-                  <a href="tel:+918830603858" className="hover:text-primary">+91 88306 03858</a>
+                  <a href="tel:+919049001430" className="hover:text-primary">
+                    +91 90490 01430
+                  </a>
+                  <a href="tel:+918830603858" className="hover:text-primary">
+                    +91 88306 03858
+                  </a>
                 </div>
               </li>
               <li className="flex gap-3">
                 <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <a href="mailto:msnayak@venusgroup.co.in" className="hover:text-primary break-all">
+                  <a
+                    href="mailto:msnayak@venusgroup.co.in"
+                    className="hover:text-primary break-all"
+                  >
                     msnayak@venusgroup.co.in
                   </a>
-                  <a href="mailto:sathvik@venusgroup.co.in" className="hover:text-primary break-all">
+                  <a
+                    href="mailto:sathvik@venusgroup.co.in"
+                    className="hover:text-primary break-all"
+                  >
                     sathvik@venusgroup.co.in
                   </a>
                 </div>
@@ -76,9 +113,7 @@ export function Footer() {
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Venus Group. All rights reserved.
           </p>
-          <p className="text-xs text-white/50">
-            ISO 9001:2015 · IATF 16949:2016 Certified
-          </p>
+          <p className="text-xs text-white/50">ISO 9001:2015 · IATF 16949:2016 Certified</p>
         </div>
       </div>
     </footer>

@@ -23,7 +23,13 @@ import tyAsset from "@/assets/ty.png.asset.json";
 import { companyFacilityCounts } from "@/lib/company-facility-counts";
 
 export const Route = createFileRoute("/infrastructure")({
-  head: () => pageHead("/infrastructure", "Infrastructure | Five Manufacturing Plants, Venus Group Pune", "Explore Venus Group’s five manufacturing plant entries across Chinchwad and Chakan, Pune, and the separate Venus Auto automotive service facility.", progressiveToolsPlantAsset.url),
+  head: () =>
+    pageHead(
+      "/infrastructure",
+      "Infrastructure | Five Manufacturing Plants, Venus Group Pune",
+      "Explore Venus Group’s five manufacturing plant entries across Chinchwad and Chakan, Pune, and the separate Venus Auto automotive service facility.",
+      progressiveToolsPlantAsset.url,
+    ),
   component: InfraPage,
 });
 
@@ -203,8 +209,8 @@ function InfraPage() {
                   PROPOSED MOULDING UNIT PLANT
                 </h3>
                 <div className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                  D - 89, MIDC Chakan, Pune – 410501
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />D - 89, MIDC Chakan,
+                  Pune – 410501
                 </div>
               </div>
             </Reveal>

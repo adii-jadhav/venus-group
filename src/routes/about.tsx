@@ -23,7 +23,13 @@ const storyPhotos = [
 ];
 
 export const Route = createFileRoute("/about")({
-  head: () => pageHead("/about", "About Venus Group | Precision Engineering Since 1999, Pune", "Discover Venus Group’s journey from a CNC wire EDM workshop in Bhosari to five manufacturing plants in Pune, with a focus on quality and sustainable operations.", storyScooterAsset.url),
+  head: () =>
+    pageHead(
+      "/about",
+      "About Venus Group | Precision Engineering Since 1999, Pune",
+      "Discover Venus Group’s journey from a CNC wire EDM workshop in Bhosari to five manufacturing plants in Pune, with a focus on quality and sustainable operations.",
+      storyScooterAsset.url,
+    ),
   component: AboutPage,
 });
 

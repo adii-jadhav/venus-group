@@ -8,7 +8,12 @@ import { MapPin, Phone, Mail, CheckCircle2, AlertCircle } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/contact")({
-  head: () => pageHead("/contact", "Contact Venus Group | Manufacturing Enquiries, Pune", "Request a quote for moulds, dies and components. Contact Venus Group at D-2 Block 66/12, MIDC Chinchwad, Pune 411019, or call +91 90490 01430."),
+  head: () =>
+    pageHead(
+      "/contact",
+      "Contact Venus Group | Manufacturing Enquiries, Pune",
+      "Request a quote for moulds, dies and components. Contact Venus Group at D-2 Block 66/12, MIDC Chinchwad, Pune 411019, or call +91 90490 01430.",
+    ),
   component: ContactPage,
 });
 
@@ -99,7 +104,10 @@ function ContactPage() {
               </p>
 
               {status === "success" && (
-                <div role="status" className="mt-8 flex items-start gap-4 rounded-sm border border-primary/30 bg-primary/5 p-6">
+                <div
+                  role="status"
+                  className="mt-8 flex items-start gap-4 rounded-sm border border-primary/30 bg-primary/5 p-6"
+                >
                   <CheckCircle2 className="h-6 w-6 shrink-0 text-primary" />
                   <div>
                     <h3 className="font-display text-lg font-bold uppercase text-foreground">
@@ -114,7 +122,10 @@ function ContactPage() {
               )}
 
               {status === "error" && (
-                <div role="alert" className="mt-8 flex items-start gap-4 rounded-sm border border-destructive/30 bg-destructive/5 p-6">
+                <div
+                  role="alert"
+                  className="mt-8 flex items-start gap-4 rounded-sm border border-destructive/30 bg-destructive/5 p-6"
+                >
                   <AlertCircle className="h-6 w-6 shrink-0 text-destructive" />
                   <div>
                     <h3 className="font-display text-lg font-bold uppercase text-foreground">
@@ -163,7 +174,10 @@ function ContactPage() {
                   />
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
+                  <label
+                    htmlFor="message"
+                    className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -177,7 +191,9 @@ function ContactPage() {
                     className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
                   />
                   {errors.message && (
-                    <p id="message-error" role="alert" className="mt-1 text-xs text-destructive">{errors.message}</p>
+                    <p id="message-error" role="alert" className="mt-1 text-xs text-destructive">
+                      {errors.message}
+                    </p>
                   )}
                 </div>
                 <div className="sm:col-span-2">
@@ -266,7 +282,10 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
+      <label
+        htmlFor={name}
+        className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground"
+      >
         {label}
       </label>
       <input
@@ -280,7 +299,11 @@ function Field({
         placeholder={placeholder}
         className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
       />
-      {error && <p id={`${name}-error`} role="alert" className="mt-1 text-xs text-destructive">{error}</p>}
+      {error && (
+        <p id={`${name}-error`} role="alert" className="mt-1 text-xs text-destructive">
+          {error}
+        </p>
+      )}
     </div>
   );
 }

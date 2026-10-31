@@ -4,7 +4,14 @@ import { canonicalHost, organization, publicPagePaths } from "../src/lib/site-se
 describe("verified public company facts", () => {
   test("uses the owner's canonical host for all six public pages", () => {
     expect(canonicalHost).toBe("https://www.venusgroup.co.in");
-    expect(publicPagePaths).toEqual(["/", "/about", "/capabilities", "/infrastructure", "/industries", "/contact"]);
+    expect(publicPagePaths).toEqual([
+      "/",
+      "/about",
+      "/capabilities",
+      "/infrastructure",
+      "/industries",
+      "/contact",
+    ]);
   });
   test("keeps the verified founding year", () => {
     expect(organization.foundingDate).toBe("1999");

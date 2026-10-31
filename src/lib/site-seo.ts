@@ -1,7 +1,14 @@
 import logo from "@/assets/venus-logo.png";
 
 export const canonicalHost = "https://www.venusgroup.co.in";
-export const publicPagePaths = ["/", "/about", "/capabilities", "/infrastructure", "/industries", "/contact"] as const;
+export const publicPagePaths = [
+  "/",
+  "/about",
+  "/capabilities",
+  "/infrastructure",
+  "/industries",
+  "/contact",
+] as const;
 
 export function pageHead(path: string, title: string, description: string, image = logo) {
   const url = new URL(path, canonicalHost).href;
@@ -42,8 +49,25 @@ export const organization = {
     addressCountry: "IN",
   },
   contactPoint: [
-    { "@type": "ContactPoint", contactType: "Business enquiries", telephone: "+91 90490 01430", email: "msnayak@venusgroup.co.in" },
-    { "@type": "ContactPoint", contactType: "Business enquiries", telephone: "+91 88306 03858", email: "sathvik@venusgroup.co.in" },
+    {
+      "@type": "ContactPoint",
+      contactType: "Business enquiries",
+      telephone: "+91 90490 01430",
+      email: "msnayak@venusgroup.co.in",
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "Business enquiries",
+      telephone: "+91 88306 03858",
+      email: "sathvik@venusgroup.co.in",
+    },
   ],
-  knowsAbout: ["Plastic injection moulds", "High pressure die casting", "Progressive and stamping tools", "Sheet metal components", "CNC wire cutting", "Laser cutting"],
+  knowsAbout: [
+    "Plastic injection moulds",
+    "High pressure die casting",
+    "Progressive and stamping tools",
+    "Sheet metal components",
+    "CNC wire cutting",
+    "Laser cutting",
+  ],
 };

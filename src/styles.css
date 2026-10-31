@@ -242,21 +242,36 @@
 }
 
 @layer base {
-  :target { scroll-margin-top: 6rem; }
-  a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
-  a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
+  :target {
+    scroll-margin-top: 6rem;
+  }
+  a,
+  button,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 4px;
   }
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
-    .group:hover img { transform: none !important; }
+    .group:hover img {
+      transform: none !important;
+    }
   }
   @media (hover: none) {
-    .card-lift:hover, .group:hover img { transform: none; }
+    .card-lift:hover,
+    .group:hover img {
+      transform: none;
+    }
   }
 }

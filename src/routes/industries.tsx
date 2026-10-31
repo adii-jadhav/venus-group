@@ -10,7 +10,13 @@ import awardAia from "@/assets/award-aia.jpg.asset.json";
 import { customers } from "@/lib/customers";
 
 export const Route = createFileRoute("/industries")({
-  head: () => pageHead("/industries", "Industries, Customers and Awards | Venus Group, Pune", "Venus Group supplies precision moulds, dies and components for automotive, electrical, textile, household and defence applications. View customers and awards.", awardBia.url),
+  head: () =>
+    pageHead(
+      "/industries",
+      "Industries, Customers and Awards | Venus Group, Pune",
+      "Venus Group supplies precision moulds, dies and components for automotive, electrical, textile, household and defence applications. View customers and awards.",
+      awardBia.url,
+    ),
   component: IndustriesPage,
 });
 
