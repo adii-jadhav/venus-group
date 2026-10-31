@@ -1,4 +1,8 @@
 # Final QA
+- [ ] Refine typography, proofreading, restrained motion, accessibility and image reliability without redesigning or changing supplied assets.
+- [ ] Implement canonical metadata, verified Organization data, absolute sitemap and robots for www.venusgroup.co.in.
+- [ ] Run regression tests, targeted/full lint, automatic build checks and seven-width browser QA, including contact mock submissions and history restoration.
+- [ ] Inspect domain setup and report safe cutover requirements without publishing or changing DNS.
 - [x] Replace the two About "OUR STORY" photographs with the sharper supplied originals; verify both load at their true size, stay aligned and responsive, and that no slide artifacts remain.
 - [x] Correct manufacturing counts to five, separate Venus Auto as an automotive service facility, and verify counts, grouping, images, and responsive behavior without publishing. Seven Bun tests, targeted lint and preview build checks passed; browser checks passed at 320/390/768/1280px. Whole-project lint was attempted but timed out.
 - [x] Replace the HPDC Production Plant photo in Infrastructure Manufacturing Units with the newly supplied building photo; verify it displays correctly at phone and desktop widths.
