@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/site-seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { CheckCircle2 } from "lucide-react";
@@ -22,23 +23,7 @@ const storyPhotos = [
 ];
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { title: "About Venus Group — 26+ Years of Precision Engineering in Pune" },
-      {
-        name: "description",
-        content:
-          "Founded in 1999 in Pune, Venus Group is a precision engineering manufacturer of injection moulds, die casting and stamping tools. Quality, innovation and customer satisfaction.",
-      },
-      { property: "og:title", content: "About Venus Group Pvt. Ltd." },
-      {
-        property: "og:description",
-        content: "Pune-based dies and moulds manufacturer with 26+ years of trusted manufacturing.",
-      },
-    ],
-  }),
+  head: () => pageHead("/about", "About Venus Group | Precision Engineering Since 1999, Pune", "Discover Venus Group’s journey from a CNC wire EDM workshop in Bhosari to five manufacturing plants in Pune, with a focus on quality and sustainable operations.", storyScooterAsset.url),
   component: AboutPage,
 });
 
@@ -52,17 +37,17 @@ const milestones = [
   { y: "2022", t: "Plant expansion at D-89 Phase-2 MIDC Chakan." },
   {
     y: "2019",
-    t: "Embraced renewable energy with the commissioning of a 300 KVA roof-top solar system — advancing sustainable operations, reducing carbon footprint and reinforcing our commitment to environmental responsibility.",
+    t: "Commissioned a 300 kVA rooftop solar installation, contributing towards cleaner energy and sustainable operations.",
   },
   { y: "2018", t: "Takeover of PDC plant at B-32, Phase-2 MIDC Chakan." },
   { y: "2016", t: "Established stamping production plant at C-19, MIDC Chakan." },
   { y: "2013", t: "Established progressive press tools manufacturing plant at Chinchwad." },
   {
     y: "2005",
-    t: "Started manufacturing of plastic injection moulds & sheet metal dies at MIDC Bhosari.",
+    t: "Started manufacturing plastic injection moulds & sheet metal dies at MIDC Bhosari.",
   },
-  { y: "2002", t: "Shifted to Gulvevasti — added VMC and Sodick W/c." },
-  { y: "1999", t: "Initiated with job work on used CNC Wire EDM at Landewadi, Bhosari." },
+  { y: "2002", t: "Shifted to Gulvevasti, added VMC and Sodick W/c." },
+  { y: "1999", t: "Began job work with a used CNC Wire EDM at Landewadi, Bhosari." },
 ];
 
 const coreValues = [
@@ -70,7 +55,7 @@ const coreValues = [
   "LIVE QUALITY",
   "ENCOURAGE CREATIVITY & INNOVATION",
   "RESPECT FOR INDIVIDUAL",
-  "RESPECT FOR WORK-PLACE ETHICS",
+  "RESPECT FOR WORKPLACE ETHICS",
 ];
 
 function AboutPage() {
@@ -90,17 +75,17 @@ function AboutPage() {
         <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-muted-foreground">
           <p>
             In 1999, Venus Group began as a small job-work unit in Bhosari with a single used CNC
-            Wire EDM and one operator. What we lacked in scale, we made up for in commitment to
+            wire EDM and one operator. What we lacked in scale, we made up for in commitment to
             quality and on-time delivery.
           </p>
           <p>
             Two and a half decades later, Venus operates five dedicated manufacturing plants across
-            Chinchwad and Chakan MIDC - covering the entire value chain from design and prototyping
+            Chinchwad and Chakan MIDC, covering the entire value chain from design and prototyping
             to high pressure die casting, stamping and sub-assembly.
           </p>
           <p>
             Our quality policy commits us to continual improvement through innovation and a robust
-            quality management system - backed by skilled people, modern infrastructure and ISO
+            quality management system, backed by skilled people, modern infrastructure and ISO
             9001:2015 / IATF 16949:2016 certifications.
           </p>
         </div>
@@ -131,7 +116,7 @@ function AboutPage() {
           <SectionHeading eyebrow="QUALITY POLICY" title="WHAT WE COMMIT TO, EVERY SINGLE DAY" />
           <ul className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              "We continuously strive for customer satisfaction by providing timely qualitative products & hassle-free services.",
+              "We continuously strive for customer satisfaction by providing high-quality products delivered on time and hassle-free services.",
               "We are committed to continual improvement through innovation and our quality management system to meet customer needs with increased morale of our personnel.",
               "We create an environment that encourages all our employees and stakeholders to prevent defects and strive for excellence.",
             ].map((q, i) => (
@@ -217,13 +202,13 @@ export function PageHero({
   subtitle?: string;
 }) {
   return (
-    <section className="hero-surface text-white border-b border-white/10">
+    <section className="relative overflow-hidden hero-surface text-steel-foreground border-b border-steel-foreground/10">
       <div className="absolute inset-0 industrial-grid opacity-[0.06]" />
-      <div className="container-px relative mx-auto max-w-7xl py-16 md:py-24">
+      <div className="container-px relative mx-auto max-w-7xl py-16 md:py-20 hero-rise">
         <div className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
           {eyebrow}
         </div>
-        <h1 className="mt-3 font-display text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
+        <h1 className="mt-3 font-display text-4xl font-bold uppercase tracking-normal leading-tight md:text-5xl">
           {title}
         </h1>
         {subtitle && (

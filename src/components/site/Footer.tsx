@@ -17,12 +17,12 @@ export function Footer() {
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/70">
               Precision dies and moulds manufacturer in Pune, India. ISO 9001:2015 and IATF 16949:2016 certified
-              engineering partner serving automotive, electrical, defense and industrial sectors since 1999.
+              engineering partner serving automotive, electrical, defence and industrial sectors since 1999.
             </p>
           </div>
 
           <div>
-            <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">EXPLORE</h4>
+            <h2 className="font-display text-sm uppercase tracking-[0.18em] text-white">EXPLORE</h2>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               <li><Link to="/about" className="hover:text-primary">ABOUT US</Link></li>
               <li><Link to="/capabilities" className="hover:text-primary">CAPABILITIES</Link></li>
@@ -33,18 +33,18 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">CAPABILITIES</h4>
+            <h2 className="font-display text-sm uppercase tracking-[0.18em] text-white">CAPABILITIES</h2>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               <li>PLASTIC INJECTION MOULDS</li>
               <li>HPDC DIES</li>
               <li>PROGRESSIVE & STAMPING TOOLS</li>
-              <li>ALUMINUM & ZINC PDC COMPONENTS</li>
+              <li>ALUMINIUM & ZINC PDC COMPONENTS</li>
               <li>SHEET METAL COMPONENTS</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display text-sm uppercase tracking-[0.18em] text-white">GET IN TOUCH</h4>
+            <h2 className="font-display text-sm uppercase tracking-[0.18em] text-white">GET IN TOUCH</h2>
             <ul className="mt-5 space-y-4 text-sm text-white/80">
               <li className="flex gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />

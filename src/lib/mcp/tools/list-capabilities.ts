@@ -11,13 +11,13 @@ const capabilities = [
     id: "hpdc-dies",
     title: "HPDC Dies and Components",
     description:
-      "Aluminum and Zinc pressure die casting components — cold chamber and hot chamber — produced at our 100,000+ sq. ft. facility in Chakan.",
+      "Aluminium and Zinc pressure die casting components, cold chamber and hot chamber, produced at our 100,000+ sq. ft. facility in Chakan.",
   },
   {
     id: "progressive-stamping-tools",
     title: "Progressive & Stamping Tools and Components",
     description:
-      "Progressive and stamping tools plus sheet metal components; stamping development and sub-assembly (plastic, sheet metal, aluminum) under one roof.",
+      "Progressive and stamping tools plus sheet metal components; stamping development and sub-assembly (plastic, sheet metal, aluminium) under one roof.",
   },
   {
     id: "sheet-metal-components",

@@ -15,7 +15,7 @@ export function SectionHeading({ eyebrow, title, subtitle, align = "left", title
           {eyebrow}
         </div>
       )}
-      <h2 className={`mt-3 font-display text-3xl font-bold uppercase tracking-tight sm:text-4xl md:text-5xl ${titleClassName}`}>
+      <h2 className={`mt-3 font-display text-3xl font-bold uppercase tracking-normal leading-tight sm:text-4xl ${titleClassName}`}>
         {title}
       </h2>
       {subtitle && (

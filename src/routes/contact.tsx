@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/site-seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -7,23 +8,7 @@ import { MapPin, Phone, Mail, CheckCircle2, AlertCircle } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { title: "Contact Venus Group — Request a Quote | ALL UNDER ONE ROOF" },
-      {
-        name: "description",
-        content:
-          "Contact Venus Group for injection moulds, die casting and stamping tools. Corporate Office: D-2 Block, MIDC Chinchwad, Pune – 411019.",
-      },
-      { property: "og:title", content: "Contact Venus Group" },
-      {
-        property: "og:description",
-        content: "Request a quote from a trusted dies and moulds manufacturer in Pune.",
-      },
-    ],
-  }),
+  head: () => pageHead("/contact", "Contact Venus Group | Manufacturing Enquiries, Pune", "Request a quote for moulds, dies and components. Contact Venus Group at D-2 Block 66/12, MIDC Chinchwad, Pune 411019, or call +91 90490 01430."),
   component: ContactPage,
 });
 
@@ -93,7 +78,7 @@ function ContactPage() {
       <PageHero
         eyebrow="CONTACT"
         title="LET'S ENGINEER YOUR NEXT PROJECT TOGETHER"
-        subtitle="Share your drawings or requirements — our engineering team will respond with a quote in 1–3 working days."
+        subtitle="Share your drawings or requirements , our engineering team will respond with a quote in 1–3 working days."
       />
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
@@ -104,7 +89,7 @@ function ContactPage() {
                 REQUEST A QUOTE
               </h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Fill in the details below — all fields marked * are required.
+                Fill in the details below , all fields marked * are required.
               </p>
 
               {status === "success" && (
@@ -240,7 +225,7 @@ function ContactPage() {
 
               <div className="mt-8 overflow-hidden rounded-sm border border-border">
                 <iframe
-                  title="Venus Group — Pune location"
+                  title="Venus Group , Pune location"
                   src="https://www.google.com/maps?q=Venus+Group+D-2+Block+66%2F12+MIDC+Chinchwad+Pune+411019&output=embed"
                   className="h-72 w-full"
                   loading="lazy"
