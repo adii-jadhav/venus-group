@@ -15,7 +15,7 @@ export default tseslint.config(
       ".workspace",
       "src/routeTree.gen.ts",
       "src/routes/mcp.ts",
-      "src/routes/[.mcp]/**",
+      "src/routes/\\[.mcp\\]/**",
       "src/routes/[.well-known]/oauth-protected-resource.ts",
     ],
   },
