@@ -220,7 +220,7 @@ function InfraPage() {
                 </h3>
                 <div className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                  5th manufacturing plant — details to be announced.
+                  D - 89, MIDC Chakan, Pune – 410501
                 </div>
               </div>
             </Reveal>
