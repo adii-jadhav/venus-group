@@ -22,7 +22,7 @@ export function CountUp({ value, duration = 1400, className = "" }: Props) {
   const target = numStr ? parseInt(numStr.replace(/,/g, ""), 10) : NaN;
   const hasComma = numStr.includes(",");
 
-  const [n, setN] = useState(0);
+  const [n, setN] = useState(target);
   const startedRef = useRef(false);
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export function CountUp({ value, duration = 1400, className = "" }: Props) {
 
   const formatted = hasComma ? n.toLocaleString("en-US") : String(n);
   return (
-    <span ref={ref} className={className}>
+    <span ref={ref} className={className} aria-label={value}>
       {prefix}
       {formatted}
       {suffix}

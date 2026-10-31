@@ -61,6 +61,12 @@ function ContactPage() {
 
     try {
       const form = e.currentTarget;
+      for (const [name, value] of Object.entries(result.data)) {
+        const control = form.elements.namedItem(name);
+        if (control instanceof HTMLInputElement || control instanceof HTMLTextAreaElement) {
+          control.value = value ?? "";
+        }
+      }
       await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, {
         publicKey: EMAILJS_PUBLIC_KEY,
       });
@@ -78,7 +84,7 @@ function ContactPage() {
       <PageHero
         eyebrow="CONTACT"
         title="LET'S ENGINEER YOUR NEXT PROJECT TOGETHER"
-        subtitle="Share your drawings or requirements , our engineering team will respond with a quote in 1–3 working days."
+        subtitle="Share your drawings or requirements, our engineering team will respond with a quote in 1–3 working days."
       />
 
       <section className="container-px mx-auto max-w-7xl py-20 md:py-28">
@@ -89,11 +95,11 @@ function ContactPage() {
                 REQUEST A QUOTE
               </h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Fill in the details below , all fields marked * are required.
+                Fill in the details below. All fields marked * are required.
               </p>
 
               {status === "success" && (
-                <div className="mt-8 flex items-start gap-4 rounded-sm border border-primary/30 bg-primary/5 p-6">
+                <div role="status" className="mt-8 flex items-start gap-4 rounded-sm border border-primary/30 bg-primary/5 p-6">
                   <CheckCircle2 className="h-6 w-6 shrink-0 text-primary" />
                   <div>
                     <h3 className="font-display text-lg font-bold uppercase text-foreground">
@@ -108,7 +114,7 @@ function ContactPage() {
               )}
 
               {status === "error" && (
-                <div className="mt-8 flex items-start gap-4 rounded-sm border border-destructive/30 bg-destructive/5 p-6">
+                <div role="alert" className="mt-8 flex items-start gap-4 rounded-sm border border-destructive/30 bg-destructive/5 p-6">
                   <AlertCircle className="h-6 w-6 shrink-0 text-destructive" />
                   <div>
                     <h3 className="font-display text-lg font-bold uppercase text-foreground">
@@ -157,10 +163,13 @@ function ContactPage() {
                   />
                 </div>
                 <div className="sm:col-span-2">
-                  <label className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
+                  <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
                     Message *
                   </label>
                   <textarea
+                    id="message"
+                    aria-invalid={Boolean(errors.message)}
+                    aria-describedby={errors.message ? "message-error" : undefined}
                     name="message"
                     rows={5}
                     required
@@ -168,7 +177,7 @@ function ContactPage() {
                     className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
                   />
                   {errors.message && (
-                    <p className="mt-1 text-xs text-destructive">{errors.message}</p>
+                    <p id="message-error" role="alert" className="mt-1 text-xs text-destructive">{errors.message}</p>
                   )}
                 </div>
                 <div className="sm:col-span-2">
@@ -187,9 +196,9 @@ function ContactPage() {
 
           <Reveal as="div" delay={120} className="lg:col-span-5">
             <aside>
-              <h3 className="font-display text-xl font-bold uppercase tracking-wide text-foreground">
+              <h2 className="font-display text-xl font-bold uppercase tracking-wide text-foreground">
                 REACH US DIRECTLY
-              </h3>
+              </h2>
               <ul className="mt-6 space-y-5">
                 <Info icon={<MapPin className="h-5 w-5" />} title="Corporate Office">
                   D-2 Block 66/12, MIDC Chinchwad, Pune – 411019
@@ -225,7 +234,7 @@ function ContactPage() {
 
               <div className="mt-8 overflow-hidden rounded-sm border border-border">
                 <iframe
-                  title="Venus Group , Pune location"
+                  title="Venus Group, Pune location"
                   src="https://www.google.com/maps?q=Venus+Group+D-2+Block+66%2F12+MIDC+Chinchwad+Pune+411019&output=embed"
                   className="h-72 w-full"
                   loading="lazy"
@@ -257,10 +266,13 @@ function Field({
 }) {
   return (
     <div>
-      <label className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
+      <label htmlFor={name} className="block text-xs font-semibold uppercase tracking-[0.16em] text-foreground">
         {label}
       </label>
       <input
+        id={name}
+        aria-invalid={Boolean(error)}
+        aria-describedby={error ? `${name}-error` : undefined}
         type={type}
         name={name}
         required={name !== "company"}
@@ -268,7 +280,7 @@ function Field({
         placeholder={placeholder}
         className="mt-2 w-full rounded-sm border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
       />
-      {error && <p className="mt-1 text-xs text-destructive">{error}</p>}
+      {error && <p id={`${name}-error`} role="alert" className="mt-1 text-xs text-destructive">{error}</p>}
     </div>
   );
 }
