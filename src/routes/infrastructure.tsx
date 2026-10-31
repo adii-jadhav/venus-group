@@ -216,7 +216,7 @@ function InfraPage() {
               />
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="font-display text-lg font-bold uppercase tracking-wide text-foreground">
-                  Upcoming Manufacturing Facility
+                  PROPOSED MOULDING UNIT PLANT
                 </h3>
                 <div className="mt-2 flex items-start gap-2 text-sm text-muted-foreground">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
