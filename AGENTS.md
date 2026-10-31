@@ -7,3 +7,4 @@
 - Keep public SEO metadata and verified Organization data in a browser-safe shared module, with canonicals and social metadata on leaf routes only, to prevent conflicting root metadata.
 - Render reveal content and image pixels visible before hydration; arm only offscreen reveals after observation is available, with a bounded fallback, so JavaScript failure cannot hide essential content.
 - Exclude tool caches and generator-owned router/MCP files from ESLint; lint owned source instead, because generated output is overwritten and caches can stall whole-project lint.
+- Resolve exact legacy page mappings in global request middleware with HTTP 301 before route rendering; keep the map browser-safe and preserve queries, so search engines receive permanent redirects without JavaScript.

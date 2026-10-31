@@ -1,5 +1,7 @@
 # Final QA
 
+- [x] Add server-side permanent redirects for the ten specified legacy paths, handle both slash forms, and verify HTTP status and destination without publishing. All 20 variants return HTTP 301 locally; four representative destination pages return 200 with JavaScript disabled; unrelated paths remain 404. Twenty-three Bun tests, targeted lint and formatting passed; full lint passed with the existing router warning; automatic build/TypeScript reports build OK. Published edge/custom-domain behaviour awaits authorised publication and domain connection.
+
 - [x] Refine typography, proofreading, restrained motion, accessibility and image reliability without redesigning or changing supplied assets.
 - [x] Implement canonical metadata, verified Organization data, absolute sitemap and robots for www.venusgroup.co.in.
 - [x] Run regression tests, targeted/full lint, automatic build checks and seven-width browser QA, including contact mock submissions and history restoration. Eleven Bun tests passed; targeted lint and formatting passed; full lint passed with one existing router warning after excluding generator-owned files and caches (initial attempt timed out). Automatic build/TypeScript checks report build OK. All 42 public route/width combinations passed; sitemap/robots, 404, no-JS visibility, reduced motion and contact mock states passed.
