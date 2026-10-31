@@ -1,9 +1,9 @@
 # Final QA
 
-- [ ] Refine typography, proofreading, restrained motion, accessibility and image reliability without redesigning or changing supplied assets.
-- [ ] Implement canonical metadata, verified Organization data, absolute sitemap and robots for www.venusgroup.co.in.
-- [ ] Run regression tests, targeted/full lint, automatic build checks and seven-width browser QA, including contact mock submissions and history restoration.
-- [ ] Inspect domain setup and report safe cutover requirements without publishing or changing DNS.
+- [x] Refine typography, proofreading, restrained motion, accessibility and image reliability without redesigning or changing supplied assets.
+- [x] Implement canonical metadata, verified Organization data, absolute sitemap and robots for www.venusgroup.co.in.
+- [x] Run regression tests, targeted/full lint, automatic build checks and seven-width browser QA, including contact mock submissions and history restoration. Eleven Bun tests passed; targeted lint and formatting passed; full lint passed with one existing router warning after excluding generator-owned files and caches (initial attempt timed out). Automatic build/TypeScript checks report build OK. All 42 public route/width combinations passed; sitemap/robots, 404, no-JS visibility, reduced motion and contact mock states passed.
+- [x] Inspect domain setup and report safe cutover requirements without publishing or changing DNS. Project is unpublished; www.venusgroup.co.in is unmanaged here, with no Lovable ownership records available. No publication or DNS action taken.
 - [x] Replace the two About "OUR STORY" photographs with the sharper supplied originals; verify both load at their true size, stay aligned and responsive, and that no slide artifacts remain.
 - [x] Correct manufacturing counts to five, separate Venus Auto as an automotive service facility, and verify counts, grouping, images, and responsive behavior without publishing. Seven Bun tests, targeted lint and preview build checks passed; browser checks passed at 320/390/768/1280px. Whole-project lint was attempted but timed out.
 - [x] Replace the HPDC Production Plant photo in Infrastructure Manufacturing Units with the newly supplied building photo; verify it displays correctly at phone and desktop widths.
@@ -19,4 +19,4 @@
 - [x] Validate six routes, navigation, history, images, and contact validation; report limits.
 - [x] Make the Venus Auto card match the other plant cards: one grid cell, photo + name + location + phone only; no subtitle or service list.
 
-Remaining manual checks: physical iPhone Safari/Android devices, published production runtime, and actual EmailJS delivery (browser submission was intercepted, not sent). Existing unrelated lint formatting errors remain in Footer, SectionHeading, and MCP routes; the existing router fast-refresh warning also remains.
+Remaining launch dependencies: domain owner must complete connection/ownership setup and approve publication before cutover; exact Lovable DNS requirements are not available yet. Production HTTPS and social-image URLs must be checked after the authorised cutover. Physical iPhone Safari/Android checks, real-user Core Web Vitals and actual EmailJS delivery remain unverified; submissions were intercepted without sending mail. The existing router fast-refresh lint warning remains. Preserve existing solar statistics pending owner confirmation: the 2019 installation is 300 kVA; Infrastructure currently shows 350 kVA, which may refer to a later total. No manual production build was run; automatic build/TypeScript checks were used as required by the environment.
